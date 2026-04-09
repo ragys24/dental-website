@@ -272,7 +272,7 @@ export default function Blog() {
     <>
       <PageSEO
         title="Dental Health Blog | Uplift Dental & Orthodontics Garden Grove"
-        description="Expert dental health tips, Invisalign guides, gum disease education, and oral care advice from the team at Uplift Dental & Orthodontics in {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}."
+        description={`Expert dental health tips, Invisalign guides, gum disease education, and oral care advice from the team at Uplift Dental & Orthodontics in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}.`}
         canonical="https://upliftdental.com/blog"
       />
       <div className="min-h-screen flex flex-col bg-white">
