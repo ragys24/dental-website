@@ -16,7 +16,7 @@ export default function DentalCrowns() {
     <>
       <PageSEO
         title="Dental Crowns in Garden Grove, CA | Same-Day Crowns | Uplift Dental"
-        description="Restore damaged or weakened teeth with dental crowns at Uplift Dental in Garden Grove, CA. Porcelain, zirconia, and same-day crown options available. Call {PRACTICE.phone.display}."
+        description={`Restore damaged or weakened teeth with dental crowns at Uplift Dental in Garden Grove, CA. Porcelain, zirconia, and same-day crown options available. Call ${PRACTICE.phone.display}.`}
         canonical="https://upliftdental.com/dental-crowns"
       />
       <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
