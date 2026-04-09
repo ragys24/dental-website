@@ -16,7 +16,7 @@ export default function DentalFillings() {
     <>
       <PageSEO
         title="Tooth-Colored Fillings in Garden Grove, CA | Composite Fillings | Uplift Dental"
-        description="Get natural-looking tooth-colored composite fillings at Uplift Dental in Garden Grove, CA. Replace old silver amalgam fillings or treat new cavities. Call {PRACTICE.phone.display}."
+        description={`Get natural-looking tooth-colored composite fillings at Uplift Dental in Garden Grove, CA. Replace old silver amalgam fillings or treat new cavities. Call ${PRACTICE.phone.display}.`}
         canonical="https://upliftdental.com/dental-fillings"
       />
       <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
