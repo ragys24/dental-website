@@ -38,7 +38,7 @@ const SERVICES = [
 const FAQS = (city: string) => [
   {
     q: `How far is Uplift Dental from ${city}?`,
-    a: `Uplift Dental & Orthodontics is conveniently located at {PRACTICE.address.full} — just minutes from ${city}. We serve patients from ${city} and the surrounding Orange County area.`,
+    a: `Uplift Dental & Orthodontics is conveniently located at ${PRACTICE.address.full} — just minutes from ${city}. We serve patients from ${city} and the surrounding Orange County area.`,
   },
   {
     q: `Do you accept Denti-Cal patients from ${city}?`,
@@ -46,7 +46,7 @@ const FAQS = (city: string) => [
   },
   {
     q: `Can I get same-day emergency dental care if I'm in ${city}?`,
-    a: `Absolutely. We offer same-day emergency dental appointments for patients from ${city} and surrounding areas. Call {PRACTICE.phone.display} or text {PRACTICE.sms.display} immediately for urgent dental needs.`,
+    a: `Absolutely. We offer same-day emergency dental appointments for patients from ${city} and surrounding areas. Call ${PRACTICE.phone.display} or text ${PRACTICE.sms.display} immediately for urgent dental needs.`,
   },
   {
     q: `Do you offer free consultations for ${city} patients?`,
