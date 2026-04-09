@@ -44,7 +44,7 @@ function ArticleSEO({ post }: { post: BlogPost }) {
     schemaTag.textContent = JSON.stringify(schema);
 
     return () => {
-      document.title = "Uplift Dental & Orthodontics | Top-Rated Dentist in {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}";
+      document.title = `Uplift Dental & Orthodontics | Top-Rated Dentist in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}`;
       schemaTag?.remove();
     };
   }, [post]);
