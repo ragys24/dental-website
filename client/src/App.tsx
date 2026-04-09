@@ -91,6 +91,7 @@ function Router() {
       <Route path="/dentist-near-stanton" component={Stanton} />
       <Route path="/dentist-near-buena-park" component={BuenaPark} />
       <Route path="/dentist-near-rossmoor" component={Rossmoor} />
+      <Route path="/dentist-near-west-grove" component={WestGrove} />
        <Route path="/smile-assessment" component={SmileAssessment} />
       <Route path="/membership-plan" component={MembershipPlan} />
       <Route path="/insurance-financing" component={InsuranceFinancing} />
@@ -164,8 +165,7 @@ function Router() {
       <Route path="/reviews/">{() => <Redirect to="/about" />}</Route>
       <Route path="/membership-plans">{() => <Redirect to="/membership-plan" />}</Route>
       <Route path="/membership-plans/">{() => <Redirect to="/membership-plan" />}</Route>
-      <Route path="/membership-plan">{() => <Redirect to="/membership-plan" />}</Route>
-      <Route path="/membership-plan/">{() => <Redirect to="/membership-plan" />}</Route>
+
       {/* Blog pagination */}
       <Route path="/blog/page/:page">{() => <Redirect to="/blog" />}</Route>
       {/* Tooth extraction and other missing pages */}
