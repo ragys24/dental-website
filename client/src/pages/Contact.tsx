@@ -54,8 +54,8 @@ export default function Contact() {
   return (
     <>
       <PageSEO
-        title=`Contact Uplift Dental & Orthodontics | ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}`
-        description=`Contact Uplift Dental & Orthodontics at ${PRACTICE.address.full}. Call ${PRACTICE.phone.display} or text ${PRACTICE.sms.display}. Book online 24/7. Same-day emergency appointments available.`
+        title={`Contact Uplift Dental & Orthodontics | ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}`}
+        description={`Contact Uplift Dental & Orthodontics at ${PRACTICE.address.full}. Call ${PRACTICE.phone.display} or text ${PRACTICE.sms.display}. Book online 24/7. Same-day emergency appointments available.`}
         canonical="https://upliftdental.com/contact"
       />
       <div className="min-h-screen flex flex-col bg-white">
