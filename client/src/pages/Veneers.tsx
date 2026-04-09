@@ -16,7 +16,7 @@ export default function Veneers() {
     <>
       <PageSEO
         title="Dental Veneers in Garden Grove, CA | Porcelain Veneers | Uplift Dental"
-        description="Transform your smile with porcelain dental veneers at Uplift Dental in Garden Grove, CA. Fix chips, cracks, gaps, and discoloration in just 2 visits. Call {PRACTICE.phone.display} for a free consult."
+        description={`Transform your smile with porcelain dental veneers at Uplift Dental in Garden Grove, CA. Fix chips, cracks, gaps, and discoloration in just 2 visits. Call ${PRACTICE.phone.display} for a free consult.`}
         canonical="https://upliftdental.com/veneers"
       />
       <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
