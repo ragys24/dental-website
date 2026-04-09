@@ -181,7 +181,7 @@ export default function Periodontics() {
       "url": "https://upliftdental.com/periodontics",
       "name": "Periodontist in Garden Grove, CA | Gum Disease Treatment | Uplift Dental",
       "description":
-        "Board-eligible periodontist Dr. Erene Saad, DMD MS offers gum disease treatment, LANAP laser therapy, gum grafts, crown lengthening, and dental implants in {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}.",
+        `Board-eligible periodontist Dr. Erene Saad, DMD MS offers gum disease treatment, LANAP laser therapy, gum grafts, crown lengthening, and dental implants in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}.`,
       "about": {
         "@type": "MedicalCondition",
         "name": "Periodontal Disease",
@@ -213,7 +213,7 @@ export default function Periodontics() {
     if (metaDesc) {
       metaDesc.setAttribute(
         "content",
-        "Dr. Erene Saad, DMD MS — board-eligible periodontist at Uplift Dental & Orthodontics in {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}. Gum disease treatment, LANAP laser therapy, gum grafts, crown lengthening & dental implants. No referral needed."
+        `Dr. Erene Saad, DMD MS — board-eligible periodontist at Uplift Dental & Orthodontics in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. Gum disease treatment, LANAP laser therapy, gum grafts, crown lengthening & dental implants. No referral needed.`
       );
     }
 
@@ -227,7 +227,7 @@ export default function Periodontics() {
     <div className="min-h-screen flex flex-col bg-white">
       <PageSEO
         title="Periodontist in Garden Grove, CA | Gum Disease Treatment | Uplift Dental"
-        description="Dr. Erene Saad, DMD MS — Board-trained Periodontist at Uplift Dental in {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}. Gum disease treatment, LANAP laser therapy, gum grafts, scaling & root planing. Free consultations. Call {PRACTICE.phone.display}."
+        description={`Dr. Erene Saad, DMD MS — Board-trained Periodontist at Uplift Dental in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. Gum disease treatment, LANAP laser therapy, gum grafts, scaling & root planing. Free consultations. Call ${PRACTICE.phone.display}.`}
         canonical="https://upliftdental.com/periodontics"
       />
       <FAQSchema faqs={FAQS.map(f => ({ question: f.q, answer: f.a }))} id="ld-faq-periodontics" />
@@ -315,7 +315,7 @@ export default function Periodontics() {
               "Dental Implant Specialist",
               "No Referral Required",
               "Most Insurance Accepted",
-              "{PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}",
+              `${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}`,
             ].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4" style={{ color: COLORS.teal }} />
@@ -506,7 +506,7 @@ export default function Periodontics() {
                   },
                   {
                     title: "Convenient Garden Grove Location",
-                    desc: "Located at {PRACTICE.address.full} — easily accessible from Seal Beach, Los Alamitos, Westminster, and Anaheim.",
+                    desc: `Located at ${PRACTICE.address.full} — easily accessible from Seal Beach, Los Alamitos, Westminster, and Anaheim.`,
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4">
