@@ -16,7 +16,7 @@ export default function DentalBonding() {
     <>
       <PageSEO
         title="Dental Bonding in Garden Grove, CA | Tooth Bonding | Uplift Dental"
-        description="Fix chips, cracks, and gaps with dental bonding at Uplift Dental in Garden Grove, CA. Affordable cosmetic dentistry completed in one visit. Call {PRACTICE.phone.display}."
+        description={`Fix chips, cracks, and gaps with dental bonding at Uplift Dental in Garden Grove, CA. Affordable cosmetic dentistry completed in one visit. Call ${PRACTICE.phone.display}.`}
         canonical="https://upliftdental.com/dental-bonding"
       />
       <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
