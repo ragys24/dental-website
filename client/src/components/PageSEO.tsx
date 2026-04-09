@@ -59,7 +59,7 @@ export function PageSEO({ title, description, canonical, ogImage }: PageSEOProps
     return () => {
       // Restore homepage defaults on unmount
       document.title =
-        "Uplift Dental & Orthodontics | Top-Rated Dentist in {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}";
+        `Uplift Dental & Orthodontics | Top-Rated Dentist in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}`;
     };
   }, [title, description, canonical, ogImage]);
 
