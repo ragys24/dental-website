@@ -147,7 +147,7 @@ const serviceCategories = [
     id: "emergency",
     category: "Emergency Dentistry",
     headline: "Same-Day Emergency Dental Care in Garden Grove",
-    desc: "Dental emergencies don't wait for convenient times. Uplift Dental offers same-day emergency appointments for patients in Garden Grove and surrounding areas. Call {PRACTICE.phone.display} immediately for severe toothaches, knocked-out teeth, broken crowns, or any urgent dental need.",
+    desc: `Dental emergencies don't wait for convenient times. Uplift Dental offers same-day emergency appointments for patients in Garden Grove and surrounding areas. Call ${PRACTICE.phone.display} immediately for severe toothaches, knocked-out teeth, broken crowns, or any urgent dental need.`,
     img: FAMILY_IMG,
     services: [
       { name: "Severe Toothache", desc: "Immediate diagnosis and relief for acute dental pain — don't suffer in silence." },
