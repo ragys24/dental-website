@@ -149,7 +149,7 @@ export default function InsuranceFinancing() {
     <>
       <PageSEO
         title="Insurance & Financing | Uplift Dental & Orthodontics Garden Grove CA"
-        description="Uplift Dental accepts Denti-Cal, Delta Dental, MetLife, Cigna, Aetna, Anthem, Ameritas, TRICARE, and most PPO plans. Cherry and CareCredit financing available. {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}."
+        description={`Uplift Dental accepts Denti-Cal, Delta Dental, MetLife, Cigna, Aetna, Anthem, Ameritas, TRICARE, and most PPO plans. Cherry and CareCredit financing available. ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}.`}
         canonical="https://upliftdental.com/insurance-financing"
       />
       <BreadcrumbSchema items={[
