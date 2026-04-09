@@ -202,7 +202,7 @@ export default function Endodontics() {
       "url": "https://upliftdental.com/endodontics",
       "name": "Endodontist in Garden Grove, CA | Root Canal Specialist | Uplift Dental",
       "description":
-        "Dr. Daniel Ghobrial, DDS — UCSF-trained endodontist at Uplift Dental & Orthodontics in {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}. Root canal therapy, microscopic endodontics, surgical endodontics, and complex retreatment. No referral needed. Call {PRACTICE.phone.display}.",
+        `Dr. Daniel Ghobrial, DDS — UCSF-trained endodontist at Uplift Dental & Orthodontics in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. Root canal therapy, microscopic endodontics, surgical endodontics, and complex retreatment. No referral needed. Call ${PRACTICE.phone.display}.`,
       "about": {
         "@type": "MedicalProcedure",
         "name": "Root Canal Therapy",
@@ -233,7 +233,7 @@ export default function Endodontics() {
     if (metaDesc) {
       metaDesc.setAttribute(
         "content",
-        "Dr. Daniel Ghobrial, DDS — UCSF-trained endodontist at Uplift Dental & Orthodontics in {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}. Root canal therapy, microscopic endodontics, surgical endodontics & complex retreatment. No referral needed."
+        `Dr. Daniel Ghobrial, DDS — UCSF-trained endodontist at Uplift Dental & Orthodontics in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. Root canal therapy, microscopic endodontics, surgical endodontics & complex retreatment. No referral needed.`
       );
     }
 
@@ -247,7 +247,7 @@ export default function Endodontics() {
     <div className="min-h-screen flex flex-col bg-white">
       <PageSEO
         title="Endodontist in Garden Grove, CA | Root Canal Specialist | Uplift Dental"
-        description="Dr. Daniel Ghobrial, DDS — UCSF-trained endodontist at Uplift Dental & Orthodontics in {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}. Root canal therapy, microscopic endodontics, surgical endodontics & complex retreatment. No referral needed."
+        description={`Dr. Daniel Ghobrial, DDS — UCSF-trained endodontist at Uplift Dental & Orthodontics in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. Root canal therapy, microscopic endodontics, surgical endodontics & complex retreatment. No referral needed.`}
         canonical="https://upliftdental.com/endodontics"
       />
       <FAQSchema faqs={FAQS.map(f => ({ question: f.q, answer: f.a }))} id="ld-faq-endodontics" />
