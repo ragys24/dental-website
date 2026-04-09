@@ -12,7 +12,7 @@ export default function EmergencyDentist() {
     <>
       <PageSEO
         title="Emergency Dentist in Garden Grove, CA | Same-Day Care | Uplift Dental"
-        description="Need an emergency dentist in Garden Grove, CA? Uplift Dental offers same-day emergency appointments for toothaches, broken teeth, lost crowns, and more. Call {PRACTICE.phone.display} now."
+        description={`Need an emergency dentist in Garden Grove, CA? Uplift Dental offers same-day emergency appointments for toothaches, broken teeth, lost crowns, and more. Call ${PRACTICE.phone.display} now.`}
         canonical="https://upliftdental.com/emergency-dentist"
       />
       <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
@@ -87,7 +87,7 @@ export default function EmergencyDentist() {
           <div className="space-y-4">
             {[
               { step: "1", title: "Stay Calm", desc: "Take a deep breath. Most dental emergencies are treatable — especially when addressed quickly." },
-              { step: "2", title: "Call Uplift Dental Immediately", desc: "Call {PRACTICE.phone.display} or text us. We'll assess your situation and schedule a same-day appointment when available." },
+              { step: "2", title: "Call Uplift Dental Immediately", desc: `Call ${PRACTICE.phone.display} or text us. We'll assess your situation and schedule a same-day appointment when available.` },
               { step: "3", title: "Manage Pain Temporarily", desc: "Take over-the-counter pain relievers (ibuprofen or acetaminophen) as directed. Apply a cold compress for swelling." },
               { step: "4", title: "Preserve Any Broken Pieces", desc: "If a tooth or piece breaks off, keep it in milk or saliva and bring it to your appointment." },
             ].map((item) => (
