@@ -16,7 +16,7 @@ export default function TeethWhitening() {
     <>
       <PageSEO
         title="Teeth Whitening in Garden Grove, CA | Professional Whitening | Uplift Dental"
-        description="Get a brighter smile with professional teeth whitening at Uplift Dental in Garden Grove, CA. In-office and take-home whitening options. Results in as little as one visit. Call {PRACTICE.phone.display}."
+        description={`Get a brighter smile with professional teeth whitening at Uplift Dental in Garden Grove, CA. In-office and take-home whitening options. Results in as little as one visit. Call ${PRACTICE.phone.display}.`}
         canonical="https://upliftdental.com/teeth-whitening"
       />
       <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
