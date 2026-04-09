@@ -93,7 +93,7 @@ const financingOptions = [
 const faqs = [
   {
     q: "How do I know if my insurance is accepted?",
-    a: "The easiest way is to call our office at {PRACTICE.phone.display} or text us at {PRACTICE.sms.display}. We'll verify your benefits in minutes. You can also provide your insurance card at your first visit and we'll handle the verification for you.",
+    a: `The easiest way is to call our office at ${PRACTICE.phone.display} or text us at ${PRACTICE.sms.display}. We'll verify your benefits in minutes. You can also provide your insurance card at your first visit and we'll handle the verification for you.`,
   },
   {
     q: "Do you accept Denti-Cal for adults?",
