@@ -176,7 +176,7 @@ export default function Services() {
     <>
           <PageSEO
         title="Dental Services in Garden Grove, CA | Uplift Dental & Orthodontics"
-        description="Comprehensive dental services in {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip} — general dentistry, Invisalign, dental implants, orthodontics, oral surgery, periodontics, cosmetic dentistry & emergency care. Denti-Cal accepted. Call {PRACTICE.phone.display}."
+        description={`Comprehensive dental services in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip} — general dentistry, Invisalign, dental implants, orthodontics, oral surgery, periodontics, cosmetic dentistry & emergency care. Denti-Cal accepted. Call ${PRACTICE.phone.display}.`}
         canonical="https://upliftdental.com/services"
       />
       <div className="min-h-screen flex flex-col bg-white">
