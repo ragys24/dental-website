@@ -23,7 +23,7 @@ export default function Invisalign() {
     <>
       <PageSEO
         title="Invisalign in Garden Grove, CA | Platinum Provider | Uplift Dental"
-        description="Uplift Dental is a Platinum Invisalign® Provider in {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}. Get straighter teeth with clear aligners — free consultation, flexible financing, and same-day starts available. Call {PRACTICE.phone.display}."
+        description={`Uplift Dental is a Platinum Invisalign® Provider in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. Get straighter teeth with clear aligners — free consultation, flexible financing, and same-day starts available. Call ${PRACTICE.phone.display}.`}
         canonical="https://upliftdental.com/invisalign"
       />
       <FAQSchema faqs={INVISALIGN_FAQS} id="ld-faq-invisalign" />
