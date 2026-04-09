@@ -16,7 +16,7 @@ export default function WisdomTeeth() {
     <>
       <PageSEO
         title="Wisdom Teeth Removal in Garden Grove, CA | Uplift Dental"
-        description="Expert wisdom teeth extraction in Garden Grove, CA by Dr. Joseph Youssef, Oral Surgeon. Same-day consultations available. Gentle care, fast recovery. Call {PRACTICE.phone.display}."
+        description={`Expert wisdom teeth extraction in Garden Grove, CA by Dr. Joseph Youssef, Oral Surgeon. Same-day consultations available. Gentle care, fast recovery. Call ${PRACTICE.phone.display}.`}
         canonical="https://upliftdental.com/wisdom-teeth-removal"
       />
       <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
