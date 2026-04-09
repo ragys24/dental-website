@@ -128,7 +128,7 @@ export default function Gallery() {
     <>
       <PageSEO
         title="Before & After Gallery | Smile Transformations | Uplift Dental Garden Grove"
-        description="See real smile transformations at Uplift Dental & Orthodontics in Garden Grove, CA. Before & after photos for Invisalign, dental implants, veneers, braces, and full smile makeovers. Call {PRACTICE.phone.display}."
+        description=`See real smile transformations at Uplift Dental & Orthodontics in Garden Grove, CA. Before & after photos for Invisalign, dental implants, veneers, braces, and full smile makeovers. Call ${PRACTICE.phone.display}.`
         canonical="https://upliftdental.com/gallery"
       />
       <div className="min-h-screen bg-white">
