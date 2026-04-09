@@ -73,14 +73,14 @@ export default function Orthodontics() {
     <>
       <PageSEO
         title="Braces in Garden Grove, CA | Orthodontist | Uplift Dental & Orthodontics"
-        description="Traditional metal braces, ceramic braces, and Phase I/II orthodontics at Uplift Dental in {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}. Platinum Invisalign Provider. Free orthodontic consultations. Denti-Cal accepted. Call {PRACTICE.phone.display}."
+        description={`Traditional metal braces, ceramic braces, and Phase I/II orthodontics at Uplift Dental in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. Platinum Invisalign Provider. Free orthodontic consultations. Denti-Cal accepted. Call ${PRACTICE.phone.display}.`}
         canonical="https://upliftdental.com/orthodontics"
       />
       <FAQSchema faqs={FAQS} id="ld-faq-orthodontics" />
       <MedicalPageSchema
         name="Braces & Orthodontics in Garden Grove, CA"
         url="https://upliftdental.com/orthodontics"
-        description="Traditional metal braces, ceramic braces, Phase I and Phase II orthodontics at Uplift Dental & Orthodontics in {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}. Platinum Invisalign Provider. Free consultations."
+        description={`Traditional metal braces, ceramic braces, Phase I and Phase II orthodontics at Uplift Dental & Orthodontics in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. Platinum Invisalign Provider. Free consultations.`}
         medicalSpecialty="Orthodontics"
         keywords="braces garden grove, orthodontist garden grove ca, metal braces near me, ceramic braces garden grove, orthodontics 92845, braces for kids garden grove"
       />
