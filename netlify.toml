@@ -1,11 +1,11 @@
 [build]
-  command = "npm install -g pnpm && pnpm install --no-frozen-lockfile && pnpm run build"
+  command = "pnpm install --no-frozen-lockfile && pnpm run build"
     publish = "dist/public"
 
-    [build.environment]
-      NODE_VERSION = "20"
+      [build.environment]
+          NODE_VERSION = "20"
 
-      [[redirects]]
-        from = "/*"
-          to = "/index.html"
-            status = 200
+          [[redirects]]
+              from = "/*"
+                  to = "/index.html"
+                      status = 200
