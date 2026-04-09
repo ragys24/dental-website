@@ -16,7 +16,7 @@ export default function TeethCleaning() {
     <>
       <PageSEO
         title="Teeth Cleaning in Garden Grove, CA | Dental Cleanings | Uplift Dental"
-        description="Professional teeth cleanings and dental exams at Uplift Dental in Garden Grove, CA. New patient special: $99 Adult Exam & X-rays. Denti-Cal accepted. Call {PRACTICE.phone.display}."
+        description={`Professional teeth cleanings and dental exams at Uplift Dental in Garden Grove, CA. New patient special: $99 Adult Exam & X-rays. Denti-Cal accepted. Call ${PRACTICE.phone.display}.`}
         canonical="https://upliftdental.com/teeth-cleaning"
       />
       <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
