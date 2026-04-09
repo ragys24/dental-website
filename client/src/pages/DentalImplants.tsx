@@ -23,14 +23,14 @@ export default function DentalImplants() {
     <>
       <PageSEO
         title="Dental Implants in Garden Grove, CA | Uplift Dental & Orthodontics"
-        description="Restore your smile with dental implants at Uplift Dental in {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}. Expert implant placement by Dr. Youssef, Oral Surgeon. Free consultations. Financing available. Call {PRACTICE.phone.display}."
+        description={`Restore your smile with dental implants at Uplift Dental in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. Expert implant placement by Dr. Youssef, Oral Surgeon. Free consultations. Financing available. Call ${PRACTICE.phone.display}.`}
         canonical="https://upliftdental.com/dental-implants"
       />
       <FAQSchema faqs={IMPLANT_FAQS} id="ld-faq-implants" />
       <MedicalPageSchema
         name="Dental Implants in Garden Grove, CA"
         url="https://upliftdental.com/dental-implants"
-        description="Expert dental implant placement by Dr. Joseph Youssef, Oral Surgeon, at Uplift Dental in {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}. 3D-guided implant placement, bone grafting, All-on-4. Free consultations."
+        description={`Expert dental implant placement by Dr. Joseph Youssef, Oral Surgeon, at Uplift Dental in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. 3D-guided implant placement, bone grafting, All-on-4. Free consultations.`}
         medicalSpecialty="Oral Surgery"
         keywords="dental implants garden grove, dental implants near me, oral surgeon garden grove, implant dentist garden grove ca"
       />
