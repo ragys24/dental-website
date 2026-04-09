@@ -97,7 +97,7 @@ const faqs = [
   },
   {
     q: "Do you offer same-day emergency dental appointments?",
-    a: "Absolutely. We offer same-day emergency dental appointments in Garden Grove for severe toothaches, knocked-out teeth, broken crowns, lost fillings, and other dental emergencies. Call {PRACTICE.phone.display} or text us immediately."
+    a: `Absolutely. We offer same-day emergency dental appointments in Garden Grove for severe toothaches, knocked-out teeth, broken crowns, lost fillings, and other dental emergencies. Call ${PRACTICE.phone.display} or text us immediately.`
   },
   {
     q: "What are your office hours?",
@@ -105,11 +105,11 @@ const faqs = [
   },
   {
     q: "Do you offer free consultations?",
-    a: "Yes! We offer free consultations for new patients and for specific treatments like Invisalign®, dental implants, and smile makeovers. Book online or call {PRACTICE.phone.display} to schedule yours."
+    a: `Yes! We offer free consultations for new patients and for specific treatments like Invisalign®, dental implants, and smile makeovers. Book online or call ${PRACTICE.phone.display} to schedule yours.`
   },
   {
     q: "What areas do you serve near Garden Grove?",
-    a: "We serve patients from Garden Grove, Seal Beach, Los Alamitos, Cypress, Huntington Beach, Westminster, Anaheim, and surrounding Orange County communities. Our office is conveniently located at {PRACTICE.address.full}."
+    a: `We serve patients from Garden Grove, Seal Beach, Los Alamitos, Cypress, Huntington Beach, Westminster, Anaheim, and surrounding Orange County communities. Our office is conveniently located at ${PRACTICE.address.full}.`
   },
 ];
 
@@ -340,7 +340,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div className="relative">
-              <img src={FAMILY_IMG} alt="Family receiving dental care at Uplift Dental & Orthodontics in {PRACTICE.address.city}, {PRACTICE.address.state} {PRACTICE.address.zip}" className="w-full rounded-3xl object-cover shadow-2xl" style={{ maxHeight: "500px" }} loading="lazy" width="1200" height="600"/>
+              <img src={FAMILY_IMG} alt={`Family receiving dental care at Uplift Dental & Orthodontics in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}`} className="w-full rounded-3xl object-cover shadow-2xl" style={{ maxHeight: "500px" }} loading="lazy" width="1200" height="600"/>
               <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-5 shadow-xl border border-[oklch(0.90_0.015_185)]">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: "oklch(0.95 0.015 185)" }}>
@@ -950,7 +950,7 @@ function AppointmentForm() {
       );
       setSubmitted(true);
     } catch (err) {
-      setFormError("Something went wrong. Please call {PRACTICE.phone.display}.");
+      setFormError(`Something went wrong. Please call ${PRACTICE.phone.display}.`);
     } finally {
       setSending(false);
     }
