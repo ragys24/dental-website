@@ -267,7 +267,7 @@ Reference: [<a href="https://www.colgate.com/en-us/oral-health/adult-orthodontic
     metaDescription: "When it comes to your child\u2019s smile, timing is everything.",
     readTime: "3 min read",
     image: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=800&q=80",
-    content: `<span style="color: #005a64;"><b>When it comes to your child’s smile, timing is everything. Early intervention with <a href="/invisalign-treatment-garden-grove-ca/">Invisalign</a> can set the stage for a lifetime of healthy, confident smiles. At Uplift Dental, our team believes in the power of proactive orthodontic care. Starting Invisalign treatment early can make a significant difference for your child.</b></span>
+    content: `<span style="color: #005a64;"><b>When it comes to your child’s smile, timing is everything. Early intervention with <a href="/invisalign">Invisalign</a> can set the stage for a lifetime of healthy, confident smiles. At Uplift Dental, our team believes in the power of proactive orthodontic care. Starting Invisalign treatment early can make a significant difference for your child.</b></span>
 
 <span style="color: #005a64;"><b>Dr. Stefan and Dr. Schneekluth are known for their compassionate and patient-first approach. They are passionate about creating a family-oriented environment where every patient feels valued and respected. Transparency and honesty are at the heart of the Uplift Dental practice philosophy, ensuring that patients are informed and comfortable every step of the way. We can’t wait to meet you – come on in and let’s get your questions answered about all things Invisalign!</b></span>
 <h2><span style="color: #005a64;"><b>1. Guides Proper Jaw Growth</b></span></h2>
@@ -289,7 +289,7 @@ Starting orthodontic treatment early can simplify and shorten the duration of fu
 
 <iframe src="https://www.facebook.com/plugins/video.php?height=314&amp;href=https%3A%2F%2Fwww.facebook.com%2FUpliftDentalandOrthodontics%2Fvideos%2F979525090268065%2F&amp;show_text=true&amp;width=560&amp;t=0" width="560" height="429" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>
 <h4><span style="color: #005a64;"><b>Take the First Step with Uplift Dental</b></span></h4>
-<span style="color: #005a64;"><b>At Uplift Dental, we are committed to providing the highest quality orthodontic care for you and your family. Our experienced team is here to guide you through every step of the Invisalign process, ensuring a comfortable and effective treatment experience. Let our team guide you through the process of starting early intervention with Invisalign. Visit our </b><a style="color: #005a64;" href="https://www.linkedin.com/company/uplift-dental-and-orthodontics/?viewAsMember=true"><b>socials</b></a> <b>or Explore our <a href="/invisalign-treatment-garden-grove-ca/">Invisalign treatment options</a>, <a href="/braces/">braces</a>, and <a href="/pediatric-dentistry/">pediatric dental care for kids in Garden Grove</a> services, or give us a call at 714.898.3308 to see how our team can help you and your family all achieve brilliant smiles!</b></span>`,
+<span style="color: #005a64;"><b>At Uplift Dental, we are committed to providing the highest quality orthodontic care for you and your family. Our experienced team is here to guide you through every step of the Invisalign process, ensuring a comfortable and effective treatment experience. Let our team guide you through the process of starting early intervention with Invisalign. Visit our </b><a style="color: #005a64;" href="https://www.linkedin.com/company/uplift-dental-and-orthodontics/?viewAsMember=true"><b>socials</b></a> <b>or Explore our <a href="/invisalign">Invisalign treatment options</a>, <a href="/braces/">braces</a>, and <a href="/pediatric-dentistry/">pediatric dental care for kids in Garden Grove</a> services, or give us a call at 714.898.3308 to see how our team can help you and your family all achieve brilliant smiles!</b></span>`,
     faqs: [
       { question: "At what age should a child first see an orthodontist?", answer: "The American Association of Orthodontists recommends children have their first orthodontic evaluation by age 7. Early evaluation allows the orthodontist to identify potential problems and determine the optimal time to begin treatment if needed." },
       { question: "What are the benefits of early orthodontic treatment?", answer: "Early intervention can guide jaw growth, correct harmful oral habits, reduce the risk of trauma to protruding teeth, improve appearance and self-esteem, and potentially reduce the need for more complex treatment later. It can also create space for permanent teeth to erupt properly." },
@@ -429,7 +429,7 @@ Reference: [<a href="https://www.colgate.com/en-us/oral-health/early-orthodontic
     metaDescription: "How should you straighten your teeth with Invisalign or braces Is Invisalign the same as braces?",
     readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
-    content: `<p>How should you straighten your teeth with <a href="/invisalign-treatment-garden-grove-ca/">Invisalign</a> or <a href="/braces/">braces</a></p>
+    content: `<p>How should you straighten your teeth with <a href="/invisalign">Invisalign</a> or <a href="/braces/">braces</a></p>
 
 <figure class="wp-block-uagb-image__figure"><img srcset="https://upliftdental.com/wp-content/uploads/2024/04/GettyImages-1181806522-1920w.webp ,https://upliftdental.com/wp-content/uploads/2024/04/GettyImages-1181806522-1920w.webp 780w, https://upliftdental.com/wp-content/uploads/2024/04/GettyImages-1181806522-1920w.webp 360w" sizes="(max-width: 480px) 150px" src="https://upliftdental.com/wp-content/uploads/2024/04/GettyImages-1181806522-1920w.webp" alt="" class="uag-image-7087" width="612" height="439" title="GettyImages-1181806522-1920w" loading="lazy" role="img"/></figure>
 
@@ -471,7 +471,7 @@ Reference: [<a href="https://www.colgate.com/en-us/oral-health/early-orthodontic
 
 <p>When considering alternatives to Invisalign, two common options to explore are traditional braces and lingual braces. Traditional braces consist of metal brackets and wires that are attached to the front of the teeth, gradually shifting them into alignment. On the other hand, lingual braces are placed on the backside of the teeth, making them practically invisible from the front. Both options offer effective solutions for straightening teeth, but it ultimately comes down to personal preference and the specific needs of each individual. Lingual braces may be favored by those who want a more discreet orthodontic treatment, while traditional braces may be recommended for more complex cases that require a higher level of control and customization. Overall, it's important to consult with an orthodontist to discuss which alternative to Invisalign is the best fit for achieving a straighter and healthier smile.</p>
 
-<p>Ready to start your orthodontic journey? At Uplift Dental &amp; Orthodontics in Garden Grove, CA, our experienced team offers both <a href="/invisalign-treatment-garden-grove-ca/">Invisalign treatment in Garden Grove</a> and <a href="/braces/">traditional braces</a> to give you the smile you deserve. Schedule your free consultation today by calling ${PRACTICE.phone.display}.</p>`,
+<p>Ready to start your orthodontic journey? At Uplift Dental &amp; Orthodontics in Garden Grove, CA, our experienced team offers both <a href="/invisalign">Invisalign treatment in Garden Grove</a> and <a href="/braces/">traditional braces</a> to give you the smile you deserve. Schedule your free consultation today by calling ${PRACTICE.phone.display}.</p>`,
     faqs: [
       { question: "When might braces be recommended instead of clear aligners?", answer: "Both clear aligners and braces can be appropriate orthodontic options. The recommended approach depends on the bite, alignment concerns, oral-health needs, and treatment goals reviewed during an orthodontic consultation." },
       { question: "Is Invisalign faster than braces?", answer: "Timing varies by individual orthodontic needs and the treatment approach selected. A consultation is the right time to discuss the records, steps, and timing considerations relevant to your situation without promising a treatment duration." },
@@ -494,7 +494,7 @@ Reference: [<a href="https://www.colgate.com/en-us/oral-health/early-orthodontic
     readTime: "3 min read",
     image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80",
     content: `<p><strong>When Is the Best Age to Start Orthodontic Treatment?</strong></p>
-<p>Orthodontic treatment with <a href="/braces/">braces</a> or <a href="/invisalign-treatment-garden-grove-ca/">Invisalign</a> can help to improve your smile and your overall oral health. But when is the best time to start?</p>
+<p>Orthodontic treatment with <a href="/braces/">braces</a> or <a href="/invisalign">Invisalign</a> can help to improve your smile and your overall oral health. But when is the best time to start?</p>
 <p>The American Association of Orthodontists (AAO) recommends that children get their first orthodontic evaluation around age 7. This is because by this age, most of the permanent teeth have started to come in, and the orthodontist can assess the child’s bite and jaw alignment.</p>
 <p>There are several advantages to starting orthodontic treatment early. First, it can help to prevent more serious problems from developing. For example, if a child has a crossbite, early treatment can help to prevent the teeth from becoming more crooked and the jaw from developing abnormally.</p>
 <p>Second, early treatment is often less complicated and requires less time than treatment that is started later. This is because the bones and teeth are still growing and changing, which makes it easier to move them into the correct position.</p>
@@ -520,7 +520,7 @@ Reference: [<a href="https://www.colgate.com/en-us/oral-health/early-orthodontic
 <li>Is often less complicated and requires less time than treatment that is started later</li>
 <li>Can help to improve a child’s self-confidence</li>
 </ul>
-<p>If you are thinking about orthodontic treatment, visit Uplift Dental &amp; Orthodontics in Garden Grove for a free consultation! Explore our <a href="/braces/">braces options</a> and <a href="/invisalign-treatment-garden-grove-ca/">Invisalign treatment</a> to find the right solution for you or your child. <a href="tel:7148983308">(714) 898-3308</a> today.</p>`,
+<p>If you are thinking about orthodontic treatment, visit Uplift Dental &amp; Orthodontics in Garden Grove for a free consultation! Explore our <a href="/braces/">braces options</a> and <a href="/invisalign">Invisalign treatment</a> to find the right solution for you or your child. <a href="tel:7148983308">(714) 898-3308</a> today.</p>`,
     faqs: [
       { question: "What is the best age to get braces?", answer: "The ideal age for comprehensive orthodontic treatment is typically 11 to 14 when most permanent teeth have erupted. However, early evaluation by age 7 can identify issues that benefit from Phase 1 treatment (ages 7 to 10) to guide jaw growth and prevent more serious problems." },
       { question: "What are signs my child needs early orthodontic treatment?", answer: "Signs include early or late loss of baby teeth, difficulty chewing or biting, mouth breathing, thumb sucking past age 5, crowded or misplaced teeth, jaws that shift or make sounds, and teeth that do not meet properly. An orthodontic evaluation by age 7 can identify these issues." },
@@ -545,7 +545,7 @@ Reference: [<a href="https://www.colgate.com/en-us/oral-health/early-orthodontic
     content: `Clear Aligners vs. Braces: Are Clear Aligners Better than Braces?
 <h3>Are Clear Aligners Better Than Braces? Understanding Your Orthodontic Options</h3>
 Considering straightening your smile? Both <a href="/braces/">braces</a> and clear aligners are effective options in orthodontics, but they each have their own advantages and disadvantages. Here, we'll explore both methods to help you decide which is right for you.
-<h4><strong>Clear Aligners (<a href="/invisalign-treatment-garden-grove-ca/">Invisalign</a>)</strong></h4>
+<h4><strong>Clear Aligners (<a href="/invisalign">Invisalign</a>)</strong></h4>
 <ul>
  	<li><strong>Pros:</strong></li>
  	<li><strong>Discreet:</strong> Nearly invisible, making them a popular choice for adults and teens seeking a more aesthetic treatment.</li>
@@ -577,7 +577,7 @@ The best choice for you depends on your individual needs and preferences. Here a
 <h4><a href="https://patientportal.carestack.com/?dn=uplift/#/online-appointments/select-reason" target="_blank" rel="noreferrer noopener">Click to Schedule a  Free Consultation</a></h4>
 Ultimately, the best way to determine which treatment is right for you is to consult with a qualified orthodontist. Our qualified specialists can assess your individual situation and recommend the most effective course of action.
 
-<p>Learn more about our <a href="/invisalign-treatment-garden-grove-ca/">Invisalign treatment options</a> or explore our <a href="/braces/">affordable braces in Garden Grove</a> at Uplift Dental in Garden Grove, CA.</p>`,
+<p>Learn more about our <a href="/invisalign">Invisalign treatment options</a> or explore our <a href="/braces/">affordable braces in Garden Grove</a> at Uplift Dental in Garden Grove, CA.</p>`,
     faqs: [
       { question: "Are clear aligners faster than braces?", answer: "For mild to moderate cases, clear aligners can be faster than braces, often completing treatment in 6 to 12 months. Complex cases may take similar time with either option, typically 12 to 24 months." },
       { question: "Do clear aligners work for overbite?", answer: "Yes, modern clear aligners can effectively treat mild to moderate overbites using attachments and rubber bands. Severe skeletal overbites may still require traditional braces or surgical intervention." },
