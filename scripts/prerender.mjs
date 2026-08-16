@@ -20,6 +20,17 @@ const sitemapRoutes = [...fs.readFileSync(sitemapPath, "utf8").matchAll(/<loc>ht
   .filter((route, index, all) => all.indexOf(route) === index);
 const routes = [...sitemapRoutes, "/404"];
 
+// Keep /blog as the canonical archive document while emitting article documents
+// as flat files. Apache maps the public article URLs to these files, avoiding a
+// physical /blog directory that SiteGround's DirectorySlash would canonicalize.
+function getDestination(route) {
+  if (route === "/") return path.join(outputDirectory, "index.html");
+  if (route.startsWith("/blog/")) {
+    return path.join(outputDirectory, `blog--${route.slice("/blog/".length)}.html`);
+  }
+  return path.join(outputDirectory, `${route.replace(/^\//, "")}.html`);
+}
+
 const mimeTypes = {
   ".css": "text/css; charset=utf-8",
   ".html": "text/html; charset=utf-8",
@@ -75,9 +86,7 @@ try {
       throw new Error(`Prerender validation failed for ${route}`);
     }
 
-    const destination = route === "/"
-      ? path.join(outputDirectory, "index.html")
-      : path.join(outputDirectory, `${route.replace(/^\//, "")}.html`);
+    const destination = getDestination(route);
     fs.mkdirSync(path.dirname(destination), { recursive: true });
     fs.writeFileSync(destination, stdout.trim());
     console.log(`rendered\t${route}\t${path.relative(outputDirectory, destination)}`);

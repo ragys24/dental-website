@@ -1,0 +1,11 @@
+
+> apex-dental@1.0.0 validate:release /home/ubuntu/dental-website
+> node scripts/validate-release.mjs
+
+{
+  "sitemapRoutes": 75,
+  "verifiedPages": 75,
+  "verifiedAssetReferences": 1861,
+  "errors": [],
+  "passed": true
+}

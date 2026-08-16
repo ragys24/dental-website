@@ -1,0 +1,4 @@
+Uploading file: uplift-siteground-release-2026-08-16.zip (size: 4529712 bytes)
+Upload timeout: 2m40s
+File uploaded successfully!
+CDN URL: https://files.manuscdn.com/user_upload_by_module/session_file/310519663519418507/sJJuywqqpTgktNJn.zip

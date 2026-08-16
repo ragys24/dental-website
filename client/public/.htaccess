@@ -48,6 +48,11 @@ ServerSignature Off
   RewriteRule ^tmj-treatment(?:-garden-grove-ca)?/?$ /blog/tmj-disorder-causes-symptoms-and-treatment-options [R=301,L,NE]
   RewriteRule ^what-to-expect-at-your-first-dental-appointment/?$ /contact [R=301,L,NE]
 
+  # Blog archive and articles use flat static documents. This avoids a physical
+  # `/blog` directory, so SiteGround cannot add a non-canonical trailing slash.
+  RewriteRule ^blog/([^/]+)/?$ blog--$1.html [END]
+  RewriteRule ^blog/?$ blog.html [END]
+
   # Serve the generated static HTML at its sitemap URL without exposing .html.
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d

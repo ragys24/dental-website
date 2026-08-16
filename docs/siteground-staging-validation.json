@@ -1,0 +1,808 @@
+{
+  "origin": "https://ragys.sg-host.com",
+  "sitemapRoutes": 75,
+  "passed": true,
+  "failures": [],
+  "checked": [
+    {
+      "path": "/",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/services",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/services",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/about",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/contact",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/special-offers",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/special-offers",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/gallery",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/gallery",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/invisalign",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/invisalign",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/dental-implants",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/dental-implants",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/emergency-dentist",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/emergency-dentist",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/periodontics",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/periodontics",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/endodontics",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/endodontics",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/smile-assessment",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/smile-assessment",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/orthodontics",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/orthodontics",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/teeth-whitening",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/teeth-whitening",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/veneers",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/veneers",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/dental-crowns",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/dental-crowns",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/wisdom-teeth-removal",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/wisdom-teeth-removal",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/dental-bonding",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/dental-bonding",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/dental-fillings",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/dental-fillings",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/teeth-cleaning",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/teeth-cleaning",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/dentist-near-garden-grove",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/dentist-near-garden-grove",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/dentist-near-seal-beach",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/dentist-near-seal-beach",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/dentist-near-los-alamitos",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/dentist-near-los-alamitos",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/dentist-near-westminster",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/dentist-near-westminster",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/dentist-near-anaheim",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/dentist-near-anaheim",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/dentist-near-huntington-beach",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/dentist-near-huntington-beach",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/dentist-near-cypress",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/dentist-near-cypress",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/dentist-near-long-beach",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/dentist-near-long-beach",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/dentist-near-stanton",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/dentist-near-stanton",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/dentist-near-buena-park",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/dentist-near-buena-park",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/dentist-near-rossmoor",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/dentist-near-rossmoor",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/dentist-near-west-grove",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/dentist-near-west-grove",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/a-parents-guide-to-your-childs-first-dental-visit",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/a-parents-guide-to-your-childs-first-dental-visit",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/how-gum-disease-can-affect-your-overall-health",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/how-gum-disease-can-affect-your-overall-health",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/dental-sealants-the-secret-weapon-against-cavities-for-kids-and-adults",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/dental-sealants-the-secret-weapon-against-cavities-for-kids-and-adults",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/new-year-new-smile-setting-dental-health-goals-for-the-year-ahead",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/new-year-new-smile-setting-dental-health-goals-for-the-year-ahead",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/the-ultimate-guide-to-choosing-between-dental-bridge-and-implant",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/the-ultimate-guide-to-choosing-between-dental-bridge-and-implant",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/dental-care-during-pregnancy-what-every-expecting-mom-should-know",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/dental-care-during-pregnancy-what-every-expecting-mom-should-know",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/tmj-disorder-causes-symptoms-and-treatment-options",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/tmj-disorder-causes-symptoms-and-treatment-options",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/the-benefits-of-dental-implants-a-permanent-solution-for-missing-teeth",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/the-benefits-of-dental-implants-a-permanent-solution-for-missing-teeth",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/dental-emergency-away-from-home",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/dental-emergency-away-from-home",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/what-are-dental-veneers-and-are-they-right-for-you",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/what-are-dental-veneers-and-are-they-right-for-you",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/do-i-really-need-to-floss-a-dentist-answers-your-top-questions",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/do-i-really-need-to-floss-a-dentist-answers-your-top-questions",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/cosmetic-dentistry-5-ways-to-transform-your-smile",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/cosmetic-dentistry-5-ways-to-transform-your-smile",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/understanding-root-canals-why-they-are-nothing-to-fear",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/understanding-root-canals-why-they-are-nothing-to-fear",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/how-dental-crowns-can-save-a-damaged-tooth",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/how-dental-crowns-can-save-a-damaged-tooth",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/why-regular-dental-cleanings-are-more-important-than-you-think",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/why-regular-dental-cleanings-are-more-important-than-you-think",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/the-truth-about-dental-anxiety-and-how-to-overcome-it",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/the-truth-about-dental-anxiety-and-how-to-overcome-it",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/braces-vs-invisalign-which-is-better-for-your-teen",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/braces-vs-invisalign-which-is-better-for-your-teen",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/what-to-do-when-you-crack-or-break-a-tooth",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/what-to-do-when-you-crack-or-break-a-tooth",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/7-tips-to-keep-your-kids-teeth-healthy-and-cavity-free",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/7-tips-to-keep-your-kids-teeth-healthy-and-cavity-free",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/the-complete-guide-to-invisalign-what-to-expect-from-start-to-finish",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/the-complete-guide-to-invisalign-what-to-expect-from-start-to-finish",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/everything-you-need-to-know-about-teeth-whitening",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/everything-you-need-to-know-about-teeth-whitening",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/how-to-choose-the-best-dentist-in-garden-grove-ca",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/how-to-choose-the-best-dentist-in-garden-grove-ca",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/dental-implants-vs-dentures-which-is-right-for-you",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/dental-implants-vs-dentures-which-is-right-for-you",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/emergency-dentist-garden-grove",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/emergency-dentist-garden-grove",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/tips-for-optimal-braces-care",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/tips-for-optimal-braces-care",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/effective-tmj-treatment-options",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/effective-tmj-treatment-options",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/oral-health-and-overall-wellness-why-seniors-need-regular-dental-checkups",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/oral-health-and-overall-wellness-why-seniors-need-regular-dental-checkups",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/get-started-the-benefits-of-early-intervention-with-invisalign",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/get-started-the-benefits-of-early-intervention-with-invisalign",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/understanding-gum-disease-stages",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/understanding-gum-disease-stages",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/fluoride-vs-hydroxyapatite-which-is-best-for-your-childs-dental-health",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/fluoride-vs-hydroxyapatite-which-is-best-for-your-childs-dental-health",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/3-tricks-to-make-flossing-with-braces-easier",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/3-tricks-to-make-flossing-with-braces-easier",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/what-happens-during-your-professional-dental-cleaning",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/what-happens-during-your-professional-dental-cleaning",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/oral-health-tips-for-children",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/oral-health-tips-for-children",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/diet-and-oral-health",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/diet-and-oral-health",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/a-deep-dive-into-dental-hygiene-floss-vs-water-pick",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/a-deep-dive-into-dental-hygiene-floss-vs-water-pick",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/is-invisalign-the-same-as-braces",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/is-invisalign-the-same-as-braces",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/its-too-early-for-braces-or-is-it",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/its-too-early-for-braces-or-is-it",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/how-to-keep-your-teeth-healthy-and-white",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/how-to-keep-your-teeth-healthy-and-white",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/i-want-whiter-teeth",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/i-want-whiter-teeth",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/what-are-the-differences-between-dental-insurance-plans",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/what-are-the-differences-between-dental-insurance-plans",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/are-clear-aligners-better-than-braces",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/are-clear-aligners-better-than-braces",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/the-compassionate-provider",
+      "status": 200,
+      "location": "",
+      "canonical": "https://upliftdental.com/blog/the-compassionate-provider",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/oral-surgery",
+      "status": 301,
+      "location": "https://ragys.sg-host.com/wisdom-teeth-removal",
+      "canonical": "",
+      "hasAppRoot": false,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/2023/10/27/whats-are-the-differences-between-dental-insurance-plans",
+      "status": 301,
+      "location": "https://ragys.sg-host.com/blog/what-are-the-differences-between-dental-insurance-plans",
+      "canonical": "",
+      "hasAppRoot": false,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/blog/",
+      "status": 301,
+      "location": "https://ragys.sg-host.com/blog",
+      "canonical": "",
+      "hasAppRoot": false,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/this-route-must-not-exist",
+      "status": 404,
+      "location": "",
+      "canonical": "https://upliftdental.com/",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    },
+    {
+      "path": "/siteground-stage-deploy.php?verify=1786853324987",
+      "status": 404,
+      "location": "",
+      "canonical": "https://upliftdental.com/",
+      "hasAppRoot": true,
+      "hasManusReference": false,
+      "nosniff": "nosniff",
+      "ok": true
+    }
+  ]
+}

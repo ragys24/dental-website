@@ -10,10 +10,16 @@ const errors = [];
 let verifiedPages = 0;
 let verifiedAssets = 0;
 
+function getDocumentPath(route) {
+  if (route === "/") return path.join(outputDirectory, "index.html");
+  if (route.startsWith("/blog/")) {
+    return path.join(outputDirectory, `blog--${route.slice("/blog/".length)}.html`);
+  }
+  return path.join(outputDirectory, `${route.replace(/^\//, "")}.html`);
+}
+
 for (const route of sitemapRoutes) {
-  const documentPath = route === "/"
-    ? path.join(outputDirectory, "index.html")
-    : path.join(outputDirectory, `${route.replace(/^\//, "")}.html`);
+  const documentPath = getDocumentPath(route);
   if (!fs.existsSync(documentPath)) {
     errors.push({ route, error: "missing_static_document" });
     continue;
