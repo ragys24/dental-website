@@ -1,0 +1,79 @@
+Options -Indexes
+DirectoryIndex index.html
+ServerSignature Off
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # The sitemap uses the apex host. Preserve it as the single public host.
+  RewriteCond %{HTTP_HOST} ^www\.upliftdental\.com$ [NC]
+  RewriteRule ^ https://upliftdental.com%{REQUEST_URI} [R=301,L,NE]
+
+  # Retire the old direct index URL and normalize non-root trailing slashes.
+  RewriteRule ^index\.html$ / [R=301,L,NE]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} ^(.+)/+$
+  RewriteRule ^(.+?)/+$ /$1 [R=301,L,NE]
+
+  # Historic team and appointment URLs.
+  RewriteRule ^(?:team|our-team|meet-the-team|doctors|staff)/?$ /about [R=301,L,NE]
+  RewriteRule ^(?:meet-dr-stefan|dr-stefan|dr-ragy-stefan)/?$ /about#dr-stefan [R=301,L,NE]
+  RewriteRule ^(?:meet-dr-schneekluth|dr-schneekluth|dr-clark-schneekluth)/?$ /about#dr-schneekluth [R=301,L,NE]
+  RewriteRule ^(?:meet-dr-youssef|dr-youssef|dr-joseph-youssef)/?$ /about#dr-youssef [R=301,L,NE]
+  RewriteRule ^(?:meet-dr-saad|dr-saad|dr-erene-saad)/?$ /about#dr-saad [R=301,L,NE]
+  RewriteRule ^(?:meet-dr-ghobrial|dr-ghobrial|dr-daniel-ghobrial)/?$ /about#dr-ghobrial [R=301,L,NE]
+  RewriteRule ^(?:appointments?|book|booking|new-patients?|patient-forms)/?$ /contact [R=301,L,NE]
+
+  # Historic service and patient-resource URLs.
+  RewriteRule ^(?:financing|insurance|payment|dental-financing)/?$ /insurance-financing [R=301,L,NE]
+  RewriteRule ^(?:implants|dental-bridges)/?$ /dental-implants [R=301,L,NE]
+  RewriteRule ^(?:braces|orthodontic-treatments)/?$ /orthodontics [R=301,L,NE]
+  RewriteRule ^(?:whitening|porcelain-veneers)/?$ /veneers [R=301,L,NE]
+  RewriteRule ^dental-cleaning/?$ /teeth-cleaning [R=301,L,NE]
+  RewriteRule ^(?:cleaning|dental-x-rays|dentures|night-guards|pediatric-dentistry|sedation-dentistry)/?$ /services [R=301,L,NE]
+  RewriteRule ^(?:emergency|emergency-care|same-day-dental-appointments)/?$ /emergency-dentist [R=301,L,NE]
+  RewriteRule ^(?:specialty-dentistry|services/specialty-dentistry|dental-services|our-services|treatments|cosmetic|cosmetic-dentistry|general-dentistry|restorative|restorative-dentistry)/?$ /services [R=301,L,NE]
+  RewriteRule ^(?:oral-surgery|tooth-extraction|extraction|extractions|wisdom-teeth)/?$ /wisdom-teeth-removal [R=301,L,NE]
+  RewriteRule ^(?:gum-disease|gum-disease-treatment|periodontal)/?$ /periodontics [R=301,L,NE]
+  RewriteRule ^(?:root-canal|root-canals|root-canal-treatment)/?$ /endodontics [R=301,L,NE]
+  RewriteRule ^(?:clear-aligners|invisalign-treatment-garden-grove-ca)/?$ /invisalign [R=301,L,NE]
+  RewriteRule ^crowns/?$ /dental-crowns [R=301,L,NE]
+  RewriteRule ^(?:faq|reviews)/?$ /blog [R=301,L,NE]
+  RewriteRule ^membership-plans/?$ /membership-plan [R=301,L,NE]
+  RewriteRule ^blog/page/[0-9]+/?$ /blog [R=301,L,NE]
+
+  # Historic article permalinks retained by search, bookmarks, and old internal links.
+  RewriteRule ^2023/10/27/whats-are-the-differences-between-dental-insurance-plans/?$ /blog/what-are-the-differences-between-dental-insurance-plans [R=301,L,NE]
+  RewriteRule ^tmj-treatment(?:-garden-grove-ca)?/?$ /blog/tmj-disorder-causes-symptoms-and-treatment-options [R=301,L,NE]
+  RewriteRule ^what-to-expect-at-your-first-dental-appointment/?$ /contact [R=301,L,NE]
+
+  # Serve the generated static HTML at its sitemap URL without exposing .html.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+</IfModule>
+
+# Unknown paths must retain a true 404 status, not a SPA soft-404 response.
+ErrorDocument 404 /404.html
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; img-src 'self' data: https://images.unsplash.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://api.web3forms.com; frame-src https://www.google.com; upgrade-insecure-requests"
+
+  <FilesMatch "\.(?:css|js|mjs|webp|png|jpe?g|gif|svg|ico|woff2?|mp4)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(?:html|xml|txt)$">
+    Header set Cache-Control "public, max-age=300, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml application/javascript application/json application/xml image/svg+xml
+</IfModule>

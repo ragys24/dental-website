@@ -1,0 +1,353 @@
+{
+  "optimized": [
+    {
+      "source": "IMG_9486_6f5df7e4.jpeg",
+      "output": "IMG_9486_6f5df7e4.webp",
+      "original_bytes": 99143,
+      "optimized_bytes": 33528,
+      "original_dimensions": [
+        599,
+        900
+      ],
+      "optimized_dimensions": [
+        599,
+        900
+      ]
+    },
+    {
+      "source": "Logo-01_0c8b669d.png",
+      "output": "Logo-01_0c8b669d.webp",
+      "original_bytes": 154735,
+      "optimized_bytes": 61732,
+      "original_dimensions": [
+        4500,
+        4500
+      ],
+      "optimized_dimensions": [
+        2000,
+        2000
+      ]
+    },
+    {
+      "source": "Logo-10_73bf64d6.png",
+      "output": "Logo-10_73bf64d6.webp",
+      "original_bytes": 165666,
+      "optimized_bytes": 61886,
+      "original_dimensions": [
+        4500,
+        4500
+      ],
+      "optimized_dimensions": [
+        2000,
+        2000
+      ]
+    },
+    {
+      "source": "PATTERN-02_5ffa36bf.jpg",
+      "output": "PATTERN-02_5ffa36bf.webp",
+      "original_bytes": 542068,
+      "optimized_bytes": 8262,
+      "original_dimensions": [
+        8000,
+        4500
+      ],
+      "optimized_dimensions": [
+        2000,
+        1125
+      ]
+    },
+    {
+      "source": "angeliki_blanco_91783479.jpg",
+      "output": "angeliki_blanco_91783479.webp",
+      "original_bytes": 193435,
+      "optimized_bytes": 112210,
+      "original_dimensions": [
+        800,
+        1067
+      ],
+      "optimized_dimensions": [
+        800,
+        1067
+      ]
+    },
+    {
+      "source": "dr-ghobrial-hq_89525d81.jpeg",
+      "output": "dr-ghobrial-hq_89525d81.webp",
+      "original_bytes": 99143,
+      "optimized_bytes": 33528,
+      "original_dimensions": [
+        599,
+        900
+      ],
+      "optimized_dimensions": [
+        599,
+        900
+      ]
+    },
+    {
+      "source": "dr-saad-periodontist_45f9c7c5.jpg",
+      "output": "dr-saad-periodontist_45f9c7c5.webp",
+      "original_bytes": 236224,
+      "optimized_bytes": 38958,
+      "original_dimensions": [
+        1120,
+        1042
+      ],
+      "optimized_dimensions": [
+        1120,
+        1042
+      ]
+    },
+    {
+      "source": "dr-schneekluth-clean_de46bddf.png",
+      "output": "dr-schneekluth-clean_de46bddf.webp",
+      "original_bytes": 257269,
+      "optimized_bytes": 16658,
+      "original_dimensions": [
+        640,
+        640
+      ],
+      "optimized_dimensions": [
+        640,
+        640
+      ]
+    },
+    {
+      "source": "dr-schneekluth-labcoat-clean_5cfb4098.png",
+      "output": "dr-schneekluth-labcoat-clean_5cfb4098.webp",
+      "original_bytes": 162801,
+      "optimized_bytes": 11646,
+      "original_dimensions": [
+        640,
+        640
+      ],
+      "optimized_dimensions": [
+        640,
+        640
+      ]
+    },
+    {
+      "source": "dr-stefan-clean_5bc74027.png",
+      "output": "dr-stefan-clean_5bc74027.webp",
+      "original_bytes": 5351640,
+      "optimized_bytes": 141638,
+      "original_dimensions": [
+        2048,
+        2048
+      ],
+      "optimized_dimensions": [
+        2000,
+        2000
+      ]
+    },
+    {
+      "source": "dr-youssef-clean_da346e41.png",
+      "output": "dr-youssef-clean_da346e41.webp",
+      "original_bytes": 185594,
+      "optimized_bytes": 11208,
+      "original_dimensions": [
+        640,
+        640
+      ],
+      "optimized_dimensions": [
+        640,
+        640
+      ]
+    },
+    {
+      "source": "family-dental-fixed_12ae74fd.png",
+      "output": "family-dental-fixed_12ae74fd.webp",
+      "original_bytes": 6451458,
+      "optimized_bytes": 221836,
+      "original_dimensions": [
+        2400,
+        1792
+      ],
+      "optimized_dimensions": [
+        2000,
+        1493
+      ]
+    },
+    {
+      "source": "geneyah_warren_faf8fe8e.jpg",
+      "output": "geneyah_warren_faf8fe8e.webp",
+      "original_bytes": 113937,
+      "optimized_bytes": 47122,
+      "original_dimensions": [
+        800,
+        1067
+      ],
+      "optimized_dimensions": [
+        800,
+        1067
+      ]
+    },
+    {
+      "source": "hero-smile_47b15f85.jpg",
+      "output": "hero-smile_47b15f85.webp",
+      "original_bytes": 5319113,
+      "optimized_bytes": 81450,
+      "original_dimensions": [
+        2752,
+        1536
+      ],
+      "optimized_dimensions": [
+        2000,
+        1116
+      ]
+    },
+    {
+      "source": "invisalign-lifestyle_cd9d5323.jpg",
+      "output": "invisalign-lifestyle_cd9d5323.webp",
+      "original_bytes": 6107726,
+      "optimized_bytes": 109692,
+      "original_dimensions": [
+        2400,
+        1792
+      ],
+      "optimized_dimensions": [
+        2000,
+        1493
+      ]
+    },
+    {
+      "source": "sinath_oum_f502fa41.jpg",
+      "output": "sinath_oum_f502fa41.webp",
+      "original_bytes": 96950,
+      "optimized_bytes": 34014,
+      "original_dimensions": [
+        800,
+        1067
+      ],
+      "optimized_dimensions": [
+        800,
+        1067
+      ]
+    },
+    {
+      "source": "smile-transformation_82cc164e.jpg",
+      "output": "smile-transformation_82cc164e.webp",
+      "original_bytes": 5198374,
+      "optimized_bytes": 94108,
+      "original_dimensions": [
+        2528,
+        1696
+      ],
+      "optimized_dimensions": [
+        2000,
+        1342
+      ]
+    },
+    {
+      "source": "uplift-about-real_a6815637.jpg",
+      "output": "uplift-about-real_a6815637.webp",
+      "original_bytes": 109626,
+      "optimized_bytes": 43964,
+      "original_dimensions": [
+        726,
+        468
+      ],
+      "optimized_dimensions": [
+        726,
+        468
+      ]
+    },
+    {
+      "source": "uplift-logo-icon_12b7fb68.png",
+      "output": "uplift-logo-icon_12b7fb68.webp",
+      "original_bytes": 120387,
+      "optimized_bytes": 21998,
+      "original_dimensions": [
+        4500,
+        4500
+      ],
+      "optimized_dimensions": [
+        2000,
+        2000
+      ]
+    },
+    {
+      "source": "uplift-pattern-dark_02e4726d.jpg",
+      "output": "uplift-pattern-dark_02e4726d.webp",
+      "original_bytes": 542068,
+      "optimized_bytes": 8262,
+      "original_dimensions": [
+        8000,
+        4500
+      ],
+      "optimized_dimensions": [
+        2000,
+        1125
+      ]
+    },
+    {
+      "source": "uplift-pattern-light_9d83da07.jpg",
+      "output": "uplift-pattern-light_9d83da07.webp",
+      "original_bytes": 560786,
+      "optimized_bytes": 8972,
+      "original_dimensions": [
+        8000,
+        4500
+      ],
+      "optimized_dimensions": [
+        2000,
+        1125
+      ]
+    },
+    {
+      "source": "uplift-team-real_7d2676d0.jpg",
+      "output": "uplift-team-real_7d2676d0.webp",
+      "original_bytes": 152786,
+      "optimized_bytes": 103552,
+      "original_dimensions": [
+        917,
+        647
+      ],
+      "optimized_dimensions": [
+        917,
+        647
+      ]
+    },
+    {
+      "source": "uplift-team-real_80532d53.jpg",
+      "output": "uplift-team-real_80532d53.webp",
+      "original_bytes": 152786,
+      "optimized_bytes": 103552,
+      "original_dimensions": [
+        917,
+        647
+      ],
+      "optimized_dimensions": [
+        917,
+        647
+      ]
+    }
+  ],
+  "replacements": {
+    "/assets/uplift/IMG_9486_6f5df7e4.jpeg": "/assets/uplift/IMG_9486_6f5df7e4.webp",
+    "/assets/uplift/Logo-01_0c8b669d.png": "/assets/uplift/Logo-01_0c8b669d.webp",
+    "/assets/uplift/Logo-10_73bf64d6.png": "/assets/uplift/Logo-10_73bf64d6.webp",
+    "/assets/uplift/PATTERN-02_5ffa36bf.jpg": "/assets/uplift/PATTERN-02_5ffa36bf.webp",
+    "/assets/uplift/angeliki_blanco_91783479.jpg": "/assets/uplift/angeliki_blanco_91783479.webp",
+    "/assets/uplift/dr-ghobrial-hq_89525d81.jpeg": "/assets/uplift/dr-ghobrial-hq_89525d81.webp",
+    "/assets/uplift/dr-saad-periodontist_45f9c7c5.jpg": "/assets/uplift/dr-saad-periodontist_45f9c7c5.webp",
+    "/assets/uplift/dr-schneekluth-clean_de46bddf.png": "/assets/uplift/dr-schneekluth-clean_de46bddf.webp",
+    "/assets/uplift/dr-schneekluth-labcoat-clean_5cfb4098.png": "/assets/uplift/dr-schneekluth-labcoat-clean_5cfb4098.webp",
+    "/assets/uplift/dr-stefan-clean_5bc74027.png": "/assets/uplift/dr-stefan-clean_5bc74027.webp",
+    "/assets/uplift/dr-youssef-clean_da346e41.png": "/assets/uplift/dr-youssef-clean_da346e41.webp",
+    "/assets/uplift/family-dental-fixed_12ae74fd.png": "/assets/uplift/family-dental-fixed_12ae74fd.webp",
+    "/assets/uplift/geneyah_warren_faf8fe8e.jpg": "/assets/uplift/geneyah_warren_faf8fe8e.webp",
+    "/assets/uplift/hero-smile_47b15f85.jpg": "/assets/uplift/hero-smile_47b15f85.webp",
+    "/assets/uplift/invisalign-lifestyle_cd9d5323.jpg": "/assets/uplift/invisalign-lifestyle_cd9d5323.webp",
+    "/assets/uplift/sinath_oum_f502fa41.jpg": "/assets/uplift/sinath_oum_f502fa41.webp",
+    "/assets/uplift/smile-transformation_82cc164e.jpg": "/assets/uplift/smile-transformation_82cc164e.webp",
+    "/assets/uplift/uplift-about-real_a6815637.jpg": "/assets/uplift/uplift-about-real_a6815637.webp",
+    "/assets/uplift/uplift-logo-icon_12b7fb68.png": "/assets/uplift/uplift-logo-icon_12b7fb68.webp",
+    "/assets/uplift/uplift-pattern-dark_02e4726d.jpg": "/assets/uplift/uplift-pattern-dark_02e4726d.webp",
+    "/assets/uplift/uplift-pattern-light_9d83da07.jpg": "/assets/uplift/uplift-pattern-light_9d83da07.webp",
+    "/assets/uplift/uplift-team-real_7d2676d0.jpg": "/assets/uplift/uplift-team-real_7d2676d0.webp",
+    "/assets/uplift/uplift-team-real_80532d53.jpg": "/assets/uplift/uplift-team-real_80532d53.webp"
+  },
+  "original_bytes": 32373715,
+  "optimized_bytes": 1409776
+}

@@ -7,7 +7,7 @@ import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { PRACTICE, COLORS } from "@/lib/constants";
 import { SMS } from "@/lib/sms";
 
-const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg";
+const PATTERN_DARK = "/assets/uplift/PATTERN-02_5ffa36bf.webp";
 
 export default function MembershipPlan() {
   const [, navigate] = useLocation();

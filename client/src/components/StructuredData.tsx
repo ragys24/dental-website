@@ -5,6 +5,9 @@
 import { useEffect } from "react";
 import { PRACTICE, SITE_IMAGES } from "@/lib/constants";
 
+const SITE_ORIGIN = "https://upliftdental.com";
+const absoluteUrl = (url: string) => url.startsWith("/") ? `${SITE_ORIGIN}${url}` : url;
+
 // ── Core LocalBusiness / Dentist schema ──────────────────────────────────────
 export function LocalBusinessSchema() {
   useEffect(() => {
@@ -20,8 +23,8 @@ export function LocalBusinessSchema() {
       "name": PRACTICE.name,
       "alternateName": PRACTICE.nameShort,
       "url": PRACTICE.website,
-      "logo": "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/logo-og_e9a52b9b.webp",
-      "image": SITE_IMAGES.hero,
+      "logo": `${SITE_ORIGIN}/assets/uplift/logo-og_e9a52b9b.webp`,
+      "image": absoluteUrl(SITE_IMAGES.hero),
       "description": "Uplift Dental & Orthodontics is a top-rated dental practice in Garden Grove, CA 92845 offering general dentistry, Invisalign, dental implants, orthodontics, oral surgery, periodontics, endodontics, and cosmetic dentistry. Platinum Invisalign Provider. Denti-Cal, PPO, and military insurance accepted.",
       "telephone": PRACTICE.phone.digits,
       "email": PRACTICE.email,
@@ -39,8 +42,7 @@ export function LocalBusinessSchema() {
         "longitude": -117.9601
       },
       "openingHoursSpecification": [
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" },
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "17:00" }
       ],
       "priceRange": "$$",
       "currenciesAccepted": "USD",

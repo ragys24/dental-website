@@ -7,8 +7,8 @@ import { Link } from "wouter";
 import { CheckCircle2, Phone, Award, ChevronRight, Star } from "lucide-react";
 import { PRACTICE } from "@/lib/constants";
 
-const INVISALIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/invisalign-lifestyle_cd9d5323.jpg";
-const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
+const INVISALIGN_IMG = "/assets/uplift/invisalign-lifestyle_cd9d5323.webp";
+const SMILE_IMG = "/assets/uplift/smile-transformation_82cc164e.webp";
 
 const INVISALIGN_FAQS = [
   { question: "How much does Invisalign cost in Garden Grove, CA?", answer: "Invisalign at Uplift Dental in Garden Grove typically ranges from $3,500 to $7,500 depending on the complexity of your case. We offer free consultations and flexible financing through Cherry Finance with 0% APR options. Most PPO dental insurance plans cover Invisalign the same as traditional braces." },

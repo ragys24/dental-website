@@ -1,0 +1,99 @@
+{
+  "generatedAt": "2026-08-16T03:04:18.569Z",
+  "counts": {
+    "staticRoutes": 140,
+    "sitemapUrls": 75,
+    "distinctInternalLinks": 35,
+    "sitemapUrlsWithoutStaticRoute": 0,
+    "staticRoutesNotInSitemap": 65,
+    "unresolvedInternalLinks": 3
+  },
+  "sitemapUrlsWithoutStaticRoute": [],
+  "staticRoutesNotInSitemap": [
+    "/404",
+    "/accessibility",
+    "/appointment",
+    "/appointments",
+    "/book",
+    "/booking",
+    "/braces",
+    "/cleaning",
+    "/clear-aligners",
+    "/cosmetic",
+    "/cosmetic-dentistry",
+    "/crowns",
+    "/dental-services",
+    "/doctors",
+    "/dr-clark-schneekluth",
+    "/dr-daniel-ghobrial",
+    "/dr-erene-saad",
+    "/dr-ghobrial",
+    "/dr-joseph-youssef",
+    "/dr-ragy-stefan",
+    "/dr-saad",
+    "/dr-schneekluth",
+    "/dr-stefan",
+    "/dr-youssef",
+    "/emergency",
+    "/extraction",
+    "/extractions",
+    "/faq",
+    "/financing",
+    "/general-dentistry",
+    "/gum-disease",
+    "/implants",
+    "/insurance",
+    "/insurance-financing",
+    "/meet-dr-ghobrial",
+    "/meet-dr-saad",
+    "/meet-dr-schneekluth",
+    "/meet-dr-stefan",
+    "/meet-dr-youssef",
+    "/meet-the-team",
+    "/membership-plan",
+    "/membership-plans",
+    "/new-patient",
+    "/new-patients",
+    "/oral-surgery",
+    "/our-services",
+    "/our-team",
+    "/patient-forms",
+    "/payment",
+    "/periodontal",
+    "/privacy-policy",
+    "/restorative",
+    "/restorative-dentistry",
+    "/reviews",
+    "/root-canal",
+    "/root-canals",
+    "/services/specialty-dentistry",
+    "/specialty-dentistry",
+    "/staff",
+    "/team",
+    "/terms-of-service",
+    "/tooth-extraction",
+    "/treatments",
+    "/whitening",
+    "/wisdom-teeth"
+  ],
+  "unresolvedInternalLinks": [
+    {
+      "url": "/blog/tmj-disorder-causes-symptoms-and-treatment-options-garden-grove-ca",
+      "files": [
+        "client/src/lib/blogData.ts"
+      ]
+    },
+    {
+      "url": "/oral-surgery-garden-grove",
+      "files": [
+        "client/src/App.tsx"
+      ]
+    },
+    {
+      "url": "/sitemap.xml",
+      "files": [
+        "client/src/components/Footer.tsx"
+      ]
+    }
+  ]
+}

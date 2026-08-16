@@ -4,7 +4,6 @@
    Content: Real data from upliftdental.com WordPress site
    ============================================================= */
 import { useState, useEffect, useRef } from "react";
-import emailjs from "@emailjs/browser";
 import { Link } from "wouter";
 import TikTokSection from "@/components/TikTokSection";
 import Navbar from "@/components/Navbar";
@@ -16,22 +15,24 @@ import {
 } from "lucide-react";
 import { PRACTICE } from "@/lib/constants";
 import { SMS } from "@/lib/sms";
+import { submitLead } from "@/lib/leads";
 import { FAQSchema } from "@/components/StructuredData";
+import { PageSEO } from "@/components/PageSEO";
 
 // CDN Assets
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/hero-smile_47b15f85.jpg";
-const FAMILY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/family-dental-fixed_12ae74fd.png";
-const INVISALIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/invisalign-lifestyle_cd9d5323.jpg";
-const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
-const TECH_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
-const ABOUT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-about-real_a6815637.jpg";
-const TEAM_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-team-real_80532d53.jpg";
-const DR_STEFAN = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-stefan-clean_5bc74027.png";
-const DR_SCHNEEKLUTH = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-schneekluth-labcoat-clean_5cfb4098.png";
-const DR_YOUSSEF = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-youssef-clean_da346e41.png";
-const DR_SAAD = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-saad-periodontist_45f9c7c5.jpg";
-const DR_GHOBRIAL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-ghobrial-hq_89525d81.jpeg";
-const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-pattern-dark_02e4726d.jpg";
+const HERO_IMG = "/assets/uplift/hero-smile_47b15f85.webp";
+const FAMILY_IMG = "/assets/uplift/family-dental-fixed_12ae74fd.webp";
+const INVISALIGN_IMG = "/assets/uplift/invisalign-lifestyle_cd9d5323.webp";
+const SMILE_IMG = "/assets/uplift/smile-transformation_82cc164e.webp";
+const TECH_IMG = "/assets/uplift/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
+const ABOUT_IMG = "/assets/uplift/uplift-about-real_a6815637.webp";
+const TEAM_IMG = "/assets/uplift/uplift-team-real_80532d53.webp";
+const DR_STEFAN = "/assets/uplift/dr-stefan-clean_5bc74027.webp";
+const DR_SCHNEEKLUTH = "/assets/uplift/dr-schneekluth-labcoat-clean_5cfb4098.webp";
+const DR_YOUSSEF = "/assets/uplift/dr-youssef-clean_da346e41.webp";
+const DR_SAAD = "/assets/uplift/dr-saad-periodontist_45f9c7c5.webp";
+const DR_GHOBRIAL = "/assets/uplift/dr-ghobrial-hq_89525d81.webp";
+const PATTERN_DARK = "/assets/uplift/uplift-pattern-dark_02e4726d.webp";
 
 const services = [
   { icon: <Stethoscope className="w-7 h-7" />, title: "General Dentistry", desc: "Cleanings, exams, X-rays, fillings, and preventive care for the whole family.", href: "/services#general" },
@@ -183,7 +184,13 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
+    <>
+      <PageSEO
+        title="Uplift Dental & Orthodontics | Top-Rated Dentist in Garden Grove, CA 92845"
+        description="Uplift Dental & Orthodontics in Garden Grove, CA — Platinum Invisalign® Provider, same-day emergency dental care, general and cosmetic dentistry, oral surgery, and orthodontics. Free consultations available."
+        canonical="https://upliftdental.com/"
+      />
+      <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
       <Navbar />
       <FAQSchema faqs={faqs.map(f => ({ question: f.q, answer: f.a }))} id="ld-faq-home" />
       {/* ── HERO ── pulls up behind the sticky navbar so dark image shows behind nav at top */}
@@ -922,7 +929,8 @@ export default function Home() {
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </>
   );
 }
 
@@ -937,17 +945,12 @@ function AppointmentForm() {
     setSending(true);
     setFormError("");
     try {
-      await emailjs.send(
-        "service_x856ofi",
-        "template_mp248nf",
-        {
-          name: form.name,
-          phone: form.phone,
-          service: form.service || "Not specified",
-          time: new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" }),
-        },
-        "6X9QyXqRhDTbdty7A"
-      );
+      await submitLead({
+        name: form.name,
+        phone: form.phone,
+        service: form.service,
+        source: "homepage",
+      });
       setSubmitted(true);
     } catch (err) {
       setFormError(`Something went wrong. Please call ${PRACTICE.phone.display}.`);

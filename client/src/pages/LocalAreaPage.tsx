@@ -5,9 +5,10 @@
    ============================================================= */
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { PageSEO } from "@/components/PageSEO";
 import { Link } from "wouter";
 import { MapPin, Phone, MessageSquare, CheckCircle, Star, Clock, Shield, ChevronRight } from "lucide-react";
-import { PRACTICE, COLORS } from "@/lib/constants";
+import { PRACTICE, COLORS, SITE_IMAGES } from "@/lib/constants";
 import { SMS } from "@/lib/sms";
 
 export interface LocalAreaPageProps {
@@ -58,7 +59,7 @@ const FAQS = (city: string) => [
   },
 ];
 
-export default function LocalAreaPage({ city, state = "CA", distance, driveTime, slug, nearbyLandmark, intro, zipCode }: LocalAreaPageProps) {
+export default function LocalAreaPage({ city, state = "CA", distance, driveTime, slug, nearbyLandmark, metaDescription, intro, zipCode }: LocalAreaPageProps) {
   const faqs = FAQS(city);
 
   // Note: LocalBusiness schema is only on the homepage (StructuredData.tsx)
@@ -82,11 +83,16 @@ export default function LocalAreaPage({ city, state = "CA", distance, driveTime,
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
+      <PageSEO
+        title={`Dentist Near ${city}, ${state} | Uplift Dental & Orthodontics`}
+        description={metaDescription || `Looking for a dentist near ${city}, ${state}? Uplift Dental & Orthodontics offers Invisalign®, dental implants, orthodontics, emergency dentistry, and family dental care in nearby Garden Grove.`}
+        canonical={`https://upliftdental.com/dentist-near-${slug}`}
+      />
       <Navbar />
 
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden" style={{ background: `linear-gradient(135deg, ${COLORS.tealDark} 0%, ${COLORS.teal} 100%)` }}>
-        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg')", backgroundSize: "cover" }} />
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url('/assets/uplift/PATTERN-02_5ffa36bf.webp')", backgroundSize: "cover" }} />
         <div className="container relative z-10 max-w-4xl mx-auto text-center px-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 border border-white/25 text-white/90 text-sm font-body mb-6">
             <MapPin className="w-4 h-4" />
@@ -181,11 +187,10 @@ export default function LocalAreaPage({ city, state = "CA", distance, driveTime,
             </div>
             <div className="relative">
               <img
-                src="https://i0.wp.com/upliftdental.com/wp-content/uploads/2024/10/uplift-dental-garden-grove-team.jpg?w=1024&ssl=1"
+                src={SITE_IMAGES.teamAlt}
                 alt={`Uplift Dental team serving patients from ${city}`}
                 className="rounded-2xl shadow-xl w-full object-cover"
                 style={{ aspectRatio: "4/3" }}
-                onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80"; }}
               />
               <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg p-4 border" style={{ borderColor: "oklch(0.88 0.04 192)" }}>
                 <div className="flex items-center gap-1 mb-1">

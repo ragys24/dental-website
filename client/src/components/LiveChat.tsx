@@ -6,15 +6,15 @@
    ============================================================= */
 import { useState, useRef, useEffect } from "react";
 import { useIsMobile } from "@/hooks/useMobile";
-import emailjs from "@emailjs/browser";
 import {
   MessageSquare, X, Send, Phone, Calendar, ChevronDown,
   CheckCircle2, Clock, Smile, AlertCircle, Minimize2
 } from "lucide-react";
 import { PRACTICE, COLORS } from "@/lib/constants";
 import { SMS } from "@/lib/sms";
+import { submitLead } from "@/lib/leads";
 
-const LOGO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/Logo-01_0c8b669d.png";
+const LOGO = "/assets/uplift/Logo-01_0c8b669d.webp";
 
 // ── Dental FAQ knowledge base ──────────────────────────────────
 type BotAnswer = { text: string; actions?: { label: string; href: string }[] };
@@ -191,6 +191,7 @@ export default function LiveChat() {
   const [offlineForm, setOfflineForm] = useState({ name: "", phone: "", message: "" });
   const [offlineSent, setOfflineSent] = useState(false);
   const [offlineSending, setOfflineSending] = useState(false);
+  const [offlineError, setOfflineError] = useState("");
   const [unreadCount, setUnreadCount] = useState(1);
   const [hasOpened, setHasOpened] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -250,22 +251,17 @@ export default function LiveChat() {
   const handleOfflineSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setOfflineSending(true);
+    setOfflineError("");
     try {
-      await emailjs.send(
-        "service_x856ofi",
-        "template_mp248nf",
-        {
-          name: offlineForm.name,
-          phone: offlineForm.phone,
-          service: `Chat message: ${offlineForm.message}`,
-          time: new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" }),
-        },
-        "6X9QyXqRhDTbdty7A"
-      );
+      await submitLead({
+        name: offlineForm.name,
+        phone: offlineForm.phone,
+        message: offlineForm.message,
+        source: "chat",
+      });
       setOfflineSent(true);
     } catch {
-      // silently fail — show success anyway to not frustrate user
-      setOfflineSent(true);
+      setOfflineError(`We couldn't send your message. Please call ${PRACTICE.phone.display} or text us instead.`);
     } finally {
       setOfflineSending(false);
     }
@@ -388,6 +384,9 @@ export default function LiveChat() {
               {showOfflineForm && !offlineSent && (
                 <div className="px-4 py-3 bg-[oklch(0.97_0.008_192)] border-b border-[oklch(0.92_0.02_192)] shrink-0">
                   <p className="font-body text-xs font-semibold text-[oklch(0.28_0.08_192)] mb-2">Leave us a message — we'll call you back!</p>
+                  {offlineError && (
+                    <p role="alert" className="rounded-lg border border-red-200 bg-red-50 p-2 text-xs font-body text-red-700">{offlineError}</p>
+                  )}
                   <form onSubmit={handleOfflineSubmit} className="space-y-2">
                     <input
                       required

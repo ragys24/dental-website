@@ -1,0 +1,61 @@
+=== DNS ===
+104.18.26.246
+104.18.27.246
+104.19.168.112
+104.19.169.112
+
+=== Home headers ===
+HTTP/2 200 
+date: Sun, 16 Aug 2026 02:53:44 GMT
+content-type: text/html; charset=utf-8
+cache-control: no-cache, no-store, must-revalidate
+expires: 0
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+pragma: no-cache
+x-content-type-options: nosniff
+server: cloudflare
+cf-ray: a2bd267d2873334a-MAD
+
+
+=== Robots ===
+# Uplift Dental & Orthodontics
+# Generated from seo/route-registry.mjs
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_/
+Disallow: /_route-documents/
+Disallow: /wp-admin
+Disallow: /wp-login.php
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /wp-json/
+Disallow: /xmlrpc.php
+Disallow: /?s=*
+Disallow: /?page_id=*
+
+Sitemap: https://upliftdental.com/sitemap.xml
+
+=== Sitemap response ===
+HTTP/2 200 
+date: Sun, 16 Aug 2026 02:53:49 GMT
+content-type: text/xml; charset=utf-8
+content-length: 12113
+x-manus-seo-source: cdn
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+x-content-type-options: nosniff
+server: cloudflare
+cf-ray: a2bd269ece847a1d-MAD
+
+
+=== Representative URL response codes ===
+200	/
+200	/services
+200	/blog
+200	/blog/a-parents-guide-to-your-childs-first-dental-visit
+200	/dentist-near-garden-grove
+200	/dental-cleaning
+200	/dentures
+200	/our-team
+200	/invisalign/

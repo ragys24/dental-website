@@ -1,0 +1,63 @@
+=== UI component import references outside each component ===
+accordion	UNREFERENCED
+alert-dialog	UNREFERENCED
+alert	UNREFERENCED
+aspect-ratio	UNREFERENCED
+avatar	UNREFERENCED
+badge	UNREFERENCED
+breadcrumb	UNREFERENCED
+button-group	UNREFERENCED
+button	client/src/components/ManusDialog.tsx,client/src/components/ui/alert-dialog.tsx,client/src/components/ui/calendar.tsx,client/src/components/ui/carousel.tsx,client/src/components/ui/input-group.tsx,client/src/components/ui/pagination.tsx,client/src/components/ui/sidebar.tsx,client/src/pages/NotFound.tsx,
+calendar	UNREFERENCED
+card	client/src/pages/NotFound.tsx,
+carousel	UNREFERENCED
+chart	UNREFERENCED
+checkbox	UNREFERENCED
+collapsible	UNREFERENCED
+command	UNREFERENCED
+context-menu	UNREFERENCED
+dialog	client/src/components/ManusDialog.tsx,client/src/components/ui/command.tsx,client/src/components/ui/input.tsx,client/src/components/ui/textarea.tsx,
+drawer	UNREFERENCED
+dropdown-menu	UNREFERENCED
+empty	UNREFERENCED
+field	UNREFERENCED
+form	UNREFERENCED
+hover-card	UNREFERENCED
+input-group	UNREFERENCED
+input-otp	UNREFERENCED
+input	client/src/components/ui/input-group.tsx,client/src/components/ui/sidebar.tsx,
+item	UNREFERENCED
+kbd	UNREFERENCED
+label	client/src/components/ui/field.tsx,client/src/components/ui/form.tsx,
+menubar	UNREFERENCED
+navigation-menu	UNREFERENCED
+pagination	UNREFERENCED
+popover	UNREFERENCED
+progress	UNREFERENCED
+radio-group	UNREFERENCED
+resizable	UNREFERENCED
+scroll-area	UNREFERENCED
+select	UNREFERENCED
+separator	client/src/components/ui/button-group.tsx,client/src/components/ui/field.tsx,client/src/components/ui/item.tsx,client/src/components/ui/sidebar.tsx,
+sheet	client/src/components/ui/sidebar.tsx,
+sidebar	UNREFERENCED
+skeleton	client/src/components/ui/sidebar.tsx,
+slider	UNREFERENCED
+sonner	client/src/App.tsx,
+spinner	UNREFERENCED
+switch	UNREFERENCED
+table	UNREFERENCED
+tabs	UNREFERENCED
+textarea	client/src/components/ui/input-group.tsx,
+toggle-group	UNREFERENCED
+toggle	client/src/components/ui/toggle-group.tsx,
+tooltip	client/src/App.tsx,client/src/components/ui/sidebar.tsx,
+
+=== Manus/runtime source references ===
+client/public/__manus__/debug-collector.js:9: * Data is periodically sent to /__manus__/logs
+client/public/__manus__/debug-collector.js:22:    reportEndpoint: "/__manus__/logs",
+client/public/__manus__/debug-collector.js:465:    if (url.indexOf("/__manus__/") === 0) {
+client/public/__manus__/debug-collector.js:615:      xhr._manusData.url.indexOf("/__manus__/") !== 0
+client/src/components/ManusDialog.tsx:12:interface ManusDialogProps {
+client/src/components/ManusDialog.tsx:21:export function ManusDialog({
+client/src/components/ManusDialog.tsx:28:}: ManusDialogProps) {

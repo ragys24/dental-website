@@ -35,7 +35,7 @@ function ArticleSEO({ post }: { post: BlogPost }) {
       "publisher": {
         "@type": "Organization",
         "name": "Uplift Dental & Orthodontics",
-        "logo": { "@type": "ImageObject", "url": "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/Logo-01_0c8b669d.png" }
+        "logo": { "@type": "ImageObject", "url": "https://upliftdental.com/assets/uplift/Logo-01_0c8b669d.webp" }
       },
       "mainEntityOfPage": { "@type": "WebPage", "@id": `https://upliftdental.com/blog/${post.slug}` }
     };
@@ -82,6 +82,7 @@ export default function BlogPostPage() {
     if (postDate > now) {
       return (
         <>
+          <ArticleSEO post={post} />
           <Navbar />
           <div className="min-h-screen flex flex-col items-center justify-center gap-4 text-center px-4">
             <h1 className="text-3xl font-display font-bold text-[oklch(0.14_0.02_220)]">Coming Soon</h1>

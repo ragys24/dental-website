@@ -10,16 +10,16 @@ import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { PRACTICE, COLORS } from "@/lib/constants";
 
-const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation-Wf9zjaGJrezRhcJ4Rfspix.webp";
-const INVISALIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/invisalign-lifestyle-a4Ab7WZcR277XNEE76tgPU.webp";
-const FAMILY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/general-dentistry-clean-LezMDGWkmg46HMXLmdPsth.webp";
-const TECH_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
-const WHITENING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/teeth-whitening-service-GFdaDu8hrcaxHAdkpU4VSE.webp";
-const ORTHO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/orthodontics-braces-U3K8rtBtyKN8vNF3Qv3diF.webp";
-const IMPLANTS_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-implants-xray-o29b5GJ6kDtFez7JQjzyLT.webp";
-const ORAL_SURGERY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/oral-surgery-consult-Vi4KLsbGvghRt73SdrUprh.webp";
-const PERIO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/periodontics-gums-8yxDptJ86QFDsaVgaCxvDM.webp";
-const ENDO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/endodontics-microscope-hx7iwZLLNyvbyySf2aHhfk.webp";
+const SMILE_IMG = "/assets/uplift/smile-transformation-Wf9zjaGJrezRhcJ4Rfspix.webp";
+const INVISALIGN_IMG = "/assets/uplift/invisalign-lifestyle-a4Ab7WZcR277XNEE76tgPU.webp";
+const FAMILY_IMG = "/assets/uplift/general-dentistry-clean-LezMDGWkmg46HMXLmdPsth.webp";
+const TECH_IMG = "/assets/uplift/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
+const WHITENING_IMG = "/assets/uplift/teeth-whitening-service-GFdaDu8hrcaxHAdkpU4VSE.webp";
+const ORTHO_IMG = "/assets/uplift/orthodontics-braces-U3K8rtBtyKN8vNF3Qv3diF.webp";
+const IMPLANTS_IMG = "/assets/uplift/dental-implants-xray-o29b5GJ6kDtFez7JQjzyLT.webp";
+const ORAL_SURGERY_IMG = "/assets/uplift/oral-surgery-consult-Vi4KLsbGvghRt73SdrUprh.webp";
+const PERIO_IMG = "/assets/uplift/periodontics-gums-8yxDptJ86QFDsaVgaCxvDM.webp";
+const ENDO_IMG = "/assets/uplift/endodontics-microscope-hx7iwZLLNyvbyySf2aHhfk.webp";
 
 const serviceCategories = [
   {
@@ -188,7 +188,7 @@ export default function Services() {
 
       {/* Hero */}
       <section className="py-20 relative overflow-hidden" style={{ backgroundColor: COLORS.tealDark }}>
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url(https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg)`, backgroundSize: "500px auto" }} />
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url(/assets/uplift/PATTERN-02_5ffa36bf.webp)`, backgroundSize: "500px auto" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="font-body text-sm font-semibold uppercase tracking-widest mb-3" style={{ color: "oklch(0.73 0.07 200)" }}>Garden Grove, CA</p>
           <h1 className="font-display text-5xl md:text-6xl font-bold text-white mb-5">Our Dental Services</h1>

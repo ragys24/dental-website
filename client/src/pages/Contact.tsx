@@ -10,8 +10,9 @@ import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { PRACTICE, COLORS } from "@/lib/constants";
 import { SMS } from "@/lib/sms";
+import { submitLead } from "@/lib/leads";
 
-const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg";
+const PATTERN_DARK = "/assets/uplift/PATTERN-02_5ffa36bf.webp";
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", phone: "", service: "" });
@@ -25,25 +26,13 @@ export default function Contact() {
     setSending(true);
     setError("");
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key: "84b33306-8bd2-4e29-bbbc-0da57a4292dc",
-          subject: "New Appointment Request — Uplift Dental",
-          from_name: formData.name,
-          name: formData.name,
-          phone: formData.phone,
-          service: formData.service || "Not specified",
-          time: new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" }),
-        }),
+      await submitLead({
+        name: formData.name,
+        phone: formData.phone,
+        service: formData.service,
+        source: "contact-page",
       });
-      const data = await res.json();
-      if (data.success) {
-        setSubmitted(true);
-      } else {
-        throw new Error(data.message || "Submission failed");
-      }
+      setSubmitted(true);
     } catch (err) {
       setError(`Something went wrong. Please call us at ${PRACTICE.phone.display} or try again.`);
     } finally {

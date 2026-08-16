@@ -31,9 +31,9 @@ import { PRACTICE, COLORS } from "@/lib/constants";
 import { SMS } from "@/lib/sms";
 
 const FOREST = "oklch(0.32 0.08 155)";
-const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg";
-const DR_SAAD = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-saad-periodontist_45f9c7c5.jpg";
-const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
+const PATTERN_DARK = "/assets/uplift/PATTERN-02_5ffa36bf.webp";
+const DR_SAAD = "/assets/uplift/dr-saad-periodontist_45f9c7c5.webp";
+const SMILE_IMG = "/assets/uplift/smile-transformation_82cc164e.webp";
 
 const TREATMENTS = [
   {

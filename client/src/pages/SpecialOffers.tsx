@@ -6,6 +6,7 @@
 import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { PageSEO } from "@/components/PageSEO";
 import {
   Phone, MessageSquare, CheckCircle2, Clock, Tag, Star,
   Baby, Smile, AlignCenter, Sparkles, Zap, Shield, Calendar
@@ -13,7 +14,7 @@ import {
 import { PRACTICE } from "@/lib/constants";
 import { SMS } from "@/lib/sms";
 
-const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-pattern-dark_02e4726d.jpg";
+const PATTERN_DARK = "/assets/uplift/uplift-pattern-dark_02e4726d.webp";
 
 const offers = [
   {
@@ -216,7 +217,13 @@ function OfferCard({ offer }: { offer: typeof offers[0] }) {
 
 export default function SpecialOffers() {
   return (
-    <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
+    <>
+      <PageSEO
+        title="Special Offers & New Patient Deals | Uplift Dental Garden Grove"
+        description="Explore new-patient dental specials at Uplift Dental & Orthodontics in Garden Grove, including adult and pediatric exams with X-rays and free Invisalign consultations."
+        canonical="https://upliftdental.com/special-offers"
+      />
+      <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
       <Navbar />
 
       {/* ── HERO ── */}
@@ -385,6 +392,7 @@ export default function SpecialOffers() {
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </>
   );
 }

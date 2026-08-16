@@ -1,7 +1,7 @@
-import { Toaster } from "@/components/ui/sonner";
+import { lazy, Suspense } from "react";
+import { Redirect, Route, Switch } from "wouter";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Toaster } from "@/components/ui/sonner";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import LiveChat from "./components/LiveChat";
@@ -9,53 +9,51 @@ import AccessibilityWidget from "./components/AccessibilityWidget";
 import AnnouncementBanner from "./components/AnnouncementBanner";
 import { LocalBusinessSchema, WebSiteSchema } from "./components/StructuredData";
 import MobileCallBar from "./components/MobileCallBar";
-import Home from "./pages/Home";
-import Services from "./pages/Services";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
-import Invisalign from "./pages/Invisalign";
-import DentalImplants from "./pages/DentalImplants";
-import EmergencyDentist from "./pages/EmergencyDentist";
-import SpecialOffers from "./pages/SpecialOffers";
-import Periodontics from "./pages/Periodontics";
-import Endodontics from "./pages/Endodontics";
-import Gallery from "./pages/Gallery";
-import TeethWhitening from "./pages/TeethWhitening";
-import Veneers from "./pages/Veneers";
-import DentalCrowns from "./pages/DentalCrowns";
-import WisdomTeeth from "./pages/WisdomTeeth";
-import DentalBonding from "./pages/DentalBonding";
-import DentalFillings from "./pages/DentalFillings";
-import TeethCleaning from "./pages/TeethCleaning";
-import Orthodontics from "./pages/Orthodontics";
-import SmileAssessment from "./pages/SmileAssessment";
-import MembershipPlan from "./pages/MembershipPlan";
 
-// Local area landing pages
-import SealBeach from "./pages/cities/SealBeach";
-import LosAlamitos from "./pages/cities/LosAlamitos";
-import Westminster from "./pages/cities/Westminster";
-import Anaheim from "./pages/cities/Anaheim";
-import HuntingtonBeach from "./pages/cities/HuntingtonBeach";
-import CypressCity from "./pages/cities/CypressCity";
-import LongBeach from "./pages/cities/LongBeach";
-import Stanton from "./pages/cities/Stanton";
-import BuenaPark from "./pages/cities/BuenaPark";
-import Rossmoor from "./pages/cities/Rossmoor";
-import WestGrove from "./pages/cities/WestGrove";
-import GardenGrove from "./pages/cities/GardenGrove";
-import Accessibility from "./pages/Accessibility";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsOfService from "./pages/TermsOfService";
-import InsuranceFinancing from "./pages/InsuranceFinancing";
-import { Redirect } from "wouter";
+const Home = lazy(() => import("./pages/Home"));
+const Services = lazy(() => import("./pages/Services"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
+const Invisalign = lazy(() => import("./pages/Invisalign"));
+const DentalImplants = lazy(() => import("./pages/DentalImplants"));
+const EmergencyDentist = lazy(() => import("./pages/EmergencyDentist"));
+const SpecialOffers = lazy(() => import("./pages/SpecialOffers"));
+const Periodontics = lazy(() => import("./pages/Periodontics"));
+const Endodontics = lazy(() => import("./pages/Endodontics"));
+const Gallery = lazy(() => import("./pages/Gallery"));
+const TeethWhitening = lazy(() => import("./pages/TeethWhitening"));
+const Veneers = lazy(() => import("./pages/Veneers"));
+const DentalCrowns = lazy(() => import("./pages/DentalCrowns"));
+const WisdomTeeth = lazy(() => import("./pages/WisdomTeeth"));
+const DentalBonding = lazy(() => import("./pages/DentalBonding"));
+const DentalFillings = lazy(() => import("./pages/DentalFillings"));
+const TeethCleaning = lazy(() => import("./pages/TeethCleaning"));
+const Orthodontics = lazy(() => import("./pages/Orthodontics"));
+const SmileAssessment = lazy(() => import("./pages/SmileAssessment"));
+const MembershipPlan = lazy(() => import("./pages/MembershipPlan"));
+const InsuranceFinancing = lazy(() => import("./pages/InsuranceFinancing"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
+const Accessibility = lazy(() => import("./pages/Accessibility"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const SealBeach = lazy(() => import("./pages/cities/SealBeach"));
+const LosAlamitos = lazy(() => import("./pages/cities/LosAlamitos"));
+const Westminster = lazy(() => import("./pages/cities/Westminster"));
+const Anaheim = lazy(() => import("./pages/cities/Anaheim"));
+const HuntingtonBeach = lazy(() => import("./pages/cities/HuntingtonBeach"));
+const CypressCity = lazy(() => import("./pages/cities/CypressCity"));
+const LongBeach = lazy(() => import("./pages/cities/LongBeach"));
+const Stanton = lazy(() => import("./pages/cities/Stanton"));
+const BuenaPark = lazy(() => import("./pages/cities/BuenaPark"));
+const Rossmoor = lazy(() => import("./pages/cities/Rossmoor"));
+const WestGrove = lazy(() => import("./pages/cities/WestGrove"));
+const GardenGrove = lazy(() => import("./pages/cities/GardenGrove"));
 
 function Router() {
   return (
     <Switch>
-      {/* Core pages */}
       <Route path="/" component={Home} />
       <Route path="/services" component={Services} />
       <Route path="/about" component={About} />
@@ -78,8 +76,12 @@ function Router() {
       <Route path="/teeth-cleaning" component={TeethCleaning} />
       <Route path="/orthodontics" component={Orthodontics} />
       <Route path="/smile-assessment" component={SmileAssessment} />
+      <Route path="/membership-plan" component={MembershipPlan} />
+      <Route path="/insurance-financing" component={InsuranceFinancing} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/terms-of-service" component={TermsOfService} />
+      <Route path="/accessibility" component={Accessibility} />
 
-      {/* Local area SEO landing pages */}
       <Route path="/dentist-near-garden-grove" component={GardenGrove} />
       <Route path="/dentist-near-seal-beach" component={SealBeach} />
       <Route path="/dentist-near-los-alamitos" component={LosAlamitos} />
@@ -92,20 +94,12 @@ function Router() {
       <Route path="/dentist-near-buena-park" component={BuenaPark} />
       <Route path="/dentist-near-rossmoor" component={Rossmoor} />
       <Route path="/dentist-near-west-grove" component={WestGrove} />
-       <Route path="/smile-assessment" component={SmileAssessment} />
-      <Route path="/membership-plan" component={MembershipPlan} />
-      <Route path="/insurance-financing" component={InsuranceFinancing} />
-      <Route path="/privacy-policy" component={PrivacyPolicy} />
-      <Route path="/terms-of-service" component={TermsOfService} />
-      <Route path="/accessibility" component={Accessibility} />
 
-      {/* Redirect legacy/Google-indexed URLs to correct pages */}
       <Route path="/team">{() => <Redirect to="/about" />}</Route>
       <Route path="/our-team">{() => <Redirect to="/about" />}</Route>
       <Route path="/meet-the-team">{() => <Redirect to="/about" />}</Route>
       <Route path="/doctors">{() => <Redirect to="/about" />}</Route>
       <Route path="/staff">{() => <Redirect to="/about" />}</Route>
-      {/* Doctor-specific deep links from old WordPress site */}
       <Route path="/meet-dr-stefan">{() => <Redirect to="/about#dr-stefan" />}</Route>
       <Route path="/dr-stefan">{() => <Redirect to="/about#dr-stefan" />}</Route>
       <Route path="/dr-ragy-stefan">{() => <Redirect to="/about#dr-stefan" />}</Route>
@@ -136,9 +130,7 @@ function Router() {
       <Route path="/whitening">{() => <Redirect to="/teeth-whitening" />}</Route>
       <Route path="/cleaning">{() => <Redirect to="/teeth-cleaning" />}</Route>
       <Route path="/emergency">{() => <Redirect to="/emergency-dentist" />}</Route>
-      {/* WordPress specialty/service URL patterns */}
       <Route path="/specialty-dentistry">{() => <Redirect to="/services" />}</Route>
-      <Route path="/specialty-dentistry/">{() => <Redirect to="/services" />}</Route>
       <Route path="/services/specialty-dentistry">{() => <Redirect to="/services" />}</Route>
       <Route path="/dental-services">{() => <Redirect to="/services" />}</Route>
       <Route path="/our-services">{() => <Redirect to="/services" />}</Route>
@@ -148,29 +140,19 @@ function Router() {
       <Route path="/general-dentistry">{() => <Redirect to="/services" />}</Route>
       <Route path="/restorative">{() => <Redirect to="/services" />}</Route>
       <Route path="/restorative-dentistry">{() => <Redirect to="/services" />}</Route>
-      <Route path="/oral-surgery">{() => <Redirect to="/oral-surgery-garden-grove" />}</Route>
+      <Route path="/oral-surgery">{() => <Redirect to="/wisdom-teeth-removal" />}</Route>
       <Route path="/gum-disease">{() => <Redirect to="/periodontics" />}</Route>
       <Route path="/periodontal">{() => <Redirect to="/periodontics" />}</Route>
       <Route path="/root-canal">{() => <Redirect to="/endodontics" />}</Route>
       <Route path="/root-canals">{() => <Redirect to="/endodontics" />}</Route>
-      <Route path="/invisalign">{() => <Redirect to="/orthodontics" />}</Route>
       <Route path="/clear-aligners">{() => <Redirect to="/orthodontics" />}</Route>
-      <Route path="/veneers">{() => <Redirect to="/veneers" />}</Route>
       <Route path="/crowns">{() => <Redirect to="/dental-crowns" />}</Route>
       <Route path="/wisdom-teeth">{() => <Redirect to="/wisdom-teeth-removal" />}</Route>
-      {/* FAQ, Reviews, Membership redirects */}
       <Route path="/faq">{() => <Redirect to="/blog" />}</Route>
-      <Route path="/faq/">{() => <Redirect to="/blog" />}</Route>
       <Route path="/reviews">{() => <Redirect to="/about" />}</Route>
-      <Route path="/reviews/">{() => <Redirect to="/about" />}</Route>
       <Route path="/membership-plans">{() => <Redirect to="/membership-plan" />}</Route>
-      <Route path="/membership-plans/">{() => <Redirect to="/membership-plan" />}</Route>
-
-      {/* Blog pagination */}
       <Route path="/blog/page/:page">{() => <Redirect to="/blog" />}</Route>
-      {/* Tooth extraction and other missing pages */}
       <Route path="/tooth-extraction">{() => <Redirect to="/wisdom-teeth-removal" />}</Route>
-      <Route path="/tooth-extraction/">{() => <Redirect to="/wisdom-teeth-removal" />}</Route>
       <Route path="/extraction">{() => <Redirect to="/wisdom-teeth-removal" />}</Route>
       <Route path="/extractions">{() => <Redirect to="/wisdom-teeth-removal" />}</Route>
       <Route path="/404" component={NotFound} />
@@ -179,7 +161,11 @@ function Router() {
   );
 }
 
-function App() {
+function RouteLoadingFallback() {
+  return <div className="min-h-screen bg-white" aria-busy="true" aria-label="Loading page" />;
+}
+
+export default function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">
@@ -188,7 +174,9 @@ function App() {
           <LocalBusinessSchema />
           <WebSiteSchema />
           <AnnouncementBanner />
-          <Router />
+          <Suspense fallback={<RouteLoadingFallback />}>
+            <Router />
+          </Suspense>
           <LiveChat />
           <AccessibilityWidget />
           <MobileCallBar />
@@ -197,5 +185,3 @@ function App() {
     </ErrorBoundary>
   );
 }
-
-export default App;

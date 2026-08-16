@@ -1,0 +1,127 @@
+=== Source external dependency counts ===
+d2xsxph8kpxj0f.cloudfront.net	20 files
+/manus-storage/	0 files
+images.unsplash.com	3 files
+api.web3forms.com	1 files
+emailjs	3 files
+google.com/maps	3 files
+VITE_	3 files
+netlify	0 files
+manus	1 files
+
+=== Live page first-party Manus asset references ===
+/manus-storage/uplift-case-1-after_b4e1eb64.png
+/manus-storage/uplift-case-1-before_c7e95f4e.png
+/manus-storage/uplift-case-2-after_e1f67053.webp
+/manus-storage/uplift-case-2-before_217e67b4.png
+/manus-storage/uplift-favicon-64_5a516ac9.png
+/manus-storage/uplift-hero-desktop-motion-v2_84f904cc.mp4
+/manus-storage/uplift-hero-desktop-tight_036aff9f.webp
+/manus-storage/uplift-hero-mobile-editorial-tight_733a57ba.webp
+/manus-storage/uplift-logo-light-112_30c322a0.webp
+/manus-storage/uplift-logo-primary-112_c4a29daf.webp
+/manus-storage/uplift-team-garden-grove_c57d4b4d.webp
+
+=== Source CloudFront asset paths ===
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/IMG_9486_6f5df7e4.jpeg
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/Logo-01_0c8b669d.png
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg'
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-implant-hero-k3ekVFSZCNDA8fPqPQR8xJ.webp
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-implants-xray-o29b5GJ6kDtFez7JQjzyLT.webp
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-ghobrial-hq_89525d81.jpeg
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-saad-periodontist_45f9c7c5.jpg
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-schneekluth-labcoat-clean_5cfb4098.png
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-stefan-clean_5bc74027.png
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-youssef-clean_da346e41.png
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/endodontics-microscope-hx7iwZLLNyvbyySf2aHhfk.webp
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/family-dental-TeGJLyZzfqwuRW5gkKNBzm.webp
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/family-dental-fixed_12ae74fd.png
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/general-dentistry-clean-LezMDGWkmg46HMXLmdPsth.webp
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/hero-smile_47b15f85.jpg
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/invisalign-lifestyle-a4Ab7WZcR277XNEE76tgPU.webp
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/invisalign-lifestyle_cd9d5323.jpg
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/logo-og_e9a52b9b.webp
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/oral-surgery-consult-Vi4KLsbGvghRt73SdrUprh.webp
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/orthodontics-braces-U3K8rtBtyKN8vNF3Qv3diF.webp
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/orthodontics-braces-xPjbHnQGVTqFBiS9cKsRzW.webp
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/periodontics-gums-8yxDptJ86QFDsaVgaCxvDM.webp
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation-Wf9zjaGJrezRhcJ4Rfspix.webp
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/teeth-whitening-service-GFdaDu8hrcaxHAdkpU4VSE.webp
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-about-real_a6815637.jpg
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-logo-icon_12b7fb68.png
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-pattern-dark_02e4726d.jpg
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-pattern-dark_02e4726d.jpg'
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-pattern-light_9d83da07.jpg'
+https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-team-real_80532d53.jpg
+
+=== SiteGround deployment blockers found ===
+client/index.html:27:    <meta property="og:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/logo-og_e9a52b9b.webp" />
+client/index.html:37:    <meta name="twitter:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/logo-og_e9a52b9b.webp" />
+client/index.html:40:    <link rel="icon" type="image/png" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-logo-icon_12b7fb68.png" />
+client/index.html:41:    <link rel="apple-touch-icon" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-logo-icon_12b7fb68.png" />
+client/index.html:44:    <link rel="preload" as="image" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/hero-smile_47b15f85.jpg" fetchpriority="high" />
+client/index.html:45:    <link rel="dns-prefetch" href="https://d2xsxph8kpxj0f.cloudfront.net" />
+client/index.html:46:    <link rel="preconnect" href="https://d2xsxph8kpxj0f.cloudfront.net" crossorigin />
+client/index.html:131:      src="%VITE_ANALYTICS_ENDPOINT%/umami"
+client/index.html:132:      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+client/src/components/LiveChat.tsx:17:const LOGO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/Logo-01_0c8b669d.png";
+client/src/components/LiveChat.tsx:254:      await emailjs.send(
+client/src/components/Map.tsx:93:const MAPS_PROXY_URL = `${FORGE_BASE_URL}/v1/maps/proxy`;
+client/src/components/PageSEO.tsx:17:  "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/hero-smile_47b15f85.jpg";
+client/src/components/StructuredData.tsx:23:      "logo": "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/logo-og_e9a52b9b.webp",
+client/src/index.css:209:    background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-pattern-dark_02e4726d.jpg');
+client/src/index.css:215:    background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-pattern-light_9d83da07.jpg');
+client/src/lib/constants.ts:57:const CDN = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN";
+client/src/pages/Blog.tsx:15:const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg";
+client/src/pages/Blog.tsx:16:const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation-Wf9zjaGJrezRhcJ4Rfspix.webp";
+client/src/pages/Blog.tsx:17:const INVISALIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/invisalign-lifestyle-a4Ab7WZcR277XNEE76tgPU.webp";
+client/src/pages/Blog.tsx:18:const FAMILY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/family-dental-TeGJLyZzfqwuRW5gkKNBzm.webp";
+client/src/pages/Blog.tsx:19:const TECH_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
+client/src/pages/BlogPost.tsx:38:        "logo": { "@type": "ImageObject", "url": "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/Logo-01_0c8b669d.png" }
+client/src/pages/Contact.tsx:14:const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg";
+client/src/pages/Contact.tsx:28:      const res = await fetch("https://api.web3forms.com/submit", {
+client/src/pages/DentalImplants.tsx:10:const IMPLANTS_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-implant-hero-k3ekVFSZCNDA8fPqPQR8xJ.webp";
+client/src/pages/DentalImplants.tsx:11:const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
+client/src/pages/Endodontics.tsx:37:const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg";
+client/src/pages/Endodontics.tsx:38:const DR_GHOBRIAL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/IMG_9486_6f5df7e4.jpeg";
+client/src/pages/Endodontics.tsx:39:const TECH_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
+client/src/pages/Endodontics.tsx:40:const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
+client/src/pages/Home.tsx:22:const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/hero-smile_47b15f85.jpg";
+client/src/pages/Home.tsx:23:const FAMILY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/family-dental-fixed_12ae74fd.png";
+client/src/pages/Home.tsx:24:const INVISALIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/invisalign-lifestyle_cd9d5323.jpg";
+client/src/pages/Home.tsx:25:const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
+client/src/pages/Home.tsx:26:const TECH_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
+client/src/pages/Home.tsx:27:const ABOUT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-about-real_a6815637.jpg";
+client/src/pages/Home.tsx:28:const TEAM_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-team-real_80532d53.jpg";
+client/src/pages/Home.tsx:29:const DR_STEFAN = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-stefan-clean_5bc74027.png";
+client/src/pages/Home.tsx:30:const DR_SCHNEEKLUTH = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-schneekluth-labcoat-clean_5cfb4098.png";
+client/src/pages/Home.tsx:31:const DR_YOUSSEF = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-youssef-clean_da346e41.png";
+client/src/pages/Home.tsx:32:const DR_SAAD = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-saad-periodontist_45f9c7c5.jpg";
+client/src/pages/Home.tsx:33:const DR_GHOBRIAL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-ghobrial-hq_89525d81.jpeg";
+client/src/pages/Home.tsx:34:const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-pattern-dark_02e4726d.jpg";
+client/src/pages/Home.tsx:940:      await emailjs.send(
+client/src/pages/InsuranceFinancing.tsx:15:const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg";
+client/src/pages/Invisalign.tsx:10:const INVISALIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/invisalign-lifestyle_cd9d5323.jpg";
+client/src/pages/Invisalign.tsx:11:const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
+client/src/pages/LocalAreaPage.tsx:89:        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg')", backgroundSize: "cover" }} />
+client/src/pages/MembershipPlan.tsx:10:const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg";
+client/src/pages/Orthodontics.tsx:20:const ORTHO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/orthodontics-braces-xPjbHnQGVTqFBiS9cKsRzW.webp";
+client/src/pages/Periodontics.tsx:34:const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg";
+client/src/pages/Periodontics.tsx:35:const DR_SAAD = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-saad-periodontist_45f9c7c5.jpg";
+client/src/pages/Periodontics.tsx:36:const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
+client/src/pages/Services.tsx:13:const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation-Wf9zjaGJrezRhcJ4Rfspix.webp";
+client/src/pages/Services.tsx:14:const INVISALIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/invisalign-lifestyle-a4Ab7WZcR277XNEE76tgPU.webp";
+client/src/pages/Services.tsx:15:const FAMILY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/general-dentistry-clean-LezMDGWkmg46HMXLmdPsth.webp";
+client/src/pages/Services.tsx:16:const TECH_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
+client/src/pages/Services.tsx:17:const WHITENING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/teeth-whitening-service-GFdaDu8hrcaxHAdkpU4VSE.webp";
+client/src/pages/Services.tsx:18:const ORTHO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/orthodontics-braces-U3K8rtBtyKN8vNF3Qv3diF.webp";
+client/src/pages/Services.tsx:19:const IMPLANTS_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-implants-xray-o29b5GJ6kDtFez7JQjzyLT.webp";
+client/src/pages/Services.tsx:20:const ORAL_SURGERY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/oral-surgery-consult-Vi4KLsbGvghRt73SdrUprh.webp";
+client/src/pages/Services.tsx:21:const PERIO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/periodontics-gums-8yxDptJ86QFDsaVgaCxvDM.webp";
+client/src/pages/Services.tsx:22:const ENDO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/endodontics-microscope-hx7iwZLLNyvbyySf2aHhfk.webp";
+client/src/pages/Services.tsx:191:        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url(https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg)`, backgroundSize: "500px auto" }} />
+client/src/pages/SpecialOffers.tsx:16:const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-pattern-dark_02e4726d.jpg";

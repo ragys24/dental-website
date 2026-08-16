@@ -17,7 +17,7 @@ import { Link } from "wouter";
 import { CheckCircle2, Phone, ChevronRight, Star, Clock, Shield, Award, Users, Smile } from "lucide-react";
 import { PRACTICE, COLORS } from "@/lib/constants";
 
-const ORTHO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/orthodontics-braces-xPjbHnQGVTqFBiS9cKsRzW.webp";
+const ORTHO_IMG = "/assets/uplift/orthodontics-braces-U3K8rtBtyKN8vNF3Qv3diF.webp";
 
 const BRACE_TYPES = [
   {

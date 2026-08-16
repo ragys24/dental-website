@@ -1,0 +1,347 @@
+{
+  "generatedAt": "2026-08-16T02:55:31.993Z",
+  "declaredCount": 70,
+  "importedCount": 49,
+  "unusedDeclaredPackages": [
+    "@hookform/resolvers",
+    "@tailwindcss/typography",
+    "@types/express",
+    "@types/google.maps",
+    "@types/node",
+    "@types/react",
+    "@types/react-dom",
+    "autoprefixer",
+    "axios",
+    "esbuild",
+    "framer-motion",
+    "nanoid",
+    "pnpm",
+    "postcss",
+    "prettier",
+    "tailwindcss-animate",
+    "tsx",
+    "typescript",
+    "vite-plugin-prerender",
+    "vitest",
+    "zod"
+  ],
+  "imports": {
+    "@emailjs/browser": [
+      "client/src/components/LiveChat.tsx",
+      "client/src/pages/Home.tsx"
+    ],
+    "@radix-ui/react-accordion": [
+      "client/src/components/ui/accordion.tsx"
+    ],
+    "@radix-ui/react-alert-dialog": [
+      "client/src/components/ui/alert-dialog.tsx"
+    ],
+    "@radix-ui/react-aspect-ratio": [
+      "client/src/components/ui/aspect-ratio.tsx"
+    ],
+    "@radix-ui/react-avatar": [
+      "client/src/components/ui/avatar.tsx"
+    ],
+    "@radix-ui/react-checkbox": [
+      "client/src/components/ui/checkbox.tsx"
+    ],
+    "@radix-ui/react-collapsible": [
+      "client/src/components/ui/collapsible.tsx"
+    ],
+    "@radix-ui/react-context-menu": [
+      "client/src/components/ui/context-menu.tsx"
+    ],
+    "@radix-ui/react-dialog": [
+      "client/src/components/ui/dialog.tsx",
+      "client/src/components/ui/sheet.tsx"
+    ],
+    "@radix-ui/react-dropdown-menu": [
+      "client/src/components/ui/dropdown-menu.tsx"
+    ],
+    "@radix-ui/react-hover-card": [
+      "client/src/components/ui/hover-card.tsx"
+    ],
+    "@radix-ui/react-label": [
+      "client/src/components/ui/form.tsx",
+      "client/src/components/ui/label.tsx"
+    ],
+    "@radix-ui/react-menubar": [
+      "client/src/components/ui/menubar.tsx"
+    ],
+    "@radix-ui/react-navigation-menu": [
+      "client/src/components/ui/navigation-menu.tsx"
+    ],
+    "@radix-ui/react-popover": [
+      "client/src/components/ui/popover.tsx"
+    ],
+    "@radix-ui/react-progress": [
+      "client/src/components/ui/progress.tsx"
+    ],
+    "@radix-ui/react-radio-group": [
+      "client/src/components/ui/radio-group.tsx"
+    ],
+    "@radix-ui/react-scroll-area": [
+      "client/src/components/ui/scroll-area.tsx"
+    ],
+    "@radix-ui/react-select": [
+      "client/src/components/ui/select.tsx"
+    ],
+    "@radix-ui/react-separator": [
+      "client/src/components/ui/separator.tsx"
+    ],
+    "@radix-ui/react-slider": [
+      "client/src/components/ui/slider.tsx"
+    ],
+    "@radix-ui/react-slot": [
+      "client/src/components/ui/badge.tsx",
+      "client/src/components/ui/breadcrumb.tsx",
+      "client/src/components/ui/button-group.tsx",
+      "client/src/components/ui/button.tsx",
+      "client/src/components/ui/form.tsx",
+      "client/src/components/ui/item.tsx",
+      "client/src/components/ui/sidebar.tsx"
+    ],
+    "@radix-ui/react-switch": [
+      "client/src/components/ui/switch.tsx"
+    ],
+    "@radix-ui/react-tabs": [
+      "client/src/components/ui/tabs.tsx"
+    ],
+    "@radix-ui/react-toggle": [
+      "client/src/components/ui/toggle.tsx"
+    ],
+    "@radix-ui/react-toggle-group": [
+      "client/src/components/ui/toggle-group.tsx"
+    ],
+    "@radix-ui/react-tooltip": [
+      "client/src/components/ui/tooltip.tsx"
+    ],
+    "@tailwindcss/vite": [
+      "vite.config.ts"
+    ],
+    "@vitejs/plugin-react": [
+      "vite.config.ts"
+    ],
+    "class-variance-authority": [
+      "client/src/components/ui/alert.tsx",
+      "client/src/components/ui/badge.tsx",
+      "client/src/components/ui/button-group.tsx",
+      "client/src/components/ui/button.tsx",
+      "client/src/components/ui/empty.tsx",
+      "client/src/components/ui/field.tsx",
+      "client/src/components/ui/input-group.tsx",
+      "client/src/components/ui/item.tsx",
+      "client/src/components/ui/navigation-menu.tsx",
+      "client/src/components/ui/sidebar.tsx",
+      "client/src/components/ui/toggle-group.tsx",
+      "client/src/components/ui/toggle.tsx"
+    ],
+    "clsx": [
+      "client/src/lib/utils.ts"
+    ],
+    "cmdk": [
+      "client/src/components/ui/command.tsx"
+    ],
+    "embla-carousel-react": [
+      "client/src/components/ui/carousel.tsx"
+    ],
+    "input-otp": [
+      "client/src/components/ui/input-otp.tsx"
+    ],
+    "lucide-react": [
+      "client/src/components/AccessibilityWidget.tsx",
+      "client/src/components/AnnouncementBanner.tsx",
+      "client/src/components/ErrorBoundary.tsx",
+      "client/src/components/Footer.tsx",
+      "client/src/components/LiveChat.tsx",
+      "client/src/components/MedicalReviewBadge.tsx",
+      "client/src/components/MobileCallBar.tsx",
+      "client/src/components/Navbar.tsx",
+      "client/src/components/TikTokSection.tsx",
+      "client/src/components/ui/accordion.tsx",
+      "client/src/components/ui/breadcrumb.tsx",
+      "client/src/components/ui/calendar.tsx",
+      "client/src/components/ui/carousel.tsx",
+      "client/src/components/ui/checkbox.tsx",
+      "client/src/components/ui/command.tsx",
+      "client/src/components/ui/context-menu.tsx",
+      "client/src/components/ui/dialog.tsx",
+      "client/src/components/ui/dropdown-menu.tsx",
+      "client/src/components/ui/input-otp.tsx",
+      "client/src/components/ui/menubar.tsx",
+      "client/src/components/ui/navigation-menu.tsx",
+      "client/src/components/ui/pagination.tsx",
+      "client/src/components/ui/radio-group.tsx",
+      "client/src/components/ui/resizable.tsx",
+      "client/src/components/ui/select.tsx",
+      "client/src/components/ui/sheet.tsx",
+      "client/src/components/ui/sidebar.tsx",
+      "client/src/components/ui/spinner.tsx",
+      "client/src/pages/About.tsx",
+      "client/src/pages/Blog.tsx",
+      "client/src/pages/BlogPost.tsx",
+      "client/src/pages/Contact.tsx",
+      "client/src/pages/DentalBonding.tsx",
+      "client/src/pages/DentalCrowns.tsx",
+      "client/src/pages/DentalFillings.tsx",
+      "client/src/pages/DentalImplants.tsx",
+      "client/src/pages/EmergencyDentist.tsx",
+      "client/src/pages/Endodontics.tsx",
+      "client/src/pages/Gallery.tsx",
+      "client/src/pages/Home.tsx",
+      "client/src/pages/InsuranceFinancing.tsx",
+      "client/src/pages/Invisalign.tsx",
+      "client/src/pages/LocalAreaPage.tsx",
+      "client/src/pages/MembershipPlan.tsx",
+      "client/src/pages/NotFound.tsx",
+      "client/src/pages/Orthodontics.tsx",
+      "client/src/pages/Periodontics.tsx",
+      "client/src/pages/Services.tsx",
+      "client/src/pages/SmileAssessment.tsx",
+      "client/src/pages/SpecialOffers.tsx",
+      "client/src/pages/TeethCleaning.tsx",
+      "client/src/pages/TeethWhitening.tsx",
+      "client/src/pages/Veneers.tsx",
+      "client/src/pages/WisdomTeeth.tsx"
+    ],
+    "next-themes": [
+      "client/src/components/ui/sonner.tsx"
+    ],
+    "react": [
+      "client/src/components/AccessibilityWidget.tsx",
+      "client/src/components/AnnouncementBanner.tsx",
+      "client/src/components/BreadcrumbSchema.tsx",
+      "client/src/components/ErrorBoundary.tsx",
+      "client/src/components/LiveChat.tsx",
+      "client/src/components/ManusDialog.tsx",
+      "client/src/components/Map.tsx",
+      "client/src/components/Navbar.tsx",
+      "client/src/components/PageSEO.tsx",
+      "client/src/components/StructuredData.tsx",
+      "client/src/components/TikTokSection.tsx",
+      "client/src/components/ui/accordion.tsx",
+      "client/src/components/ui/alert-dialog.tsx",
+      "client/src/components/ui/alert.tsx",
+      "client/src/components/ui/avatar.tsx",
+      "client/src/components/ui/badge.tsx",
+      "client/src/components/ui/breadcrumb.tsx",
+      "client/src/components/ui/button.tsx",
+      "client/src/components/ui/calendar.tsx",
+      "client/src/components/ui/card.tsx",
+      "client/src/components/ui/carousel.tsx",
+      "client/src/components/ui/chart.tsx",
+      "client/src/components/ui/checkbox.tsx",
+      "client/src/components/ui/command.tsx",
+      "client/src/components/ui/context-menu.tsx",
+      "client/src/components/ui/dialog.tsx",
+      "client/src/components/ui/drawer.tsx",
+      "client/src/components/ui/dropdown-menu.tsx",
+      "client/src/components/ui/field.tsx",
+      "client/src/components/ui/form.tsx",
+      "client/src/components/ui/hover-card.tsx",
+      "client/src/components/ui/input-group.tsx",
+      "client/src/components/ui/input-otp.tsx",
+      "client/src/components/ui/input.tsx",
+      "client/src/components/ui/item.tsx",
+      "client/src/components/ui/label.tsx",
+      "client/src/components/ui/menubar.tsx",
+      "client/src/components/ui/navigation-menu.tsx",
+      "client/src/components/ui/pagination.tsx",
+      "client/src/components/ui/popover.tsx",
+      "client/src/components/ui/progress.tsx",
+      "client/src/components/ui/radio-group.tsx",
+      "client/src/components/ui/resizable.tsx",
+      "client/src/components/ui/scroll-area.tsx",
+      "client/src/components/ui/select.tsx",
+      "client/src/components/ui/separator.tsx",
+      "client/src/components/ui/sheet.tsx",
+      "client/src/components/ui/sidebar.tsx",
+      "client/src/components/ui/slider.tsx",
+      "client/src/components/ui/switch.tsx",
+      "client/src/components/ui/table.tsx",
+      "client/src/components/ui/tabs.tsx",
+      "client/src/components/ui/textarea.tsx",
+      "client/src/components/ui/toggle-group.tsx",
+      "client/src/components/ui/toggle.tsx",
+      "client/src/components/ui/tooltip.tsx",
+      "client/src/contexts/ThemeContext.tsx",
+      "client/src/hooks/useComposition.ts",
+      "client/src/hooks/useMobile.tsx",
+      "client/src/hooks/usePersistFn.ts",
+      "client/src/pages/About.tsx",
+      "client/src/pages/Blog.tsx",
+      "client/src/pages/BlogPost.tsx",
+      "client/src/pages/Contact.tsx",
+      "client/src/pages/Endodontics.tsx",
+      "client/src/pages/Gallery.tsx",
+      "client/src/pages/Home.tsx",
+      "client/src/pages/InsuranceFinancing.tsx",
+      "client/src/pages/Periodontics.tsx",
+      "client/src/pages/SmileAssessment.tsx"
+    ],
+    "react-day-picker": [
+      "client/src/components/ui/calendar.tsx"
+    ],
+    "react-dom": [
+      "client/src/main.tsx"
+    ],
+    "react-hook-form": [
+      "client/src/components/ui/form.tsx"
+    ],
+    "react-resizable-panels": [
+      "client/src/components/ui/resizable.tsx"
+    ],
+    "recharts": [
+      "client/src/components/ui/chart.tsx"
+    ],
+    "sonner": [
+      "client/src/components/ui/sonner.tsx"
+    ],
+    "tailwind-merge": [
+      "client/src/lib/utils.ts"
+    ],
+    "tailwindcss": [
+      "client/src/index.css"
+    ],
+    "tw-animate-css": [
+      "client/src/index.css"
+    ],
+    "vaul": [
+      "client/src/components/ui/drawer.tsx"
+    ],
+    "vite": [
+      "vite.config.ts"
+    ],
+    "wouter": [
+      "client/src/App.tsx",
+      "client/src/components/AccessibilityWidget.tsx",
+      "client/src/components/AnnouncementBanner.tsx",
+      "client/src/components/Footer.tsx",
+      "client/src/components/Navbar.tsx",
+      "client/src/pages/About.tsx",
+      "client/src/pages/Blog.tsx",
+      "client/src/pages/BlogPost.tsx",
+      "client/src/pages/DentalBonding.tsx",
+      "client/src/pages/DentalCrowns.tsx",
+      "client/src/pages/DentalFillings.tsx",
+      "client/src/pages/DentalImplants.tsx",
+      "client/src/pages/EmergencyDentist.tsx",
+      "client/src/pages/Endodontics.tsx",
+      "client/src/pages/Gallery.tsx",
+      "client/src/pages/Home.tsx",
+      "client/src/pages/Invisalign.tsx",
+      "client/src/pages/LocalAreaPage.tsx",
+      "client/src/pages/MembershipPlan.tsx",
+      "client/src/pages/NotFound.tsx",
+      "client/src/pages/Orthodontics.tsx",
+      "client/src/pages/Periodontics.tsx",
+      "client/src/pages/Services.tsx",
+      "client/src/pages/SmileAssessment.tsx",
+      "client/src/pages/SpecialOffers.tsx",
+      "client/src/pages/TeethCleaning.tsx",
+      "client/src/pages/TeethWhitening.tsx",
+      "client/src/pages/Veneers.tsx",
+      "client/src/pages/WisdomTeeth.tsx"
+    ]
+  }
+}

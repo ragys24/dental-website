@@ -34,10 +34,10 @@ import { PRACTICE, COLORS } from "@/lib/constants";
 import { SMS } from "@/lib/sms";
 
 const NAVY = "oklch(0.18 0.05 240)";
-const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg";
-const DR_GHOBRIAL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/IMG_9486_6f5df7e4.jpeg";
-const TECH_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
-const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
+const PATTERN_DARK = "/assets/uplift/PATTERN-02_5ffa36bf.webp";
+const DR_GHOBRIAL = "/assets/uplift/IMG_9486_6f5df7e4.webp";
+const TECH_IMG = "/assets/uplift/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
+const SMILE_IMG = "/assets/uplift/smile-transformation_82cc164e.webp";
 
 const TREATMENTS = [
   {

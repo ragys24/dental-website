@@ -1,0 +1,576 @@
+=== Working-tree changes ===
+ [31mM[m pnpm-lock.yaml
+[31m??[m docs/migration-research-notes.md
+[31m??[m docs/runtime-dependency-audit.txt
+
+=== Runtime/deployment references ===
+client/index.html:14:    <link rel="canonical" href="https://upliftdental.com/" />
+client/index.html:24:    <meta property="og:url" content="https://upliftdental.com/" />
+client/index.html:27:    <meta property="og:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/logo-og_e9a52b9b.webp" />
+client/index.html:37:    <meta name="twitter:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/logo-og_e9a52b9b.webp" />
+client/index.html:40:    <link rel="icon" type="image/png" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-logo-icon_12b7fb68.png" />
+client/index.html:41:    <link rel="apple-touch-icon" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-logo-icon_12b7fb68.png" />
+client/index.html:44:    <link rel="preload" as="image" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/hero-smile_47b15f85.jpg" fetchpriority="high" />
+client/index.html:45:    <link rel="dns-prefetch" href="https://d2xsxph8kpxj0f.cloudfront.net" />
+client/index.html:46:    <link rel="preconnect" href="https://d2xsxph8kpxj0f.cloudfront.net" crossorigin />
+client/index.html:49:    <link rel="preconnect" href="https://fonts.googleapis.com" />
+client/index.html:50:    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+client/index.html:51:    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+client/index.html:52:    <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" /></noscript>
+client/index.html:131:      src="%VITE_ANALYTICS_ENDPOINT%/umami"
+client/index.html:132:      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+client/public/__manus__/debug-collector.js:9: * Data is periodically sent to /__manus__/logs
+client/public/__manus__/debug-collector.js:22:    reportEndpoint: "/__manus__/logs",
+client/public/__manus__/debug-collector.js:136:      return !!target.closest(".manus-no-record");
+client/public/__manus__/debug-collector.js:465:    if (url.indexOf("/__manus__/") === 0) {
+client/public/__manus__/debug-collector.js:601:    this._manusData = {
+client/public/__manus__/debug-collector.js:613:      xhr._manusData &&
+client/public/__manus__/debug-collector.js:614:      xhr._manusData.url &&
+client/public/__manus__/debug-collector.js:615:      xhr._manusData.url.indexOf("/__manus__/") !== 0
+client/public/__manus__/debug-collector.js:617:      xhr._manusData.startTime = Date.now();
+client/public/__manus__/debug-collector.js:618:      xhr._manusData.requestBody = body ? sanitizeValue(tryParseJson(body)) : null;
+client/public/__manus__/debug-collector.js:657:          timestamp: xhr._manusData.startTime,
+client/public/__manus__/debug-collector.js:659:          method: xhr._manusData.method,
+client/public/__manus__/debug-collector.js:660:          url: xhr._manusData.url,
+client/public/__manus__/debug-collector.js:661:          request: { body: xhr._manusData.requestBody },
+client/public/__manus__/debug-collector.js:667:          duration: Date.now() - xhr._manusData.startTime,
+client/public/__manus__/debug-collector.js:687:          timestamp: xhr._manusData.startTime,
+client/public/__manus__/debug-collector.js:689:          method: xhr._manusData.method,
+client/public/__manus__/debug-collector.js:690:          url: xhr._manusData.url,
+client/public/__manus__/debug-collector.js:691:          request: { body: xhr._manusData.requestBody },
+client/public/__manus__/debug-collector.js:693:          duration: Date.now() - xhr._manusData.startTime,
+client/public/robots.txt:5:Sitemap: https://upliftdental.com/sitemap.xml
+client/public/sitemap.xml:2:<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+client/public/sitemap.xml:3:        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+client/public/sitemap.xml:4:        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+client/public/sitemap.xml:5:        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+client/public/sitemap.xml:8:  <url><loc>https://upliftdental.com/</loc><lastmod>2026-04-06</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+client/public/sitemap.xml:9:  <url><loc>https://upliftdental.com/services</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+client/public/sitemap.xml:10:  <url><loc>https://upliftdental.com/about</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+client/public/sitemap.xml:11:  <url><loc>https://upliftdental.com/contact</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+client/public/sitemap.xml:12:  <url><loc>https://upliftdental.com/blog</loc><lastmod>2026-04-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+client/public/sitemap.xml:13:  <url><loc>https://upliftdental.com/special-offers</loc><lastmod>2026-04-06</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+client/public/sitemap.xml:14:  <url><loc>https://upliftdental.com/gallery</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:17:  <url><loc>https://upliftdental.com/invisalign</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+client/public/sitemap.xml:18:  <url><loc>https://upliftdental.com/dental-implants</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+client/public/sitemap.xml:19:  <url><loc>https://upliftdental.com/emergency-dentist</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+client/public/sitemap.xml:20:  <url><loc>https://upliftdental.com/periodontics</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+client/public/sitemap.xml:21:  <url><loc>https://upliftdental.com/endodontics</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+client/public/sitemap.xml:24:  <url><loc>https://upliftdental.com/smile-assessment</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+client/public/sitemap.xml:27:  <url><loc>https://upliftdental.com/orthodontics</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+client/public/sitemap.xml:28:  <url><loc>https://upliftdental.com/teeth-whitening</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+client/public/sitemap.xml:29:  <url><loc>https://upliftdental.com/veneers</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+client/public/sitemap.xml:30:  <url><loc>https://upliftdental.com/dental-crowns</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+client/public/sitemap.xml:31:  <url><loc>https://upliftdental.com/wisdom-teeth-removal</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+client/public/sitemap.xml:32:  <url><loc>https://upliftdental.com/dental-bonding</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+client/public/sitemap.xml:33:  <url><loc>https://upliftdental.com/dental-fillings</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+client/public/sitemap.xml:34:  <url><loc>https://upliftdental.com/teeth-cleaning</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+client/public/sitemap.xml:37:  <url><loc>https://upliftdental.com/dentist-near-garden-grove</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+client/public/sitemap.xml:38:  <url><loc>https://upliftdental.com/dentist-near-seal-beach</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+client/public/sitemap.xml:39:  <url><loc>https://upliftdental.com/dentist-near-los-alamitos</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+client/public/sitemap.xml:40:  <url><loc>https://upliftdental.com/dentist-near-westminster</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+client/public/sitemap.xml:41:  <url><loc>https://upliftdental.com/dentist-near-anaheim</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+client/public/sitemap.xml:42:  <url><loc>https://upliftdental.com/dentist-near-huntington-beach</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+client/public/sitemap.xml:43:  <url><loc>https://upliftdental.com/dentist-near-cypress</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+client/public/sitemap.xml:44:  <url><loc>https://upliftdental.com/dentist-near-long-beach</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+client/public/sitemap.xml:45:  <url><loc>https://upliftdental.com/dentist-near-stanton</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+client/public/sitemap.xml:46:  <url><loc>https://upliftdental.com/dentist-near-buena-park</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+client/public/sitemap.xml:47:  <url><loc>https://upliftdental.com/dentist-near-rossmoor</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+client/public/sitemap.xml:48:  <url><loc>https://upliftdental.com/dentist-near-west-grove</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+client/public/sitemap.xml:51:  <url><loc>https://upliftdental.com/blog/a-parents-guide-to-your-childs-first-dental-visit</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:52:  <url><loc>https://upliftdental.com/blog/how-gum-disease-can-affect-your-overall-health</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:53:  <url><loc>https://upliftdental.com/blog/dental-sealants-the-secret-weapon-against-cavities-for-kids-and-adults</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:54:  <url><loc>https://upliftdental.com/blog/new-year-new-smile-setting-dental-health-goals-for-the-year-ahead</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:55:  <url><loc>https://upliftdental.com/blog/the-ultimate-guide-to-choosing-between-dental-bridge-and-implant</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:56:  <url><loc>https://upliftdental.com/blog/dental-care-during-pregnancy-what-every-expecting-mom-should-know</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:57:  <url><loc>https://upliftdental.com/blog/tmj-disorder-causes-symptoms-and-treatment-options</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:58:  <url><loc>https://upliftdental.com/blog/the-benefits-of-dental-implants-a-permanent-solution-for-missing-teeth</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:59:  <url><loc>https://upliftdental.com/blog/dental-emergency-away-from-home</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:60:  <url><loc>https://upliftdental.com/blog/what-are-dental-veneers-and-are-they-right-for-you</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:61:  <url><loc>https://upliftdental.com/blog/do-i-really-need-to-floss-a-dentist-answers-your-top-questions</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:62:  <url><loc>https://upliftdental.com/blog/cosmetic-dentistry-5-ways-to-transform-your-smile</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:63:  <url><loc>https://upliftdental.com/blog/understanding-root-canals-why-they-are-nothing-to-fear</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:64:  <url><loc>https://upliftdental.com/blog/how-dental-crowns-can-save-a-damaged-tooth</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:65:  <url><loc>https://upliftdental.com/blog/why-regular-dental-cleanings-are-more-important-than-you-think</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:66:  <url><loc>https://upliftdental.com/blog/the-truth-about-dental-anxiety-and-how-to-overcome-it</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:67:  <url><loc>https://upliftdental.com/blog/braces-vs-invisalign-which-is-better-for-your-teen</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:68:  <url><loc>https://upliftdental.com/blog/what-to-do-when-you-crack-or-break-a-tooth</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:69:  <url><loc>https://upliftdental.com/blog/7-tips-to-keep-your-kids-teeth-healthy-and-cavity-free</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:70:  <url><loc>https://upliftdental.com/blog/the-complete-guide-to-invisalign-what-to-expect-from-start-to-finish</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:71:  <url><loc>https://upliftdental.com/blog/everything-you-need-to-know-about-teeth-whitening</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:72:  <url><loc>https://upliftdental.com/blog/how-to-choose-the-best-dentist-in-garden-grove-ca</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+client/public/sitemap.xml:73:  <url><loc>https://upliftdental.com/blog/dental-implants-vs-dentures-which-is-right-for-you</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:74:  <url><loc>https://upliftdental.com/blog/emergency-dentist-garden-grove</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+client/public/sitemap.xml:75:  <url><loc>https://upliftdental.com/blog/tips-for-optimal-braces-care</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:76:  <url><loc>https://upliftdental.com/blog/effective-tmj-treatment-options</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:77:  <url><loc>https://upliftdental.com/blog/oral-health-and-overall-wellness-why-seniors-need-regular-dental-checkups</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:78:  <url><loc>https://upliftdental.com/blog/get-started-the-benefits-of-early-intervention-with-invisalign</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:79:  <url><loc>https://upliftdental.com/blog/understanding-gum-disease-stages</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:80:  <url><loc>https://upliftdental.com/blog/fluoride-vs-hydroxyapatite-which-is-best-for-your-childs-dental-health</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:81:  <url><loc>https://upliftdental.com/blog/3-tricks-to-make-flossing-with-braces-easier</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:82:  <url><loc>https://upliftdental.com/blog/what-happens-during-your-professional-dental-cleaning</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:83:  <url><loc>https://upliftdental.com/blog/oral-health-tips-for-children</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:84:  <url><loc>https://upliftdental.com/blog/diet-and-oral-health</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:85:  <url><loc>https://upliftdental.com/blog/a-deep-dive-into-dental-hygiene-floss-vs-water-pick</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:86:  <url><loc>https://upliftdental.com/blog/is-invisalign-the-same-as-braces</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:87:  <url><loc>https://upliftdental.com/blog/its-too-early-for-braces-or-is-it</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:88:  <url><loc>https://upliftdental.com/blog/how-to-keep-your-teeth-healthy-and-white</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:89:  <url><loc>https://upliftdental.com/blog/i-want-whiter-teeth</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:90:  <url><loc>https://upliftdental.com/blog/what-are-the-differences-between-dental-insurance-plans</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:91:  <url><loc>https://upliftdental.com/blog/are-clear-aligners-better-than-braces</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/public/sitemap.xml:92:  <url><loc>https://upliftdental.com/blog/the-compassionate-provider</loc><lastmod>2026-04-06</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+client/src/components/BreadcrumbSchema.tsx:21:      "@context": "https://schema.org",
+client/src/components/Footer.tsx:77:                { icon: Facebook, label: "Facebook", href: "https://facebook.com/upliftdental" },
+client/src/components/Footer.tsx:78:                { icon: Instagram, label: "Instagram", href: "https://instagram.com/upliftdental" },
+client/src/components/Footer.tsx:79:                { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/company/uplift-dental-and-orthodontics" },
+client/src/components/Footer.tsx:96:                href="https://www.google.com/maps/place/Uplift+Dental"
+client/src/components/Footer.tsx:105:                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-white" xmlns="http://www.w3.org/2000/svg">
+client/src/components/Footer.tsx:214:          <p className="font-body text-xs text-white/40" itemScope itemType="https://schema.org/Dentist">
+client/src/components/Footer.tsx:217:            <span itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+client/src/components/LiveChat.tsx:5:             EmailJS form submission for offline messages
+client/src/components/LiveChat.tsx:9:import emailjs from "@emailjs/browser";
+client/src/components/LiveChat.tsx:17:const LOGO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/Logo-01_0c8b669d.png";
+client/src/components/LiveChat.tsx:93:      actions: [{ label: "Get Directions", href: "https://maps.google.com/?q=5253+Lampson+Ave+Garden+Grove+CA+92845" }],
+client/src/components/LiveChat.tsx:254:      await emailjs.send(
+client/src/components/Map.tsx:89:const API_KEY = import.meta.env.VITE_FRONTEND_FORGE_API_KEY;
+client/src/components/Map.tsx:91:  import.meta.env.VITE_FRONTEND_FORGE_API_URL ||
+client/src/components/Map.tsx:92:  "https://forge.butterfly-effect.dev";
+client/src/components/PageSEO.tsx:17:  "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/hero-smile_47b15f85.jpg";
+client/src/components/StructuredData.tsx:17:      "@context": "https://schema.org",
+client/src/components/StructuredData.tsx:19:      "@id": "https://upliftdental.com/#organization",
+client/src/components/StructuredData.tsx:23:      "logo": "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/logo-og_e9a52b9b.webp",
+client/src/components/StructuredData.tsx:50:        { "@type": "City", "name": "Garden Grove", "sameAs": "https://en.wikipedia.org/wiki/Garden_Grove,_California" },
+client/src/components/StructuredData.tsx:56:        { "@type": "City", "name": "Seal Beach", "sameAs": "https://en.wikipedia.org/wiki/Seal_Beach,_California" },
+client/src/components/StructuredData.tsx:58:        { "@type": "City", "name": "Los Alamitos", "sameAs": "https://en.wikipedia.org/wiki/Los_Alamitos,_California" },
+client/src/components/StructuredData.tsx:60:        { "@type": "City", "name": "Westminster", "sameAs": "https://en.wikipedia.org/wiki/Westminster,_California" },
+client/src/components/StructuredData.tsx:62:        { "@type": "City", "name": "Cypress", "sameAs": "https://en.wikipedia.org/wiki/Cypress,_California" },
+client/src/components/StructuredData.tsx:64:        { "@type": "City", "name": "Huntington Beach", "sameAs": "https://en.wikipedia.org/wiki/Huntington_Beach,_California" },
+client/src/components/StructuredData.tsx:67:        { "@type": "City", "name": "Anaheim", "sameAs": "https://en.wikipedia.org/wiki/Anaheim,_California" },
+client/src/components/StructuredData.tsx:70:        { "@type": "City", "name": "Long Beach", "sameAs": "https://en.wikipedia.org/wiki/Long_Beach,_California" },
+client/src/components/StructuredData.tsx:72:        { "@type": "City", "name": "Buena Park", "sameAs": "https://en.wikipedia.org/wiki/Buena_Park,_California" },
+client/src/components/StructuredData.tsx:74:        { "@type": "City", "name": "Stanton", "sameAs": "https://en.wikipedia.org/wiki/Stanton,_California" },
+client/src/components/StructuredData.tsx:81:        "https://www.facebook.com/upliftdental",
+client/src/components/StructuredData.tsx:82:        "https://www.instagram.com/upliftdental",
+client/src/components/StructuredData.tsx:83:        "https://www.yelp.com/biz/uplift-dental-and-orthodontics-garden-grove"
+client/src/components/StructuredData.tsx:130:      "founder": { "@type": "Person", "name": "Dr. Ragy Stefan", "url": "https://upliftdental.com/about#dr-stefan" },
+client/src/components/StructuredData.tsx:132:        { "@type": "Person", "name": "Dr. Ragy Stefan", "jobTitle": "General Dentist", "url": "https://upliftdental.com/about#dr-stefan" },
+client/src/components/StructuredData.tsx:133:        { "@type": "Person", "name": "Dr. Clark Schneekluth", "jobTitle": "Orthodontist", "url": "https://upliftdental.com/about#dr-schneekluth" },
+client/src/components/StructuredData.tsx:134:        { "@type": "Person", "name": "Dr. Joseph Youssef", "jobTitle": "Oral Surgeon", "url": "https://upliftdental.com/about#dr-youssef" },
+client/src/components/StructuredData.tsx:135:        { "@type": "Person", "name": "Dr. Erene Saad", "jobTitle": "Periodontist", "url": "https://upliftdental.com/about#dr-saad" },
+client/src/components/StructuredData.tsx:136:        { "@type": "Person", "name": "Dr. Daniel Ghobrial", "jobTitle": "Endodontist", "url": "https://upliftdental.com/about#dr-ghobrial" }
+client/src/components/StructuredData.tsx:166:      "@context": "https://schema.org",
+client/src/components/StructuredData.tsx:168:      "@id": "https://upliftdental.com/#website",
+client/src/components/StructuredData.tsx:169:      "url": "https://upliftdental.com",
+client/src/components/StructuredData.tsx:172:      "publisher": { "@id": "https://upliftdental.com/#organization" },
+client/src/components/StructuredData.tsx:175:        "target": { "@type": "EntryPoint", "urlTemplate": "https://upliftdental.com/blog?q={search_term_string}" },
+client/src/components/StructuredData.tsx:197:      "@context": "https://schema.org",
+client/src/components/StructuredData.tsx:229:      "@context": "https://schema.org",
+client/src/components/StructuredData.tsx:237:      "provider": { "@id": "https://upliftdental.com/#organization" },
+client/src/components/StructuredData.tsx:238:      "isPartOf": { "@id": "https://upliftdental.com/#website" }
+client/src/components/TikTokSection.tsx:71:                  src={`https://www.tiktok.com/embed/v2/${v.id}`}
+client/src/components/TikTokSection.tsx:93:            href="https://www.tiktok.com/@uplift.dental"
+client/src/const.ts:5:  const oauthPortalUrl = import.meta.env.VITE_OAUTH_PORTAL_URL;
+client/src/const.ts:6:  const appId = import.meta.env.VITE_APP_ID;
+client/src/index.css:209:    background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-pattern-dark_02e4726d.jpg');
+client/src/index.css:215:    background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-pattern-light_9d83da07.jpg');
+client/src/lib/blogData.ts:39:    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80",
+client/src/lib/blogData.ts:56:    image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80",
+client/src/lib/blogData.ts:73:    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=80",
+client/src/lib/blogData.ts:90:    image: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=800&q=80",
+client/src/lib/blogData.ts:107:    image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=80",
+client/src/lib/blogData.ts:124:    image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=800&q=80",
+client/src/lib/blogData.ts:125:    content: `<p>Pregnancy is an exciting time, but it also brings changes to your body that can affect your oral health. Hormonal shifts during pregnancy can increase your risk of gum disease and other dental problems, making dental care more important than ever. At <strong>Uplift Dental &amp; Orthodontics</strong> in <strong>Garden Grove, CA</strong>, we provide safe, gentle dental care for expecting mothers throughout every stage of pregnancy.</p><h2>How Pregnancy Affects Your Oral Health</h2><p>During pregnancy, elevated levels of estrogen and progesterone can cause your gums to react more intensely to plaque, leading to a condition called pregnancy gingivitis. Symptoms include red, swollen, and tender gums that bleed easily during brushing and flossing. If left untreated, pregnancy gingivitis can progress to more serious gum disease. Morning sickness can also affect your teeth. Frequent vomiting exposes your teeth to stomach acids that can erode tooth enamel over time. Pregnancy cravings for sugary foods can increase your risk of cavities as well.</p><h2>Is Dental Care During Pregnancy Safe?</h2><p>Yes, dental care during pregnancy is not only safe but highly recommended. The <a href="https://www.ada.org/resources/research/science-and-research-institute/oral-health-topics/pregnancy" target="_blank" rel="noopener">American Dental Association</a>, the American Congress of Obstetricians and Gynecologists, and the American Academy of Pediatric Dentistry all encourage women to maintain their dental health during pregnancy. Routine checkups, <a href="/dental-cleaning/">professional cleanings</a>, and necessary dental treatments can be safely performed during pregnancy, with the second trimester being the ideal time for elective procedures.</p><h2>Essential Dental Care Tips During Pregnancy</h2><p>Continue brushing twice daily and flossing once daily. If morning sickness makes brushing difficult, rinse your mouth with a teaspoon of baking soda mixed in water to neutralize stomach acids. Eat a balanced diet rich in calcium, protein, and vitamins A, C, and D to support your baby's developing teeth. Limit sugary snacks. Do not skip your dental checkups — schedule a cleaning and exam during your second trimester. Tell your dentist that you are pregnant so we can adjust treatment accordingly.</p><h2>Schedule Your Prenatal Dental Visit</h2><p>Taking care of your smile during pregnancy is one of the best things you can do for yourself and your baby. <strong>Call Uplift Dental &amp; Orthodontics at <a href="tel:7148983308">${PRACTICE.phone.display}</a></strong> to schedule your prenatal dental appointment in <strong>${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}</strong>.</p>`,
+client/src/lib/blogData.ts:141:    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+client/src/lib/blogData.ts:158:    image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80",
+client/src/lib/blogData.ts:175:    image: "https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&q=80",
+client/src/lib/blogData.ts:176:    content: `<p>Dental emergencies are stressful enough when you are near your regular dentist, but they can feel even more overwhelming when you are traveling, at work, or away from home. Knowing how to respond in those critical first moments can save your tooth and prevent a minor issue from becoming a major problem. Here is your guide from <strong>Uplift Dental &amp; Orthodontics</strong> in <strong>Garden Grove, CA</strong>.</p><h2>Build a Dental Emergency Kit</h2><p>Whether you are traveling for vacation or business, packing a small dental emergency kit can be a lifesaver. Include over-the-counter pain medication like <a href="https://www.mayoclinic.org/drugs-supplements/ibuprofen-oral-route/description/drg-20070602">ibuprofen</a>, a small container with a lid for storing a knocked-out tooth, gauze pads for controlling bleeding, dental wax to cover a broken bracket or sharp tooth edge, a small bottle of salt for making a warm saltwater rinse, and the phone number for Uplift Dental: <a href="tel:7148983308">${PRACTICE.phone.display}</a>.</p><h2>What to Do for Common Emergencies</h2><h3>Knocked-Out Tooth</h3><p>Pick up the tooth by the crown only (never the root). Gently rinse it with water if dirty — do not scrub or remove any attached tissue. Try to place the tooth back in its socket. If that is not possible, keep it moist in milk or saliva. Get to a dentist within 30 to 60 minutes for the best chance of saving the tooth.</p><h3>Severe Toothache</h3><p>Rinse your mouth with warm saltwater. Gently floss around the tooth to remove any trapped food. Take ibuprofen for pain and inflammation. Do not place aspirin directly on the gum. Contact our office or seek local emergency dental care.</p><h3>Broken or Chipped Tooth</h3><p>Save any broken pieces. Rinse your mouth with warm water. Apply gauze if there is bleeding. Use a cold compress on the outside of your cheek. Cover any sharp edges with dental wax or sugarless gum to protect your tongue and cheeks. Call <a href="tel:7148983308">${PRACTICE.phone.display}</a> to schedule an <a href="/emergency-care/">emergency appointment</a>.</p><h3>Lost Filling or Crown</h3><p>If a filling falls out, place a piece of sugarless gum in the cavity as a temporary measure. If a crown comes off, try to slip it back over the tooth using denture adhesive or toothpaste to hold it temporarily. Do not use super glue. See your dentist as soon as possible.</p><h2>When to Go to the Emergency Room</h2><p>While most dental emergencies should be treated by a dentist, certain situations warrant a visit to the ER, including uncontrollable bleeding, a broken jaw, severe swelling that affects breathing or swallowing, or facial trauma from an accident.</p><h2>We Are Here When You Need Us</h2><p>At <strong>Uplift Dental &amp; Orthodontics</strong>, we offer <a href="/same-day-dental-appointments/">same-day emergency appointments</a> so you can get help fast when you need it most. <strong>Call <a href="tel:7148983308">${PRACTICE.phone.display}</a></strong> — we are located at <strong>${PRACTICE.address.full}</strong>.</p>`,
+client/src/lib/blogData.ts:192:    image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80",
+client/src/lib/blogData.ts:209:    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80",
+client/src/lib/blogData.ts:226:    image: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=800&q=80",
+client/src/lib/blogData.ts:243:    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
+client/src/lib/blogData.ts:260:    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80",
+client/src/lib/blogData.ts:277:    image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=80",
+client/src/lib/blogData.ts:294:    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+client/src/lib/blogData.ts:311:    image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80",
+client/src/lib/blogData.ts:328:    image: "https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&q=80",
+client/src/lib/blogData.ts:345:    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=80",
+client/src/lib/blogData.ts:362:    image: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=800&q=80",
+client/src/lib/blogData.ts:379:    image: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=800&q=80",
+client/src/lib/blogData.ts:434:    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+client/src/lib/blogData.ts:497:    image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80",
+client/src/lib/blogData.ts:556:    image: "https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&q=80",
+client/src/lib/blogData.ts:591:<p>If you experience any of the signs listed above, here are some general tips to follow while you make your way to our Garden Grove dental office. Stay calm, as panicking can make the situation feel worse than it is. Call Uplift Dental at <a href="tel:7148983308">${PRACTICE.phone.display}</a> immediately to let us know you are coming. Apply a cold compress to the outside of your cheek if there is swelling. Take over-the-counter pain relief like <a href="https://www.mayoclinic.org/drugs-supplements/ibuprofen-oral-route/description/drg-20070602">ibuprofen</a> as directed. Avoid aspirin on an open wound or directly on gums, as it can burn the tissue. Save any broken tooth fragments and bring them with you.</p>
+client/src/lib/blogData.ts:613:    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
+client/src/lib/blogData.ts:674:<img class="aligncenter wp-image-11264 size-full" src="https://upliftdental.com/wp-content/uploads/2025/06/Uplift-Dental-1.jpg" alt="" width="710" height="520" />
+client/src/lib/blogData.ts:731:<img class="aligncenter wp-image-11263 size-full" src="https://upliftdental.com/wp-content/uploads/2025/06/Uplift-Dental.png" alt="" width="710" height="520" />
+client/src/lib/blogData.ts:751:<img class="aligncenter wp-image-11266 size-large" src="https://upliftdental.com/wp-content/uploads/2025/06/486063711_538182452645320_7816713636359184940_n-819x1024.jpg" alt="" width="640" height="800" />
+client/src/lib/blogData.ts:768:<strong><span style="color: #005a64;">Maximize your orthodontic journey and achieve your ideal smile! Our orthodontic and general dental services offer personalized treatment solutions tailored to your needs. Learn more about our <a href="/braces/">braces services</a> and keep your smile clean with regular <a href="/dental-cleaning/">professional dental cleaning near Garden Grove</a>. Schedule your appointment today at ${PRACTICE.phone.display} and find our IG</span> <a href="https://www.instagram.com/upliftdentalandorthodontics/">here</a>.</strong>
+client/src/lib/blogData.ts:772:Reference: [<a href="https://www.colgate.com/en-us/oral-health/adult-orthodontics/caring-for-braces-you-are-on-your-way-to-a-healthy-smile" target="_blank" rel="noopener">https://www.colgate.com/en-us/oral-health/adult-orthodontics/caring-for-braces-you-are-on-your-way-to-a-healthy-smile</a>]`,
+client/src/lib/blogData.ts:788:    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+client/src/lib/blogData.ts:828:<img class="aligncenter wp-image-10874 size-large" src="https://upliftdental.com/wp-content/uploads/2025/05/475447601_501279573002275_7713506548852801404_n-1024x1024.jpg" alt="" width="640" height="640" />
+client/src/lib/blogData.ts:868:<img class="aligncenter wp-image-10873 size-large" src="https://upliftdental.com/wp-content/uploads/2025/05/485308864_538181569312075_5011279999656015283_n-819x1024.jpg" alt="" width="640" height="800" />
+client/src/lib/blogData.ts:908:<div class="initial-rich-text"><img class="aligncenter wp-image-10872 size-large" src="https://upliftdental.com/wp-content/uploads/2025/05/480518768_515189811611251_4821689416893265410_n-819x1024.jpg" alt="" width="640" height="800" /></div>
+client/src/lib/blogData.ts:918:<strong><span style="color: #005a64;">Don’t let TMJ pain control your life—discover how the right treatment can restore your comfort and improve your quality of life. Our orthodontic and general dental services offer personalized treatment solutions tailored to your needs. Learn more about our <a href="/tmj-treatment/">TMJ treatment in Garden Grove</a> and <a href="/general-dentistry/">general dentistry</a> options. Schedule your appointment today at ${PRACTICE.phone.display} and find our IG</span> <a href="https://www.instagram.com/upliftdentalandorthodontics/" target="_blank" rel="noopener">here</a>.</strong>`,
+client/src/lib/blogData.ts:934:    image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80",
+client/src/lib/blogData.ts:941:<strong> <img class="aligncenter wp-image-10859 size-full" src="https://upliftdental.com/wp-content/uploads/2025/04/Uplift-Dental.jpg" alt="" width="710" height="520" /></strong>
+client/src/lib/blogData.ts:954:<img class="aligncenter wp-image-10858 size-full" src="https://upliftdental.com/wp-content/uploads/2025/04/Uplift-Dental-1.jpg" alt="" width="710" height="520" />
+client/src/lib/blogData.ts:962:<strong><span style="color: #005a64;">Don’t wait until dental issues arise—stay ahead with preventive care! It doesn’t matter if it’s been a while since your last visit to the dentist. We’re here for you now. If you're in Garden Grove, Rossmoor, or Seal Beach, schedule your checkup today at Uplift Dental &amp; Orthodontics and experience the difference that senior-focused, professional dental care can make. Explore our <a href="/dental-cleaning/">dental cleaning</a>, <a href="/dental-implants/">dental implant</a>, and <a href="/dentures/">denture</a> services designed for patients of all ages. Call us now at ${PRACTICE.phone.display} or visit our</span> <a href="http://upliftdental.com/">website </a><span style="color: #005a64;">to book an appointment. Your smile and your health are worth it!</span></strong>`,
+client/src/lib/blogData.ts:978:    image: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=800&q=80",
+client/src/lib/blogData.ts:988:<figure class="wp-caption aligncenter"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80" alt="Mother and daughter Invisalign success stories!" style="max-width: 100%; height: auto; border-radius: 8px; margin: 20px 0;" /><figcaption class="wp-caption-text">Mother and daughter Invisalign success stories!</figcaption></figure>
+client/src/lib/blogData.ts:993:<figure class="wp-caption aligncenter"><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80" alt="Another successful Invisalign journey with Dr. Schneekluth." style="max-width: 100%; height: auto; border-radius: 8px; margin: 20px 0;" /><figcaption class="wp-caption-text">Another successful Invisalign journey with Dr. Schneekluth.</figcaption></figure>
+client/src/lib/blogData.ts:999:<iframe src="https://www.facebook.com/plugins/video.php?height=314&amp;href=https%3A%2F%2Fwww.facebook.com%2FUpliftDentalandOrthodontics%2Fvideos%2F979525090268065%2F&amp;show_text=true&amp;width=560&amp;t=0" width="560" height="429" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>
+client/src/lib/blogData.ts:1001:<span style="color: #005a64;"><b>At Uplift Dental, we are committed to providing the highest quality orthodontic care for you and your family. Our experienced team is here to guide you through every step of the Invisalign process, ensuring a comfortable and effective treatment experience. Let our team guide you through the process of starting early intervention with Invisalign. Visit our </b><a style="color: #005a64;" href="https://www.linkedin.com/company/uplift-dental-and-orthodontics/?viewAsMember=true"><b>socials</b></a> <b>or Explore our <a href="/invisalign-treatment-garden-grove-ca/">Invisalign treatment options</a>, <a href="/braces/">braces</a>, and <a href="/pediatric-dentistry/">pediatric dental care for kids in Garden Grove</a> services, or give us a call at 714.898.3308 to see how our team can help you and your family all achieve brilliant smiles!</b></span>`,
+client/src/lib/blogData.ts:1017:    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80",
+client/src/lib/blogData.ts:1159:https://videos.files.wordpress.com/uNNWL0VF/950.kp3xiqqdp9mtdkjx_a.mp4
+client/src/lib/blogData.ts:1181:<img class="aligncenter wp-image-9600 size-full" src="https://upliftdental.com/wp-content/uploads/2025/02/Uplift-Dental.png" alt="" width="710" height="520" />
+client/src/lib/blogData.ts:1207:<img class="aligncenter wp-image-9601" src="https://upliftdental.com/wp-content/uploads/2025/02/472776574_486299564500276_5110714639062772336_n-240x300.jpg" alt="" width="600" height="750" />
+client/src/lib/blogData.ts:1219:<strong><span style="color: #005a64;">Early detection is key! Let's work together to prevent gum disease. Our team is committed to providing pain-free and stress-free care. We can’t wait to meet you! Explore our <a href="/dental-cleaning/">dental cleaning</a> and <a href="/general-dentistry/">general dentistry</a> services, and <a href="/gum-disease-treatment/">gum disease treatment at Uplift Dental</a> to keep your gums healthy. Schedule your appointment today at ${PRACTICE.phone.display} and find our IG</span> <a href="https://www.instagram.com/upliftdentalandorthodontics/" target="_blank" rel="noopener">here</a>.
+client/src/lib/blogData.ts:1224:Reference: [<a href="https://www.colgate.com/en-us/oral-health/gum-disease/what-are-the-stages-of-gum-disease" target="_blank" rel="noopener">https://www.colgate.com/en-us/oral-health/gum-disease/what-are-the-stages-of-gum-disease</a>]`,
+client/src/lib/blogData.ts:1240:    image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=80",
+client/src/lib/blogData.ts:1264:<img class="aligncenter wp-image-9762 size-full" src="https://upliftdental.com/wp-content/uploads/2025/02/Uplift-Dental-3.png" alt="" width="710" height="520" />
+client/src/lib/blogData.ts:1277:<img class="aligncenter wp-image-9763" src="https://upliftdental.com/wp-content/uploads/2025/02/image2-150x150.png?crop=1" alt="" width="600" height="600" />
+client/src/lib/blogData.ts:1308:    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80",
+client/src/lib/blogData.ts:1311:<img class="aligncenter wp-image-8992 size-medium" src="https://upliftdental.com/wp-content/uploads/2025/01/IMG_8406-225x300.jpg" alt="" width="225" height="300" />
+client/src/lib/blogData.ts:1399:<img class="aligncenter wp-image-8993 size-medium" src="https://upliftdental.com/wp-content/uploads/2025/01/IMG-20241209-WA0105-225x300.jpg" alt="" width="225" height="300" />
+client/src/lib/blogData.ts:1401:<b><span style="color: #005a64;">Schedule your appointment today and let Uplift Dental transform your dental care experience!  Learn more about our <a href="/braces/">braces services</a> and <a href="/dental-cleaning/">dental cleaning</a> options. Call us at 714.898.3308 or join our Instagram community</span> <a href="https://www.instagram.com/upliftdentalandorthodontics/" target="_blank" rel="noopener">here</a>.</b>
+client/src/lib/blogData.ts:1405:Reference: [<a href="https://www.colgate.com/en-us/oral-health/early-orthodontics/3-tricks-to-make-flossing-with-braces-easier" target="_blank" rel="noopener">https://www.colgate.com/en-us/oral-health/early-orthodontics/3-tricks-to-make-flossing-with-braces-easier</a>]`,
+client/src/lib/blogData.ts:1421:    image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=80",
+client/src/lib/blogData.ts:1433:<figure class="wp-block-image aligncenter size-full"><img class="wp-image-7719" src="https://upliftdental.com/wp-content/uploads/2024/11/Uplift-Dental-1.png" alt="" /></figure>
+client/src/lib/blogData.ts:1442:<figure class="wp-block-image aligncenter size-full is-resized"><img class="wp-image-7724" style="width: 685px; height: auto;" src="https://upliftdental.com/wp-content/uploads/2024/12/11.jpg" alt="" /></figure>
+client/src/lib/blogData.ts:1446:<p>Don’t let dental issues dim your holiday cheer! Keep your smile healthy and bright with a professional cleaning. Schedule your appointment today by calling ${PRACTICE.phone.display}, and be sure to check out our <a href="https://www.instagram.com/upliftdentalandorthodontics/" target="_blank" rel="noreferrer noopener">Instagram</a> for updates.</p>
+client/src/lib/blogData.ts:1447:<figure class="wp-block-image size-full"><a href="https://upliftdental.com/contact/" target="_blank" rel="noreferrer noopener"><img class="wp-image-7714" src="https://upliftdental.com/wp-content/uploads/2024/11/dr-ragy-stefan-profile-picture-2407335966-e1685648202260copy-1920w-1.webp" alt="" /></a></figure>
+client/src/lib/blogData.ts:1449:<figure class="wp-block-image size-full"><a href="https://upliftdental.com/contact/" target="_blank" rel="noreferrer noopener"><img class="wp-image-7715" src="https://upliftdental.com/wp-content/uploads/2024/11/dr-clark-schneekluth-profile-picture-633498533-e1685648219355copy-1920w.webp" alt="" /></a></figure>
+client/src/lib/blogData.ts:1467:    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80",
+client/src/lib/blogData.ts:1475:<img class="aligncenter wp-image-8973 size-medium" src="https://upliftdental.com/wp-content/uploads/2025/01/IMG_4301-169x300.jpg" alt="" width="169" height="300" />
+client/src/lib/blogData.ts:1499:<img class="aligncenter wp-image-8974 size-medium" src="https://upliftdental.com/wp-content/uploads/2025/01/IMG-20241209-WA0044-225x300.jpg" alt="" width="225" height="300" />
+client/src/lib/blogData.ts:1502:<b><span style="color: #005a64;">Combining professional expertise with genuine care, Uplift Dental helps instill healthy oral hygiene habits and ensures a positive experience that sets the foundation for a lifetime of confident smiles. Our compassionate team works with precision and care to ensure every patient receives personalized treatment in a warm and welcoming environment. Whether you or your family needs routine cleanings, advanced cosmetic procedures, or specialized orthodontic care, we are here to help you achieve your healthiest, most confident smile. Ready to experience the difference? Schedule your appointment today and let Uplift Dental transform your dental care experience! Explore our <a href="/pediatric-dentistry/">pediatric dentistry services</a> and <a href="/dental-cleaning/">children's dental cleaning</a> options.  Call us at 714.898.3308 or join our Instagram community</span> <a href="https://www.instagram.com/upliftdentalandorthodontics/" target="_blank" rel="noopener">here</a>.</b>
+client/src/lib/blogData.ts:1506:Reference: [<a href="https://www.cdc.gov/oral-health/prevention/oral-health-tips-for-children.html" target="_blank" rel="noopener">https://www.cdc.gov/oral-health/prevention/oral-health-tips-for-children.html</a>]`,
+client/src/lib/blogData.ts:1522:    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80",
+client/src/lib/blogData.ts:1558:<img class="aligncenter wp-image-8981 size-medium" src="https://upliftdental.com/wp-content/uploads/2025/01/IMG-20241209-WA0097-225x300.jpg" alt="" width="225" height="300" />
+client/src/lib/blogData.ts:1560:<b><span style="color: #005a64;">Whether you need routine care, a complete smile makeover, or specialized orthodontic solutions, we tailor our services to meet individual needs. Experience the genuine care and expertise that sets us apart—schedule your appointment today. Our <a href="/dental-cleaning/">dental cleaning</a> and <a href="/general-dentistry/">general dentistry</a> services help protect your smile and discover why families trust Uplift Dental for all their oral health needs!  Call us at 714.898.3308 or join our Instagram community</span> <a href="https://www.instagram.com/upliftdentalandorthodontics/" target="_blank" rel="noopener">here</a>.</b>
+client/src/lib/blogData.ts:1564:Reference: [<a href="https://www.webmd.com/oral-health/diet-oral-health" target="_blank" rel="noopener">https://www.webmd.com/oral-health/diet-oral-health</a>]`,
+client/src/lib/blogData.ts:1580:    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80",
+client/src/lib/blogData.ts:1630:    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
+client/src/lib/blogData.ts:1633:<figure class="wp-block-uagb-image__figure"><img srcset="https://upliftdental.com/wp-content/uploads/2024/04/GettyImages-1181806522-1920w.webp ,https://upliftdental.com/wp-content/uploads/2024/04/GettyImages-1181806522-1920w.webp 780w, https://upliftdental.com/wp-content/uploads/2024/04/GettyImages-1181806522-1920w.webp 360w" sizes="(max-width: 480px) 150px" src="https://upliftdental.com/wp-content/uploads/2024/04/GettyImages-1181806522-1920w.webp" alt="" class="uag-image-7087" width="612" height="439" title="GettyImages-1181806522-1920w" loading="lazy" role="img"/></figure>
+client/src/lib/blogData.ts:1689:    image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80",
+client/src/lib/blogData.ts:1733:    image: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=800&q=80",
+client/src/lib/blogData.ts:1734:    content: `<strong>Did you know that the attractiveness of your smile can have a direct influence on how people perceive you? According to a survey by the </strong><a href="https://aacd.com/proxy/files/Publications%20and%20Resources/Can%20a%20new%20smile%20make%20you%20appear%20more%20intelligent%20article.doc#:~:text=Virtually%20all%20Americans%20(99.7%25),person's%20chances%20for%20career%20success." target="_blank" rel="noreferrer noopener">American Academy of Cosmetic Dentistry</a><strong>, people with straight teeth and charming smiles are perceived as more attractive, approachable, and friendly than those with flawed smiles. </strong>
+client/src/lib/blogData.ts:1746:While regularly brushing is essential, what is more important is using the correct technique. Here’s how the <a href="https://www.mouthhealthy.org/all-topics-a-z/brushing-your-teeth/" target="_blank" rel="noreferrer noopener">American Dental Association</a> recommends us to brush our teeth:
+client/src/lib/blogData.ts:1756:Did you know that replacing one’s toothbrush regularly also helps keep one’s teeth and gums healthy? With time, the bristles of a toothbrush become frail and cannot effectively clean all the tooth surfaces, thereby increasing the risk of tooth decay, gum disease, and teeth staining. The <a href="https://www.ada.org/en/resources/research/science-and-research-institute/oral-health-topics/toothbrushes#:~:text=Toothbrushes%20should%20be%20replaced%20approximately,as%20the%20bristles%20become%20worn." target="_blank" rel="noreferrer noopener">American Dental Association</a> recommends replacing one’s toothbrush after every three to four months.
+client/src/lib/blogData.ts:1760:Many people think that brushing alone is enough to keep their teeth healthy and stain-free. Unfortunately, this is not true. The <a href="https://www.mouthhealthy.org/all-topics-a-z/flossing" target="_blank" rel="noreferrer noopener">American Dental Association</a> recommends flossing at least once a day to ensure optimal oral hygiene. Flossing helps remove food debris within the tight spaces between the teeth, significantly reducing the risk of gum disease and tooth decay.
+client/src/lib/blogData.ts:1764:A diet comprising essential nutrients such as vitamins and nutrients helps keep one’s teeth strong and healthy. Besides, a fiber-rich diet of green vegetables and fibrous fruits helps keep the teeth clean and stain-free. You can ask your dentist or dental hygienist about a <a href="https://www.mouthhealthy.org/nutrition/food-tips" target="_blank" rel="noreferrer noopener">healthy diet</a> that helps keep your teeth strong and milky white.
+client/src/lib/blogData.ts:1806:    image: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=800&q=80",
+client/src/lib/blogData.ts:1846:    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
+client/src/lib/blogData.ts:1921:<p><strong>Different Dental Insurance P</strong><a href="https://upliftdental.com/2023/10/27/whats-are-the-differences-between-dental-insurance-plans/#5eac8a49-e35d-43f8-ab8f-4e5719fec6a8" target="_blank" rel="noreferrer noopener">1</a><strong>lans in California (Average numbers historically based on 2021 coverage not necessarily accurate.)</strong></p>
+client/src/lib/blogData.ts:1935:Numbers are found online, not necessarily accurate, no affiliation with any carriers. <a href="https://upliftdental.com/2023/10/27/whats-are-the-differences-between-dental-insurance-plans/#5eac8a49-e35d-43f8-ab8f-4e5719fec6a8-link" target="_blank" rel="noreferrer noopener">↩︎</a></li>
+client/src/lib/blogData.ts:1952:    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
+client/src/lib/blogData.ts:1985:<h4><a href="https://patientportal.carestack.com/?dn=uplift/#/online-appointments/select-reason" target="_blank" rel="noreferrer noopener">Click to Schedule a  Free Consultation</a></h4>
+client/src/lib/blogData.ts:2004:    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+client/src/lib/constants.ts:29:  website: "https://upliftdental.com",
+client/src/lib/constants.ts:35:  googleMapsUrl: "https://maps.google.com/?q=5253+Lampson+Ave+Garden+Grove+CA+92845",
+client/src/lib/constants.ts:57:const CDN = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN";
+client/src/pages/About.tsx:186:        canonical="https://upliftdental.com/about"
+client/src/pages/About.tsx:190:        { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/About.tsx:191:        { name: "About Us", url: "https://upliftdental.com/about" },
+client/src/pages/Blog.tsx:15:const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg";
+client/src/pages/Blog.tsx:16:const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation-Wf9zjaGJrezRhcJ4Rfspix.webp";
+client/src/pages/Blog.tsx:17:const INVISALIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/invisalign-lifestyle-a4Ab7WZcR277XNEE76tgPU.webp";
+client/src/pages/Blog.tsx:18:const FAMILY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/family-dental-TeGJLyZzfqwuRW5gkKNBzm.webp";
+client/src/pages/Blog.tsx:19:const TECH_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
+client/src/pages/Blog.tsx:32:    img: "https://upliftdental.com/wp-content/uploads/2025/03/pain.jpg",
+client/src/pages/Blog.tsx:35:    link: "https://upliftdental.com/emergency-dentist-garden-grove/",
+client/src/pages/Blog.tsx:44:    img: "https://upliftdental.com/wp-content/uploads/2025/06/Uplift-Dental.jpg",
+client/src/pages/Blog.tsx:47:    link: "https://upliftdental.com/tips-for-optimal-braces-care/",
+client/src/pages/Blog.tsx:56:    img: "https://upliftdental.com/wp-content/uploads/2025/05/Uplift-Dental.jpg",
+client/src/pages/Blog.tsx:59:    link: "https://upliftdental.com/effective-tmj-treatment-options/",
+client/src/pages/Blog.tsx:68:    img: "https://upliftdental.com/wp-content/uploads/2025/04/Uplift-Dental-2.jpg",
+client/src/pages/Blog.tsx:71:    link: "https://upliftdental.com/oral-health-and-overall-wellness-why-seniors-need-regular-dental-checkups/",
+client/src/pages/Blog.tsx:80:    img: "https://upliftdental.com/wp-content/uploads/2025/03/Uplift-Dental-5.png",
+client/src/pages/Blog.tsx:83:    link: "https://upliftdental.com/get-started-the-benefits-of-early-intervention-with-invisalign/",
+client/src/pages/Blog.tsx:92:    img: "https://upliftdental.com/wp-content/uploads/2025/02/Uplift-Dental-1.png",
+client/src/pages/Blog.tsx:95:    link: "https://upliftdental.com/understanding-gum-disease-stages/",
+client/src/pages/Blog.tsx:104:    img: "https://upliftdental.com/wp-content/uploads/2025/02/Uplift-Dental-2.png",
+client/src/pages/Blog.tsx:107:    link: "https://upliftdental.com/fluoride-vs-hydroxyapatite-which-is-best-for-your-childs-dental-health/",
+client/src/pages/Blog.tsx:116:    img: "https://upliftdental.com/wp-content/uploads/2025/01/Uplift-Dental-2.png",
+client/src/pages/Blog.tsx:119:    link: "https://upliftdental.com/3-tricks-to-make-flossing-with-braces-easier/",
+client/src/pages/Blog.tsx:128:    img: "https://upliftdental.com/wp-content/uploads/2024/11/Uplift-Dental.png",
+client/src/pages/Blog.tsx:131:    link: "https://upliftdental.com/what-happens-during-your-professional-dental-cleaning/",
+client/src/pages/Blog.tsx:140:    img: "https://upliftdental.com/wp-content/uploads/2025/01/Uplift-Dental.png",
+client/src/pages/Blog.tsx:143:    link: "https://upliftdental.com/oral-health-tips-for-children/",
+client/src/pages/Blog.tsx:152:    img: "https://upliftdental.com/wp-content/uploads/2024/10/Uplift-Dental-1.png",
+client/src/pages/Blog.tsx:155:    link: "https://upliftdental.com/diet-and-oral-health/",
+client/src/pages/Blog.tsx:164:    img: "https://upliftdental.com/wp-content/uploads/2024/04/GettyImages-1210180620-1920w.webp",
+client/src/pages/Blog.tsx:167:    link: "https://upliftdental.com/a-deep-dive-into-dental-hygiene-floss-vs-water-pick/",
+client/src/pages/Blog.tsx:176:    img: "https://upliftdental.com/wp-content/uploads/2024/04/GettyImages-1405959406-1920w.webp",
+client/src/pages/Blog.tsx:179:    link: "https://upliftdental.com/is-invisalign-the-same-as-braces/",
+client/src/pages/Blog.tsx:188:    img: "https://upliftdental.com/wp-content/uploads/2024/04/GettyImages-1540306772-1920w.webp",
+client/src/pages/Blog.tsx:191:    link: "https://upliftdental.com/its-too-early-for-braces-or-is-it/",
+client/src/pages/Blog.tsx:200:    img: "https://upliftdental.com/wp-content/uploads/2024/04/GettyImages-580503073-1920w.webp",
+client/src/pages/Blog.tsx:203:    link: "https://upliftdental.com/how-to-keep-your-teeth-healthy-and-white/",
+client/src/pages/Blog.tsx:212:    img: "https://upliftdental.com/wp-content/uploads/2024/04/GettyImages-471031774-1920w.webp",
+client/src/pages/Blog.tsx:215:    link: "https://upliftdental.com/i-want-whiter-teeth/",
+client/src/pages/Blog.tsx:224:    img: "https://upliftdental.com/wp-content/uploads/2024/04/GettyImages-1210180620-1920w.webp",
+client/src/pages/Blog.tsx:227:    link: "https://upliftdental.com/what-are-the-differences-between-dental-insurance-plans/",
+client/src/pages/Blog.tsx:236:    img: "https://upliftdental.com/wp-content/uploads/2024/04/GettyImages-1405959406-1920w.webp",
+client/src/pages/Blog.tsx:239:    link: "https://upliftdental.com/are-clear-aligners-better-than-braces/",
+client/src/pages/Blog.tsx:248:    img: "https://upliftdental.com/wp-content/uploads/2024/04/GettyImages-580503073-1920w.webp",
+client/src/pages/Blog.tsx:251:    link: "https://upliftdental.com/the-compassionate-provider/",
+client/src/pages/Blog.tsx:276:        canonical="https://upliftdental.com/blog"
+client/src/pages/Blog.tsx:280:        { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/Blog.tsx:281:        { name: "Blog", url: "https://upliftdental.com/blog" },
+client/src/pages/BlogPost.tsx:23:    canonical.setAttribute("href", `https://upliftdental.com/blog/${post.slug}`);
+client/src/pages/BlogPost.tsx:27:      "@context": "https://schema.org",
+client/src/pages/BlogPost.tsx:38:        "logo": { "@type": "ImageObject", "url": "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/Logo-01_0c8b669d.png" }
+client/src/pages/BlogPost.tsx:40:      "mainEntityOfPage": { "@type": "WebPage", "@id": `https://upliftdental.com/blog/${post.slug}` }
+client/src/pages/Contact.tsx:14:const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg";
+client/src/pages/Contact.tsx:28:      const res = await fetch("https://api.web3forms.com/submit", {
+client/src/pages/Contact.tsx:59:        canonical="https://upliftdental.com/contact"
+client/src/pages/Contact.tsx:63:        { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/Contact.tsx:64:        { name: "Contact", url: "https://upliftdental.com/contact" },
+client/src/pages/Contact.tsx:203:                          <a href="https://maps.google.com/?q=5253+Lampson+Ave+Garden+Grove+CA+92845" target="_blank" rel="noopener noreferrer" className="text-sm font-body font-semibold mt-1 inline-block" style={{ color: COLORS.teal }}>
+client/src/pages/Contact.tsx:252:                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.2!2d-117.9945!3d33.7739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s5253+Lampson+Ave%2C+Garden+Grove%2C+CA+92845!5e0!3m2!1sen!2sus!4v1"
+client/src/pages/DentalBonding.tsx:20:        canonical="https://upliftdental.com/dental-bonding"
+client/src/pages/DentalBonding.tsx:24:          { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/DentalBonding.tsx:25:          { name: "Services", url: "https://upliftdental.com/services" },
+client/src/pages/DentalBonding.tsx:26:          { name: "Dental Bonding", url: "https://upliftdental.com/dental-bonding" },
+client/src/pages/DentalCrowns.tsx:20:        canonical="https://upliftdental.com/dental-crowns"
+client/src/pages/DentalCrowns.tsx:24:          { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/DentalCrowns.tsx:25:          { name: "Services", url: "https://upliftdental.com/services" },
+client/src/pages/DentalCrowns.tsx:26:          { name: "Dental Crowns", url: "https://upliftdental.com/dental-crowns" },
+client/src/pages/DentalFillings.tsx:20:        canonical="https://upliftdental.com/dental-fillings"
+client/src/pages/DentalFillings.tsx:24:          { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/DentalFillings.tsx:25:          { name: "Services", url: "https://upliftdental.com/services" },
+client/src/pages/DentalFillings.tsx:26:          { name: "Dental Fillings", url: "https://upliftdental.com/dental-fillings" },
+client/src/pages/DentalImplants.tsx:10:const IMPLANTS_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-implant-hero-k3ekVFSZCNDA8fPqPQR8xJ.webp";
+client/src/pages/DentalImplants.tsx:11:const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
+client/src/pages/DentalImplants.tsx:27:        canonical="https://upliftdental.com/dental-implants"
+client/src/pages/DentalImplants.tsx:32:        url="https://upliftdental.com/dental-implants"
+client/src/pages/DentalImplants.tsx:39:        { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/DentalImplants.tsx:40:        { name: "Services", url: "https://upliftdental.com/services" },
+client/src/pages/DentalImplants.tsx:41:        { name: "Dental Implants", url: "https://upliftdental.com/dental-implants" },
+client/src/pages/EmergencyDentist.tsx:16:        canonical="https://upliftdental.com/emergency-dentist"
+client/src/pages/EmergencyDentist.tsx:20:        { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/EmergencyDentist.tsx:21:        { name: "Services", url: "https://upliftdental.com/services" },
+client/src/pages/EmergencyDentist.tsx:22:        { name: "Emergency Dentist", url: "https://upliftdental.com/emergency-dentist" },
+client/src/pages/Endodontics.tsx:37:const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg";
+client/src/pages/Endodontics.tsx:38:const DR_GHOBRIAL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/IMG_9486_6f5df7e4.jpeg";
+client/src/pages/Endodontics.tsx:39:const TECH_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
+client/src/pages/Endodontics.tsx:40:const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
+client/src/pages/Endodontics.tsx:199:      "@context": "https://schema.org",
+client/src/pages/Endodontics.tsx:201:      "@id": "https://upliftdental.com/endodontics#webpage",
+client/src/pages/Endodontics.tsx:202:      "url": "https://upliftdental.com/endodontics",
+client/src/pages/Endodontics.tsx:212:      "isPartOf": { "@id": "https://upliftdental.com/#website" },
+client/src/pages/Endodontics.tsx:216:          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://upliftdental.com/" },
+client/src/pages/Endodontics.tsx:217:          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://upliftdental.com/services" },
+client/src/pages/Endodontics.tsx:218:          { "@type": "ListItem", "position": 3, "name": "Endodontics", "item": "https://upliftdental.com/endodontics" },
+client/src/pages/Endodontics.tsx:251:        canonical="https://upliftdental.com/endodontics"
+client/src/pages/Endodontics.tsx:256:          { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/Endodontics.tsx:257:          { name: "Services", url: "https://upliftdental.com/services" },
+client/src/pages/Endodontics.tsx:258:          { name: "Endodontics", url: "https://upliftdental.com/endodontics" },
+client/src/pages/Gallery.tsx:39:    before: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&h=400&fit=crop&q=80",
+client/src/pages/Gallery.tsx:40:    after: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=600&h=400&fit=crop&q=80",
+client/src/pages/Gallery.tsx:50:    before: "https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?w=600&h=400&fit=crop&q=80",
+client/src/pages/Gallery.tsx:51:    after: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=600&h=400&fit=crop&q=80",
+client/src/pages/Gallery.tsx:61:    before: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&h=400&fit=crop&q=80",
+client/src/pages/Gallery.tsx:62:    after: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=600&h=400&fit=crop&q=80",
+client/src/pages/Gallery.tsx:72:    before: "https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?w=600&h=400&fit=crop&q=80",
+client/src/pages/Gallery.tsx:73:    after: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=600&h=400&fit=crop&q=80",
+client/src/pages/Gallery.tsx:83:    before: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&h=400&fit=crop&q=80",
+client/src/pages/Gallery.tsx:84:    after: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=600&h=400&fit=crop&q=80",
+client/src/pages/Gallery.tsx:94:    before: "https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?w=600&h=400&fit=crop&q=80",
+client/src/pages/Gallery.tsx:95:    after: "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=600&h=400&fit=crop&q=80",
+client/src/pages/Gallery.tsx:132:        canonical="https://upliftdental.com/gallery"
+client/src/pages/Gallery.tsx:136:          { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/Gallery.tsx:137:          { name: "Gallery", url: "https://upliftdental.com/gallery" },
+client/src/pages/Home.tsx:7:import emailjs from "@emailjs/browser";
+client/src/pages/Home.tsx:22:const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/hero-smile_47b15f85.jpg";
+client/src/pages/Home.tsx:23:const FAMILY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/family-dental-fixed_12ae74fd.png";
+client/src/pages/Home.tsx:24:const INVISALIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/invisalign-lifestyle_cd9d5323.jpg";
+client/src/pages/Home.tsx:25:const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
+client/src/pages/Home.tsx:26:const TECH_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
+client/src/pages/Home.tsx:27:const ABOUT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-about-real_a6815637.jpg";
+client/src/pages/Home.tsx:28:const TEAM_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-team-real_80532d53.jpg";
+client/src/pages/Home.tsx:29:const DR_STEFAN = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-stefan-clean_5bc74027.png";
+client/src/pages/Home.tsx:30:const DR_SCHNEEKLUTH = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-schneekluth-labcoat-clean_5cfb4098.png";
+client/src/pages/Home.tsx:31:const DR_YOUSSEF = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-youssef-clean_da346e41.png";
+client/src/pages/Home.tsx:32:const DR_SAAD = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-saad-periodontist_45f9c7c5.jpg";
+client/src/pages/Home.tsx:33:const DR_GHOBRIAL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-ghobrial-hq_89525d81.jpeg";
+client/src/pages/Home.tsx:34:const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-pattern-dark_02e4726d.jpg";
+client/src/pages/Home.tsx:871:                href="https://maps.google.com/?q=5253+Lampson+Ave+Garden+Grove+CA+92845"
+client/src/pages/Home.tsx:883:                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.5!2d-117.9601!3d33.7783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd28b0!2s5253+Lampson+Ave%2C+Garden+Grove%2C+CA+92845!5e0!3m2!1sen!2sus!4v1"
+client/src/pages/Home.tsx:940:      await emailjs.send(
+client/src/pages/InsuranceFinancing.tsx:15:const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg";
+client/src/pages/InsuranceFinancing.tsx:68:    ctaUrl: "https://withcherry.com",
+client/src/pages/InsuranceFinancing.tsx:85:    ctaUrl: "https://www.carecredit.com",
+client/src/pages/InsuranceFinancing.tsx:153:        canonical="https://upliftdental.com/insurance-financing"
+client/src/pages/InsuranceFinancing.tsx:156:        { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/InsuranceFinancing.tsx:157:        { name: "Insurance & Financing", url: "https://upliftdental.com/insurance-financing" },
+client/src/pages/Invisalign.tsx:10:const INVISALIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/invisalign-lifestyle_cd9d5323.jpg";
+client/src/pages/Invisalign.tsx:11:const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
+client/src/pages/Invisalign.tsx:27:        canonical="https://upliftdental.com/invisalign"
+client/src/pages/Invisalign.tsx:32:        url="https://upliftdental.com/invisalign"
+client/src/pages/Invisalign.tsx:39:        { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/Invisalign.tsx:40:        { name: "Services", url: "https://upliftdental.com/services" },
+client/src/pages/Invisalign.tsx:41:        { name: "Invisalign", url: "https://upliftdental.com/invisalign" },
+client/src/pages/LocalAreaPage.tsx:68:    "@context": "https://schema.org",
+client/src/pages/LocalAreaPage.tsx:89:        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg')", backgroundSize: "cover" }} />
+client/src/pages/LocalAreaPage.tsx:184:                src="https://i0.wp.com/upliftdental.com/wp-content/uploads/2024/10/uplift-dental-garden-grove-team.jpg?w=1024&ssl=1"
+client/src/pages/LocalAreaPage.tsx:188:                onError={(e) => { (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80"; }}
+client/src/pages/LocalAreaPage.tsx:249:              href="https://maps.google.com/?q=5253+Lampson+Ave+Garden+Grove+CA+92845"
+client/src/pages/MembershipPlan.tsx:10:const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg";
+client/src/pages/MembershipPlan.tsx:20:        canonical="https://upliftdental.com/membership-plan"
+client/src/pages/MembershipPlan.tsx:22:      <BreadcrumbSchema items={[{ name: "Home", url: "https://upliftdental.com/" }, { name: "Membership Plan", url: "https://upliftdental.com/membership-plan" }]} />
+client/src/pages/Orthodontics.tsx:20:const ORTHO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/orthodontics-braces-xPjbHnQGVTqFBiS9cKsRzW.webp";
+client/src/pages/Orthodontics.tsx:77:        canonical="https://upliftdental.com/orthodontics"
+client/src/pages/Orthodontics.tsx:82:        url="https://upliftdental.com/orthodontics"
+client/src/pages/Orthodontics.tsx:88:        { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/Orthodontics.tsx:89:        { name: "Services", url: "https://upliftdental.com/services" },
+client/src/pages/Orthodontics.tsx:90:        { name: "Orthodontics & Braces", url: "https://upliftdental.com/orthodontics" },
+client/src/pages/Periodontics.tsx:34:const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg";
+client/src/pages/Periodontics.tsx:35:const DR_SAAD = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-saad-periodontist_45f9c7c5.jpg";
+client/src/pages/Periodontics.tsx:36:const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
+client/src/pages/Periodontics.tsx:178:      "@context": "https://schema.org",
+client/src/pages/Periodontics.tsx:180:      "@id": "https://upliftdental.com/periodontics#webpage",
+client/src/pages/Periodontics.tsx:181:      "url": "https://upliftdental.com/periodontics",
+client/src/pages/Periodontics.tsx:191:      "isPartOf": { "@id": "https://upliftdental.com/#website" },
+client/src/pages/Periodontics.tsx:195:          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://upliftdental.com/" },
+client/src/pages/Periodontics.tsx:196:          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://upliftdental.com/services" },
+client/src/pages/Periodontics.tsx:197:          { "@type": "ListItem", "position": 3, "name": "Periodontics", "item": "https://upliftdental.com/periodontics" },
+client/src/pages/Periodontics.tsx:231:        canonical="https://upliftdental.com/periodontics"
+client/src/pages/Periodontics.tsx:236:          { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/Periodontics.tsx:237:          { name: "Services", url: "https://upliftdental.com/services" },
+client/src/pages/Periodontics.tsx:238:          { name: "Periodontics", url: "https://upliftdental.com/periodontics" },
+client/src/pages/PrivacyPolicy.tsx:74:                  collected automatically via cookies and analytics tools.
+client/src/pages/PrivacyPolicy.tsx:111:                We may use third-party analytics services (such as Google Analytics) that collect usage data on our
+client/src/pages/PrivacyPolicy.tsx:125:                  website hosting, analytics, or communications (e.g., CareStack, Google Analytics). These providers
+client/src/pages/Services.tsx:13:const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation-Wf9zjaGJrezRhcJ4Rfspix.webp";
+client/src/pages/Services.tsx:14:const INVISALIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/invisalign-lifestyle-a4Ab7WZcR277XNEE76tgPU.webp";
+client/src/pages/Services.tsx:15:const FAMILY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/general-dentistry-clean-LezMDGWkmg46HMXLmdPsth.webp";
+client/src/pages/Services.tsx:16:const TECH_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
+client/src/pages/Services.tsx:17:const WHITENING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/teeth-whitening-service-GFdaDu8hrcaxHAdkpU4VSE.webp";
+client/src/pages/Services.tsx:18:const ORTHO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/orthodontics-braces-U3K8rtBtyKN8vNF3Qv3diF.webp";
+client/src/pages/Services.tsx:19:const IMPLANTS_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-implants-xray-o29b5GJ6kDtFez7JQjzyLT.webp";
+client/src/pages/Services.tsx:20:const ORAL_SURGERY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/oral-surgery-consult-Vi4KLsbGvghRt73SdrUprh.webp";
+client/src/pages/Services.tsx:21:const PERIO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/periodontics-gums-8yxDptJ86QFDsaVgaCxvDM.webp";
+client/src/pages/Services.tsx:22:const ENDO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/endodontics-microscope-hx7iwZLLNyvbyySf2aHhfk.webp";
+client/src/pages/Services.tsx:180:        canonical="https://upliftdental.com/services"
+client/src/pages/Services.tsx:184:        { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/Services.tsx:185:        { name: "Services", url: "https://upliftdental.com/services" },
+client/src/pages/Services.tsx:191:        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url(https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/PATTERN-02_5ffa36bf.jpg)`, backgroundSize: "500px auto" }} />
+client/src/pages/SmileAssessment.tsx:257:        canonical="https://upliftdental.com/smile-assessment"
+client/src/pages/SpecialOffers.tsx:16:const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-pattern-dark_02e4726d.jpg";
+client/src/pages/TeethCleaning.tsx:20:        canonical="https://upliftdental.com/teeth-cleaning"
+client/src/pages/TeethCleaning.tsx:24:          { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/TeethCleaning.tsx:25:          { name: "Services", url: "https://upliftdental.com/services" },
+client/src/pages/TeethCleaning.tsx:26:          { name: "Teeth Cleaning", url: "https://upliftdental.com/teeth-cleaning" },
+client/src/pages/TeethWhitening.tsx:20:        canonical="https://upliftdental.com/teeth-whitening"
+client/src/pages/TeethWhitening.tsx:24:          { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/TeethWhitening.tsx:25:          { name: "Services", url: "https://upliftdental.com/services" },
+client/src/pages/TeethWhitening.tsx:26:          { name: "Teeth Whitening", url: "https://upliftdental.com/teeth-whitening" },
+client/src/pages/Veneers.tsx:20:        canonical="https://upliftdental.com/veneers"
+client/src/pages/Veneers.tsx:24:          { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/Veneers.tsx:25:          { name: "Services", url: "https://upliftdental.com/services" },
+client/src/pages/Veneers.tsx:26:          { name: "Dental Veneers", url: "https://upliftdental.com/veneers" },
+client/src/pages/WisdomTeeth.tsx:20:        canonical="https://upliftdental.com/wisdom-teeth-removal"
+client/src/pages/WisdomTeeth.tsx:24:          { name: "Home", url: "https://upliftdental.com/" },
+client/src/pages/WisdomTeeth.tsx:25:          { name: "Services", url: "https://upliftdental.com/services" },
+client/src/pages/WisdomTeeth.tsx:26:          { name: "Wisdom Teeth Removal", url: "https://upliftdental.com/wisdom-teeth-removal" },
+server/index.ts:29:    console.log(`Server running on http://localhost:${port}/`);
+package.json:15:          "@emailjs/browser": "^4.4.1",
+
+=== Sitemap URL count ===
+75
+
+=== Assets by file size ===
+242483 client/src/lib/blogData.ts
+61991 client/src/pages/Home.tsx
+32773 client/src/pages/Endodontics.tsx
+30880 client/src/pages/Periodontics.tsx
+27987 client/src/pages/About.tsx
+25709 client/src/components/LiveChat.tsx
+25168 client/public/__manus__/debug-collector.js
+24189 client/src/pages/Blog.tsx
+22588 client/src/pages/Services.tsx
+21962 client/src/pages/SmileAssessment.tsx
+21947 client/src/components/ui/sidebar.tsx
+19975 client/src/pages/Orthodontics.tsx
+19262 client/src/pages/InsuranceFinancing.tsx
+18627 client/src/pages/LocalAreaPage.tsx
+18435 client/src/pages/SpecialOffers.tsx
+18396 client/src/pages/Gallery.tsx
+16423 client/src/pages/Contact.tsx
+15260 client/src/pages/TeethCleaning.tsx
+15036 client/src/pages/DentalFillings.tsx
+14952 client/src/components/StructuredData.tsx
+13311 client/public/sitemap.xml
+13044 client/src/components/Footer.tsx
+12845 client/src/pages/PrivacyPolicy.tsx
+12716 client/index.html
+12657 client/src/components/Navbar.tsx
+12528 client/src/pages/BlogPost.tsx
+12026 client/src/pages/WisdomTeeth.tsx
+11909 client/src/pages/TeethWhitening.tsx
+11649 client/src/pages/Veneers.tsx
+11612 client/src/App.tsx
+
+=== Existing redirect rules ===
+# Cache headers for static assets (1 year)
+/assets/*  200  Cache-Control: public, max-age=31536000, immutable
+/*.js      200  Cache-Control: public, max-age=31536000, immutable
+/*.css     200  Cache-Control: public, max-age=31536000, immutable
+/*.woff2   200  Cache-Control: public, max-age=31536000, immutable
+/*.woff    200  Cache-Control: public, max-age=31536000, immutable
+/*.ttf     200  Cache-Control: public, max-age=31536000, immutable
+/*.eot     200  Cache-Control: public, max-age=31536000, immutable
+/*.svg     200  Cache-Control: public, max-age=31536000, immutable
+/*.png     200  Cache-Control: public, max-age=31536000, immutable
+/*.jpg     200  Cache-Control: public, max-age=31536000, immutable
+/*.jpeg    200  Cache-Control: public, max-age=31536000, immutable
+/*.gif     200  Cache-Control: public, max-age=31536000, immutable
+/*.webp    200  Cache-Control: public, max-age=31536000, immutable
+/*.ico     200  Cache-Control: public, max-age=31536000, immutable
+
+# HTML: cache for 1 hour (allows updates without breaking old links)
+/index.html    200  Cache-Control: public, max-age=3600, must-revalidate
+/*.html        200  Cache-Control: public, max-age=3600, must-revalidate
+
+# Redirect /index.html to root with 301 permanent redirect
+/index.html / 301
+
+# SPA catch-all: serve index.html for all routes (React / Wouter)
+/* /index.html 200  Cache-Control: public, max-age=3600, must-revalidate
+
+=== Server entrypoint ===
+import express from "express";
+import { createServer } from "http";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+async function startServer() {
+  const app = express();
+  const server = createServer(app);
+
+  // Serve static files from dist/public in production
+  const staticPath =
+    process.env.NODE_ENV === "production"
+      ? path.resolve(__dirname, "public")
+      : path.resolve(__dirname, "..", "dist", "public");
+
+  app.use(express.static(staticPath));
+
+  // Handle client-side routing - serve index.html for all routes
+  app.get("*", (_req, res) => {
+    res.sendFile(path.join(staticPath, "index.html"));
+  });
+
+  const port = process.env.PORT || 3000;
+
+  server.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}/`);
+  });
+}
+
+startServer().catch(console.error);

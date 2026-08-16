@@ -52,37 +52,37 @@ export const COLORS = {
   gold: "oklch(0.78 0.12 85)",
 } as const;
 
-// ─── CDN Image Assets ─────────────────────────────────────────────────────────
+// ─── Local Image Assets ──────────────────────────────────────────────────────
 
-const CDN = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN";
+const CDN = "/assets/uplift";
 
 /** Doctor headshots */
 export const DOCTOR_IMAGES = {
-  stefan: `${CDN}/dr-stefan-clean_5bc74027.png`,
-  schneekluth: `${CDN}/dr-schneekluth-labcoat-clean_5cfb4098.png`,
-  schneekluthClean: `${CDN}/dr-schneekluth-clean_de46bddf.png`,
-  youssef: `${CDN}/dr-youssef-clean_da346e41.png`,
-  saad: `${CDN}/dr-saad-periodontist_45f9c7c5.jpg`,
-  ghobrial: `${CDN}/dr-ghobrial-hq_89525d81.jpeg`,
+  stefan: `${CDN}/dr-stefan-clean_5bc74027.webp`,
+  schneekluth: `${CDN}/dr-schneekluth-labcoat-clean_5cfb4098.webp`,
+  schneekluthClean: `${CDN}/dr-schneekluth-clean_de46bddf.webp`,
+  youssef: `${CDN}/dr-youssef-clean_da346e41.webp`,
+  saad: `${CDN}/dr-saad-periodontist_45f9c7c5.webp`,
+  ghobrial: `${CDN}/dr-ghobrial-hq_89525d81.webp`,
 } as const;
 
 /** Staff headshots */
 export const STAFF_IMAGES = {
-  angeliki: `${CDN}/angeliki_blanco_91783479.jpg`,
-  sinath: `${CDN}/sinath_oum_f502fa41.jpg`,
-  geneyah: `${CDN}/geneyah_warren_faf8fe8e.jpg`,
+  angeliki: `${CDN}/angeliki_blanco_91783479.webp`,
+  sinath: `${CDN}/sinath_oum_f502fa41.webp`,
+  geneyah: `${CDN}/geneyah_warren_faf8fe8e.webp`,
 } as const;
 
 /** Site-wide images */
 export const SITE_IMAGES = {
-  hero: `${CDN}/hero-smile_47b15f85.jpg`,
-  logoPrimary: `${CDN}/Logo-01_0c8b669d.png`,
-  logoLight: `${CDN}/Logo-10_73bf64d6.png`,
-  team: `${CDN}/uplift-team-real_7d2676d0.jpg`,
-  teamAlt: `${CDN}/uplift-team-real_80532d53.jpg`,
-  about: `${CDN}/uplift-about-real_a6815637.jpg`,
-  patternDark: `${CDN}/PATTERN-02_5ffa36bf.jpg`,
-  patternDarkAlt: `${CDN}/uplift-pattern-dark_02e4726d.jpg`,
+  hero: `${CDN}/hero-smile_47b15f85.webp`,
+  logoPrimary: `${CDN}/Logo-01_0c8b669d.webp`,
+  logoLight: `${CDN}/Logo-10_73bf64d6.webp`,
+  team: `${CDN}/uplift-team-real_7d2676d0.webp`,
+  teamAlt: `${CDN}/uplift-team-real_80532d53.webp`,
+  about: `${CDN}/uplift-about-real_a6815637.webp`,
+  patternDark: `${CDN}/PATTERN-02_5ffa36bf.webp`,
+  patternDarkAlt: `${CDN}/uplift-pattern-dark_02e4726d.webp`,
 } as const;
 
 // ─── Doctor / Staff Data Types ────────────────────────────────────────────────

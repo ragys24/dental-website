@@ -7,8 +7,8 @@ import { Link } from "wouter";
 import { CheckCircle2, Phone, ChevronRight } from "lucide-react";
 import { PRACTICE } from "@/lib/constants";
 
-const IMPLANTS_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-implant-hero-k3ekVFSZCNDA8fPqPQR8xJ.webp";
-const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
+const IMPLANTS_IMG = "/assets/uplift/dental-implant-hero-k3ekVFSZCNDA8fPqPQR8xJ.webp";
+const SMILE_IMG = "/assets/uplift/smile-transformation_82cc164e.webp";
 
 const IMPLANT_FAQS = [
   { question: "How much do dental implants cost in Garden Grove, CA?", answer: "Dental implants at Uplift Dental in Garden Grove typically range from $1,500 to $3,500 per implant, depending on whether bone grafting or other preparatory procedures are needed. We offer free consultations and flexible financing through Cherry Finance. Most PPO insurance plans provide partial coverage." },

@@ -206,13 +206,13 @@
 
   /* Pattern background using brand U-arch motif */
   .pattern-bg-dark {
-    background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-pattern-dark_02e4726d.jpg');
+    background-image: url('/assets/uplift/uplift-pattern-dark_02e4726d.webp');
     background-size: cover;
     background-position: center;
   }
 
   .pattern-bg-light {
-    background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-pattern-light_9d83da07.jpg');
+    background-image: url('/assets/uplift/uplift-pattern-light_9d83da07.webp');
     background-size: cover;
     background-position: center;
   }

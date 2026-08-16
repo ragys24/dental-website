@@ -13,8 +13,12 @@ interface PageSEOProps {
   ogImage?: string;
 }
 
-const DEFAULT_OG_IMAGE =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/hero-smile_47b15f85.jpg";
+const SITE_ORIGIN = "https://upliftdental.com";
+const DEFAULT_OG_IMAGE = `${SITE_ORIGIN}/assets/uplift/hero-smile_47b15f85.webp`;
+
+function absoluteUrl(url: string) {
+  return url.startsWith("/") ? `${SITE_ORIGIN}${url}` : url;
+}
 
 export function PageSEO({ title, description, canonical, ogImage }: PageSEOProps) {
   useEffect(() => {
@@ -50,11 +54,12 @@ export function PageSEO({ title, description, canonical, ogImage }: PageSEOProps
     setMeta('meta[property="og:title"]', "content", title);
     setMeta('meta[property="og:description"]', "content", description);
     setMeta('meta[property="og:url"]', "content", canonical);
-    setMeta('meta[property="og:image"]', "content", ogImage || DEFAULT_OG_IMAGE);
+    const socialImage = absoluteUrl(ogImage || DEFAULT_OG_IMAGE);
+    setMeta('meta[property="og:image"]', "content", socialImage);
 
     setMeta('meta[name="twitter:title"]', "content", title);
     setMeta('meta[name="twitter:description"]', "content", description);
-    setMeta('meta[name="twitter:image"]', "content", ogImage || DEFAULT_OG_IMAGE);
+    setMeta('meta[name="twitter:image"]', "content", socialImage);
 
     return () => {
       // Restore homepage defaults on unmount
