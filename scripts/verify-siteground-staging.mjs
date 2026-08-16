@@ -8,8 +8,24 @@ const sitemapRoutes = [...sitemap.matchAll(/<loc>https:\/\/upliftdental\.com([^<
 const results = [];
 
 async function request(path, expectedStatus, expectedLocation = '') {
-  const response = await fetch(`${origin}${path}`, { redirect: 'manual' });
-  const body = await response.text();
+  let response;
+  let body;
+  let lastError;
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    try {
+      response = await fetch(`${origin}${path}`, {
+        redirect: 'manual',
+        headers: { Connection: 'close', 'Cache-Control': 'no-cache' },
+        signal: AbortSignal.timeout(15_000),
+      });
+      body = await response.text();
+      break;
+    } catch (error) {
+      lastError = error;
+      if (attempt < 3) await new Promise((resolve) => setTimeout(resolve, attempt * 500));
+    }
+  }
+  if (!response || body === undefined) throw lastError || new Error(`No response for ${path}`);
   const entry = {
     path,
     status: response.status,
@@ -24,10 +40,14 @@ async function request(path, expectedStatus, expectedLocation = '') {
   return { response, body, entry };
 }
 
-for (const route of sitemapRoutes) {
+async function verifySitemapRoute(route) {
   const { entry } = await request(route, 200);
   const expectedCanonical = `https://upliftdental.com${route}`;
   entry.ok = entry.ok && entry.hasAppRoot && entry.canonical === expectedCanonical && !entry.hasManusReference && entry.nosniff === 'nosniff';
+}
+
+for (let offset = 0; offset < sitemapRoutes.length; offset += 5) {
+  await Promise.all(sitemapRoutes.slice(offset, offset + 5).map(verifySitemapRoute));
 }
 
 await request('/oral-surgery', 301, '/wisdom-teeth-removal');
