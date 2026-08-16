@@ -208,8 +208,12 @@ function build404Document(shell) {
     .replace(/\s*<style id="home-critical-style">[\s\S]*?<\/style>/, "");
 }
 
+function sitemapDate(lastmod) {
+  return typeof lastmod === "string" ? lastmod.slice(0, 10) : "";
+}
+
 function buildSitemap(routes) {
-  const urls = routes.map((route) => `  <url>\n    <loc>${absolute(route.path)}</loc>\n    ${route.lastmod ? `<lastmod>${route.lastmod}</lastmod>` : ""}\n    <changefreq>${route.changefreq}</changefreq>\n    <priority>${route.priority.toFixed(2)}</priority>\n  </url>`).join("\n");
+  const urls = routes.map((route) => `  <url>\n    <loc>${absolute(route.path)}</loc>\n    ${route.lastmod ? `<lastmod>${sitemapDate(route.lastmod)}</lastmod>` : ""}\n    <changefreq>${route.changefreq}</changefreq>\n    <priority>${route.priority.toFixed(2)}</priority>\n  </url>`).join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 }
 

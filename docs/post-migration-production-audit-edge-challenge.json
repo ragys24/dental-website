@@ -1,0 +1,330 @@
+{
+  "generated_at_utc": "2026-08-16T06:51:08.986Z",
+  "origin": "https://upliftdental.com",
+  "result": "fail",
+  "routes": [
+    {
+      "path": "/",
+      "expected": 200,
+      "kind": "home",
+      "samples": [
+        {
+          "status": 202,
+          "ttfb_seconds": 2.88892,
+          "total_seconds": 2.889001,
+          "bytes": 168,
+          "redirects": 0
+        },
+        {
+          "status": 202,
+          "ttfb_seconds": 3.027615,
+          "total_seconds": 3.027697,
+          "bytes": 168,
+          "redirects": 0
+        },
+        {
+          "status": 202,
+          "ttfb_seconds": 3.23106,
+          "total_seconds": 3.231142,
+          "bytes": 168,
+          "redirects": 0
+        }
+      ],
+      "median": {
+        "status": 202,
+        "ttfb_seconds": 3.027615,
+        "total_seconds": 3.027697,
+        "bytes": 168,
+        "redirects": 0
+      },
+      "pass": false
+    },
+    {
+      "path": "/patient-portal",
+      "expected": 200,
+      "kind": "recovered_page",
+      "samples": [
+        {
+          "status": 202,
+          "ttfb_seconds": 3.043384,
+          "total_seconds": 3.043463,
+          "bytes": 182,
+          "redirects": 0
+        },
+        {
+          "status": 202,
+          "ttfb_seconds": 3.094861,
+          "total_seconds": 3.094947,
+          "bytes": 182,
+          "redirects": 0
+        },
+        {
+          "status": 202,
+          "ttfb_seconds": 3.245363,
+          "total_seconds": 3.245446,
+          "bytes": 182,
+          "redirects": 0
+        }
+      ],
+      "median": {
+        "status": 202,
+        "ttfb_seconds": 3.094861,
+        "total_seconds": 3.094947,
+        "bytes": 182,
+        "redirects": 0
+      },
+      "pass": false
+    },
+    {
+      "path": "/our-specialists",
+      "expected": 200,
+      "kind": "recovered_page",
+      "samples": [
+        {
+          "status": 202,
+          "ttfb_seconds": 2.958175,
+          "total_seconds": 2.958235,
+          "bytes": 183,
+          "redirects": 0
+        },
+        {
+          "status": 202,
+          "ttfb_seconds": 3.25209,
+          "total_seconds": 3.25217,
+          "bytes": 183,
+          "redirects": 0
+        },
+        {
+          "status": 202,
+          "ttfb_seconds": 3.511731,
+          "total_seconds": 3.511797,
+          "bytes": 183,
+          "redirects": 0
+        }
+      ],
+      "median": {
+        "status": 202,
+        "ttfb_seconds": 3.25209,
+        "total_seconds": 3.25217,
+        "bytes": 183,
+        "redirects": 0
+      },
+      "pass": false
+    },
+    {
+      "path": "/community-outreach",
+      "expected": 200,
+      "kind": "recovered_page",
+      "samples": [
+        {
+          "status": 202,
+          "ttfb_seconds": 2.929688,
+          "total_seconds": 2.929755,
+          "bytes": 186,
+          "redirects": 0
+        },
+        {
+          "status": 202,
+          "ttfb_seconds": 3.046226,
+          "total_seconds": 3.046308,
+          "bytes": 186,
+          "redirects": 0
+        },
+        {
+          "status": 202,
+          "ttfb_seconds": 3.110174,
+          "total_seconds": 3.11024,
+          "bytes": 186,
+          "redirects": 0
+        }
+      ],
+      "median": {
+        "status": 202,
+        "ttfb_seconds": 3.046226,
+        "total_seconds": 3.046308,
+        "bytes": 186,
+        "redirects": 0
+      },
+      "pass": false
+    },
+    {
+      "path": "/dentures",
+      "expected": 200,
+      "kind": "recovered_page",
+      "samples": [
+        {
+          "status": 202,
+          "ttfb_seconds": 3.01034,
+          "total_seconds": 3.010409,
+          "bytes": 176,
+          "redirects": 0
+        },
+        {
+          "status": 202,
+          "ttfb_seconds": 3.176356,
+          "total_seconds": 3.176442,
+          "bytes": 176,
+          "redirects": 0
+        },
+        {
+          "status": 202,
+          "ttfb_seconds": 2.979372,
+          "total_seconds": 3.255034,
+          "bytes": 176,
+          "redirects": 0
+        }
+      ],
+      "median": {
+        "status": 202,
+        "ttfb_seconds": 3.176356,
+        "total_seconds": 3.176442,
+        "bytes": 176,
+        "redirects": 0
+      },
+      "pass": false
+    },
+    {
+      "path": "/sitemap.xml",
+      "expected": 200,
+      "kind": "crawl_file",
+      "samples": [
+        {
+          "status": 202,
+          "ttfb_seconds": 3.121964,
+          "total_seconds": 3.122062,
+          "bytes": 179,
+          "redirects": 0
+        },
+        {
+          "status": 202,
+          "ttfb_seconds": 3.124546,
+          "total_seconds": 3.124624,
+          "bytes": 179,
+          "redirects": 0
+        },
+        {
+          "status": 202,
+          "ttfb_seconds": 3.807745,
+          "total_seconds": 3.807838,
+          "bytes": 179,
+          "redirects": 0
+        }
+      ],
+      "median": {
+        "status": 202,
+        "ttfb_seconds": 3.124546,
+        "total_seconds": 3.124624,
+        "bytes": 179,
+        "redirects": 0
+      },
+      "pass": false
+    },
+    {
+      "path": "/robots.txt",
+      "expected": 200,
+      "kind": "crawl_file",
+      "samples": [
+        {
+          "status": 202,
+          "ttfb_seconds": 2.994933,
+          "total_seconds": 2.99502,
+          "bytes": 178,
+          "redirects": 0
+        },
+        {
+          "status": 202,
+          "ttfb_seconds": 3.235524,
+          "total_seconds": 3.23559,
+          "bytes": 178,
+          "redirects": 0
+        },
+        {
+          "status": 202,
+          "ttfb_seconds": 3.280556,
+          "total_seconds": 3.280626,
+          "bytes": 178,
+          "redirects": 0
+        }
+      ],
+      "median": {
+        "status": 202,
+        "ttfb_seconds": 3.235524,
+        "total_seconds": 3.23559,
+        "bytes": 178,
+        "redirects": 0
+      },
+      "pass": false
+    },
+    {
+      "path": "/siteground-recovered-latest-deploy.php",
+      "expected": 404,
+      "kind": "cleanup",
+      "samples": [
+        {
+          "status": 202,
+          "ttfb_seconds": 2.903231,
+          "total_seconds": 2.903293,
+          "bytes": 206,
+          "redirects": 0
+        },
+        {
+          "status": 202,
+          "ttfb_seconds": 3.049775,
+          "total_seconds": 3.049861,
+          "bytes": 206,
+          "redirects": 0
+        },
+        {
+          "status": 202,
+          "ttfb_seconds": 3.143205,
+          "total_seconds": 3.143272,
+          "bytes": 206,
+          "redirects": 0
+        }
+      ],
+      "median": {
+        "status": 202,
+        "ttfb_seconds": 3.049775,
+        "total_seconds": 3.049861,
+        "bytes": 206,
+        "redirects": 0
+      },
+      "pass": false
+    }
+  ],
+  "headers": {
+    "home": {
+      "server": "nginx",
+      "date": "Sun, 16 Aug 2026 06:51:04 GMT",
+      "content-type": "text/html",
+      "content-length": "168",
+      "sg-captcha": "challenge",
+      "x-robots-tag": "noindex",
+      "set-cookie": "nevercache-b39818=Y;Max-Age=-1",
+      "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+      "cache-control": "no-store,no-cache,max-age=0",
+      "host-header": "8441280b0c35cbc1147f8ba998a563a7",
+      "x-proxy-cache-info": "DT:1"
+    },
+    "emergency_redirect": {
+      "server": "nginx",
+      "date": "Sun, 16 Aug 2026 06:51:08 GMT",
+      "content-type": "text/html",
+      "content-length": "168",
+      "sg-captcha": "challenge",
+      "x-robots-tag": "noindex",
+      "set-cookie": "nevercache-b39818=Y;Max-Age=-1",
+      "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+      "cache-control": "no-store,no-cache,max-age=0",
+      "host-header": "8441280b0c35cbc1147f8ba998a563a7",
+      "x-proxy-cache-info": "DT:1"
+    }
+  },
+  "checks": {
+    "hsts_present": false,
+    "nosniff_present": false,
+    "referrer_policy": null,
+    "canonical_sitemap_http_200": false,
+    "emergency_redirect_location": null
+  }
+}
