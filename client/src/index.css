@@ -109,6 +109,16 @@
 }
 
 @layer base {
+  html {
+    scroll-padding-top: 6rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
@@ -120,6 +130,7 @@
   }
   h1, h2, h3, h4 {
     font-family: 'DM Serif Display', Georgia, serif;
+    text-wrap: balance;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -131,6 +142,16 @@
   input[type="checkbox"]:not(:disabled),
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
+  }
+
+  :focus-visible {
+    outline: 3px solid oklch(0.72 0.10 75);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: oklch(0.70 0.07 195 / 0.42);
+    color: oklch(0.18 0.04 185);
   }
 }
 
@@ -206,20 +227,15 @@
 
   /* Pattern background using brand U-arch motif */
   .pattern-bg-dark {
-    background-image: url('/assets/uplift/uplift-pattern-dark_02e4726d.webp');
+    background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/pattern-dark-optimized_09879858.jpg');
     background-size: cover;
     background-position: center;
   }
 
   .pattern-bg-light {
-    background-image: url('/assets/uplift/uplift-pattern-light_9d83da07.webp');
+    background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/uplift-pattern-light_9d83da07.jpg');
     background-size: cover;
     background-position: center;
-  }
-
-  /* Smooth scroll */
-  html {
-    scroll-behavior: smooth;
   }
 
   /* Custom scrollbar */
@@ -239,28 +255,31 @@
     background-color: oklch(0.42 0.09 185);
     color: white;
     padding: 0.75rem 1.75rem;
-    border-radius: 0.375rem;
+    border-radius: 9999px;
     font-weight: 600;
     font-family: 'DM Sans', sans-serif;
-    transition: all 0.2s ease;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
   }
   .btn-uplift-primary:hover {
     background-color: oklch(0.35 0.09 185);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 16px oklch(0.42 0.09 185 / 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px oklch(0.42 0.09 185 / 0.25);
+  }
+  .btn-uplift-primary:active {
+    transform: translateY(0) scale(0.97);
   }
 
   .btn-uplift-outline {
     border: 2px solid oklch(0.42 0.09 185);
     color: oklch(0.42 0.09 185);
     padding: 0.75rem 1.75rem;
-    border-radius: 0.375rem;
+    border-radius: 9999px;
     font-weight: 600;
     font-family: 'DM Sans', sans-serif;
-    transition: all 0.2s ease;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -269,42 +288,53 @@
   .btn-uplift-outline:hover {
     background-color: oklch(0.42 0.09 185);
     color: white;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px oklch(0.42 0.09 185 / 0.2);
+  }
+  .btn-uplift-outline:active {
+    transform: translateY(0) scale(0.97);
   }
 
   .btn-uplift-white {
     background-color: white;
     color: oklch(0.42 0.09 185);
     padding: 0.75rem 1.75rem;
-    border-radius: 0.375rem;
+    border-radius: 9999px;
     font-weight: 700;
     font-family: 'DM Sans', sans-serif;
-    transition: all 0.2s ease;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
   }
   .btn-uplift-white:hover {
-    background-color: oklch(0.95 0.015 185);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    background-color: oklch(0.97 0.015 185);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+  .btn-uplift-white:active {
+    transform: translateY(0) scale(0.97);
   }
 
   .btn-uplift-emergency {
     background-color: oklch(0.65 0.18 35);
     color: white;
     padding: 0.75rem 1.75rem;
-    border-radius: 0.375rem;
+    border-radius: 9999px;
     font-weight: 700;
     font-family: 'DM Sans', sans-serif;
-    transition: all 0.2s ease;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
   }
   .btn-uplift-emergency:hover {
     background-color: oklch(0.55 0.18 35);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px oklch(0.65 0.18 35 / 0.3);
+  }
+  .btn-uplift-emergency:active {
+    transform: translateY(0) scale(0.97);
   }
 
   /* Section divider */
@@ -315,11 +345,53 @@
 
   /* Card hover effect */
   .card-hover {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .card-hover:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px oklch(0.42 0.09 185 / 0.12);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px oklch(0.42 0.09 185 / 0.10), 0 4px 12px oklch(0.42 0.09 185 / 0.06);
+  }
+
+  /* Refined feedback for below-the-fold interactive content; hover only on precise pointers. */
+  .reveal-card,
+  .reveal-primary-button {
+    transform: translateZ(0);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .reveal-card {
+      transition: transform 220ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .reveal-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .reveal-primary-button {
+      transition: transform 180ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .reveal-primary-button:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  /* Link underline animation */
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: oklch(0.42 0.09 185);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .link-underline:hover::after {
+    width: 100%;
   }
 
   /* Animate on scroll */
@@ -331,5 +403,98 @@
   .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* Original quick-start progression: brief, spatially subtle, and disabled
+     for visitors who request reduced motion. */
+  .hero-quick-start-step {
+    animation: hero-quick-start-slide 260ms cubic-bezier(0.23, 1, 0.32, 1) both;
+    will-change: opacity, transform;
+  }
+
+  @keyframes hero-quick-start-slide {
+    from {
+      opacity: 0;
+      transform: translateX(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Below-the-fold reveals stay visible by default for no-JS and reduced-motion users. */
+  @media (prefers-reduced-motion: no-preference) {
+    [data-scroll-reveal][data-scroll-reveal-state="pending"] {
+      opacity: 0;
+      transform: translateY(18px);
+      will-change: opacity, transform;
+    }
+
+    [data-scroll-reveal][data-scroll-reveal-state="visible"] {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 460ms cubic-bezier(0.23, 1, 0.32, 1), transform 460ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+  }
+
+  /* The homepage's first four sections remain fully rendered for LCP and
+     conversion. On small screens, the long editorial content below them is
+     contained until it approaches the viewport, reducing initial layout work. */
+  @media (max-width: 767px) {
+    [data-home-root] > section:nth-of-type(n + 5) {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 780px;
+    }
+  }
+
+  /* Homepage loading accent: decorative only, never delays the hero or LCP. */
+  .homepage-load-indicator {
+    pointer-events: none;
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 20;
+    height: 2px;
+    overflow: hidden;
+    background: oklch(1 0 0 / 0.12);
+  }
+
+  .homepage-load-indicator::after {
+    content: "";
+    display: block;
+    width: 38%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, oklch(0.85 0.07 195), transparent);
+    transform: translateX(-160%);
+    will-change: transform;
+    animation: homepage-load-sweep 460ms cubic-bezier(0.23, 1, 0.32, 1) 70ms both;
+  }
+
+  @keyframes homepage-load-sweep {
+    to {
+      transform: translateX(420%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    .homepage-load-indicator {
+      display: none;
+    }
+
+    .hero-quick-start-step {
+      animation: none;
+      will-change: auto;
+    }
   }
 }

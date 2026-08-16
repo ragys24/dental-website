@@ -5,26 +5,11 @@
 import { Link } from "wouter";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, MessageSquare } from "lucide-react";
 import { PRACTICE, SITE_IMAGES } from "@/lib/constants";
+import { FOOTER_SERVICE_LINKS } from "@/lib/site-navigation";
 import { SMS } from "@/lib/sms";
+import { trackSchedule } from "@/lib/tracking";
 
-const services = [
-  { name: "General Dentistry", href: "/services" },
-  { name: "Cosmetic Dentistry", href: "/services" },
-  { name: "Teeth Whitening", href: "/teeth-whitening" },
-  { name: "Veneers", href: "/veneers" },
-  { name: "Dental Crowns", href: "/dental-crowns" },
-  { name: "Dental Bonding", href: "/dental-bonding" },
-  { name: "Invisalign", href: "/invisalign" },
-  { name: "Braces & Orthodontics", href: "/orthodontics" },
-  { name: "Dental Implants", href: "/dental-implants" },
-  { name: "Wisdom Teeth Removal", href: "/wisdom-teeth-removal" },
-  { name: "Periodontics & Gum Care", href: "/periodontics" },
-  { name: "Endodontics", href: "/endodontics" },
-  { name: "Emergency Dentistry", href: "/emergency-dentist" },
-  { name: "Teeth Cleaning", href: "/teeth-cleaning" },
-  { name: "Dental Fillings", href: "/dental-fillings" },
-  { name: "Insurance & Financing", href: "/insurance-financing" },
-];
+const services = FOOTER_SERVICE_LINKS;
 
 export default function Footer() {
   return (
@@ -44,6 +29,7 @@ export default function Footer() {
           </p>
           <a
             href={PRACTICE.phone.tel}
+            onClick={trackSchedule}
             className="flex items-center gap-2 bg-white px-5 py-2 rounded-full font-body font-bold text-sm hover:bg-white/90 transition-colors"
             style={{ color: "oklch(0.42 0.09 192)" }}
           >
@@ -118,7 +104,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {services.map((s) => (
                 <li key={s.name}>
-                  <Link href={s.href} className="font-body text-sm text-white/65 hover:text-white transition-colors">
+                  <Link href={s.href} className="font-body text-sm text-white/80 hover:text-white transition-colors inline-block py-1">
                     {s.name}
                   </Link>
                 </li>
@@ -154,7 +140,7 @@ export default function Footer() {
             <h3 className="font-display font-semibold text-base mb-5 text-white">Contact Us</h3>
             <ul className="space-y-4">
               <li>
-                <a href={PRACTICE.phone.tel} className="flex items-start gap-3 group">
+                <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-start gap-3 group">
                   <Phone className="w-4 h-4 mt-0.5 shrink-0" style={{ color: "oklch(0.72 0.07 205)" }} />
                   <div>
                     <p className="text-xs font-body text-white/45 uppercase tracking-wide">Phone</p>
@@ -163,7 +149,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href={SMS.general} className="flex items-start gap-3 group">
+                <a href={SMS.general} onClick={trackSchedule} className="flex items-start gap-3 group">
                   <MessageSquare className="w-4 h-4 mt-0.5 shrink-0" style={{ color: "oklch(0.72 0.07 205)" }} />
                   <div>
                     <p className="text-xs font-body text-white/45 uppercase tracking-wide">Text Us</p>
@@ -200,7 +186,7 @@ export default function Footer() {
                 <Clock className="w-4 h-4 mt-0.5 shrink-0" style={{ color: "oklch(0.72 0.07 205)" }} />
                 <div>
                   <p className="text-xs font-body text-white/45 uppercase tracking-wide">Insurance</p>
-                  <p className="font-body text-sm text-white/80">Denti-Cal · Most PPOs<br />Military Insurance · Cherry</p>
+                  <p className="font-body text-sm text-white/80">Denti-Cal · Most PPOs<br />Military · CareCredit · Cherry</p>
                 </div>
               </li>
             </ul>
@@ -211,7 +197,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="relative z-10 border-t" style={{ borderColor: "oklch(1 0 0 / 0.1)" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="font-body text-xs text-white/40" itemScope itemType="https://schema.org/Dentist">
+          <p className="font-body text-xs text-white/70" itemScope itemType="https://schema.org/Dentist">
             © {new Date().getFullYear()}{" "}
             <span itemProp="name">{PRACTICE.name}</span>. All rights reserved. |{" "}
             <span itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
@@ -220,19 +206,19 @@ export default function Footer() {
               <span itemProp="addressRegion">{PRACTICE.address.state}</span>{" "}
               <span itemProp="postalCode">{PRACTICE.address.zip}</span>
             </span>{" "}|{" "}
-            <a href={PRACTICE.phone.tel} itemProp="telephone" className="hover:text-white/70 transition-colors">{PRACTICE.phone.display}</a>
+            <a href={PRACTICE.phone.tel} onClick={trackSchedule} itemProp="telephone" className="hover:text-white/70 transition-colors">{PRACTICE.phone.display}</a>
           </p>
           <div className="flex gap-5">
-            <a href="/privacy-policy" className="font-body text-xs text-white/40 hover:text-white/70 transition-colors">
+            <a href="/privacy-policy" className="font-body text-xs text-white/80 hover:text-white transition-colors inline-block py-1">
               Privacy Policy
             </a>
-            <a href="/terms-of-service" className="font-body text-xs text-white/40 hover:text-white/70 transition-colors">
+            <a href="/terms-of-service" className="font-body text-xs text-white/80 hover:text-white transition-colors inline-block py-1">
               Terms of Service
             </a>
-            <a href="/accessibility" className="font-body text-xs text-white/40 hover:text-white/70 transition-colors">
+            <a href="/accessibility" className="font-body text-xs text-white/80 hover:text-white transition-colors inline-block py-1">
               Accessibility
             </a>
-            <a href="/sitemap.xml" className="font-body text-xs text-white/40 hover:text-white/70 transition-colors">
+            <a href="/sitemap.xml" className="font-body text-xs text-white/80 hover:text-white transition-colors inline-block py-1">
               Sitemap
             </a>
           </div>

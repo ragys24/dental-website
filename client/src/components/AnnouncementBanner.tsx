@@ -9,6 +9,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { MessageSquare, Calendar, X } from "lucide-react";
 import { SMS } from "@/lib/sms";
+import { trackSchedule } from "@/lib/tracking";
 
 export default function AnnouncementBanner() {
   const [dismissed, setDismissed] = useState(false);
@@ -34,7 +35,7 @@ export default function AnnouncementBanner() {
 
         {/* Text Us CTA */}
         <a
-          href={SMS.general}
+          href={SMS.general} onClick={trackSchedule}
           className="inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 text-white font-body font-semibold px-3 sm:px-4 py-1.5 rounded-full transition-all duration-200 border border-white/30 whitespace-nowrap text-xs sm:text-sm"
         >
           <MessageSquare className="w-3.5 h-3.5 shrink-0" />
@@ -43,11 +44,11 @@ export default function AnnouncementBanner() {
         </a>
 
         {/* Separator */}
-        <span className="text-white/50 text-xs sm:text-sm">or</span>
+        <span className="text-white/75 text-xs sm:text-sm">or</span>
 
         {/* Book Online CTA */}
         <Link
-          href="/contact"
+          href="/contact" onClick={trackSchedule}
           className="inline-flex items-center gap-1.5 bg-white font-body font-semibold px-3 sm:px-4 py-1.5 rounded-full transition-all duration-200 hover:bg-white/90 whitespace-nowrap text-xs sm:text-sm"
           style={{ color: "oklch(0.28 0.08 192)" }}
         >
@@ -59,7 +60,7 @@ export default function AnnouncementBanner() {
       {/* Dismiss button — always visible, positioned right */}
       <button
         onClick={() => setDismissed(true)}
-        className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors p-1.5 rounded-full hover:bg-white/10"
+        className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors p-1.5 rounded-full hover:bg-white/10"
         aria-label="Dismiss announcement"
       >
         <X className="w-3.5 h-3.5" />

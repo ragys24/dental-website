@@ -8,36 +8,22 @@
  */
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
-import {
-  CheckCircle,
-  Phone,
-  Calendar,
-  ChevronDown,
-  ChevronRight,
-  Award,
-  Shield,
-  Microscope,
-  Zap,
-  Star,
-  MessageSquare,
-  Heart,
-  Clock,
-  AlertCircle,
-  ThumbsUp,
-} from "lucide-react";
+import { CheckCircle, Phone, Calendar, ChevronDown, Award, Shield, Microscope, Zap, Star, MessageSquare, Heart, Clock, AlertCircle, ThumbsUp } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { PageSEO } from "@/components/PageSEO";
 import Footer from "@/components/Footer";
+import RelatedServices from "@/components/RelatedServices";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
-import { FAQSchema } from "@/components/StructuredData";
+import { FAQSchema, ServiceSchema } from "@/components/StructuredData";
 import { PRACTICE, COLORS } from "@/lib/constants";
 import { SMS } from "@/lib/sms";
+import { trackSchedule } from "@/lib/tracking";
 
 const NAVY = "oklch(0.18 0.05 240)";
-const PATTERN_DARK = "/assets/uplift/PATTERN-02_5ffa36bf.webp";
-const DR_GHOBRIAL = "/assets/uplift/IMG_9486_6f5df7e4.webp";
-const TECH_IMG = "/assets/uplift/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
-const SMILE_IMG = "/assets/uplift/smile-transformation_82cc164e.webp";
+const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/pattern-02-optimized_1e03ef22.jpg";
+const DR_GHOBRIAL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/IMG_9486_6f5df7e4.jpeg";
+const TECH_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
+const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
 
 const TREATMENTS = [
   {
@@ -228,14 +214,7 @@ export default function Endodontics() {
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
 
-    document.title = "Endodontist in Garden Grove, CA | Root Canal Specialist | Uplift Dental";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        "content",
-        `Dr. Daniel Ghobrial, DDS — UCSF-trained endodontist at Uplift Dental & Orthodontics in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. Root canal therapy, microscopic endodontics, surgical endodontics & complex retreatment. No referral needed.`
-      );
-    }
+    // PageSEO component handles document.title and meta description
 
     return () => {
       const el = document.getElementById(id);
@@ -246,8 +225,8 @@ export default function Endodontics() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <PageSEO
-        title="Endodontist in Garden Grove, CA | Root Canal Specialist | Uplift Dental"
-        description={`Dr. Daniel Ghobrial, DDS — UCSF-trained endodontist at Uplift Dental & Orthodontics in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. Root canal therapy, microscopic endodontics, surgical endodontics & complex retreatment. No referral needed.`}
+        title="Root Canal Specialist | Uplift Dental"
+        description="Expert endodontics by Dr. Ghobrial in Garden Grove, CA. Microscopic root canals, retreatments, and apicoectomy. Pain-free care."
         canonical="https://upliftdental.com/endodontics"
       />
       <FAQSchema faqs={FAQS.map(f => ({ question: f.q, answer: f.a }))} id="ld-faq-endodontics" />
@@ -257,6 +236,12 @@ export default function Endodontics() {
           { name: "Services", url: "https://upliftdental.com/services" },
           { name: "Endodontics", url: "https://upliftdental.com/endodontics" },
         ]}
+      />
+      <ServiceSchema
+        name="Root Canal Treatment"
+        description="Painless root canal therapy in Garden Grove, CA. Endodontic treatment with advanced technology to save infected teeth."
+        url="https://upliftdental.com/endodontics"
+        serviceType="Endodontics"
       />
       <Navbar />
 
@@ -286,7 +271,7 @@ export default function Endodontics() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/contact"
+                href="/contact" onClick={trackSchedule}
                 className="flex items-center justify-center gap-2 px-8 py-4 rounded-full font-body font-bold text-base shadow-xl transition-all hover:opacity-90"
                 style={{ backgroundColor: COLORS.teal, color: "white" }}
               >
@@ -294,7 +279,7 @@ export default function Endodontics() {
                 Book with Dr. Ghobrial
               </Link>
               <a
-                href={PRACTICE.phone.tel}
+                href={PRACTICE.phone.tel} onClick={trackSchedule}
                 className="flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-body font-semibold text-base rounded-full hover:bg-white/10 transition-all"
               >
                 <Phone className="w-5 h-5" />
@@ -517,7 +502,7 @@ export default function Endodontics() {
               >
                 <div className="flex items-start gap-3 mb-4">
                   <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" style={{ color: "oklch(0.65 0.18 30)" }} />
-                  <p className="font-body font-semibold text-white/60 text-sm line-through">{item.myth}</p>
+                  <p className="font-body font-semibold text-white/80 text-sm line-through">{item.myth}</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <ThumbsUp className="w-5 h-5 shrink-0 mt-0.5" style={{ color: "oklch(0.65 0.12 192)" }} />
@@ -632,7 +617,7 @@ export default function Endodontics() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/contact" onClick={trackSchedule}
               className="flex items-center justify-center gap-2 px-8 py-4 bg-white font-body font-bold text-base rounded-full shadow-xl hover:bg-white/90 transition-all"
               style={{ color: COLORS.tealDark }}
             >
@@ -640,19 +625,20 @@ export default function Endodontics() {
               Book with Dr. Ghobrial
             </Link>
             <a
-              href={SMS.general}
+              href={SMS.general} onClick={trackSchedule}
               className="flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/40 text-white font-body font-semibold text-base rounded-full hover:bg-white/10 transition-all"
             >
               <MessageSquare className="w-5 h-5" />
               Text Us for Faster Service
             </a>
           </div>
-          <p className="font-body text-white/50 text-sm mt-6">
+          <p className="font-body text-white/75 text-sm mt-6">
             {PRACTICE.address.full} · {PRACTICE.phone.display} · No referral needed
           </p>
         </div>
       </section>
 
+      <RelatedServices exclude={["/endodontics"]} limit={4} />
       <Footer />
     </div>
   );

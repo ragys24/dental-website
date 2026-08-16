@@ -1,0 +1,25 @@
+# Cache headers for static assets (1 year)
+/assets/*  200  Cache-Control: public, max-age=31536000, immutable
+/*.js      200  Cache-Control: public, max-age=31536000, immutable
+/*.css     200  Cache-Control: public, max-age=31536000, immutable
+/*.woff2   200  Cache-Control: public, max-age=31536000, immutable
+/*.woff    200  Cache-Control: public, max-age=31536000, immutable
+/*.ttf     200  Cache-Control: public, max-age=31536000, immutable
+/*.eot     200  Cache-Control: public, max-age=31536000, immutable
+/*.svg     200  Cache-Control: public, max-age=31536000, immutable
+/*.png     200  Cache-Control: public, max-age=31536000, immutable
+/*.jpg     200  Cache-Control: public, max-age=31536000, immutable
+/*.jpeg    200  Cache-Control: public, max-age=31536000, immutable
+/*.gif     200  Cache-Control: public, max-age=31536000, immutable
+/*.webp    200  Cache-Control: public, max-age=31536000, immutable
+/*.ico     200  Cache-Control: public, max-age=31536000, immutable
+
+# HTML: cache for 1 hour (allows updates without breaking old links)
+/index.html    200  Cache-Control: public, max-age=3600, must-revalidate
+/*.html        200  Cache-Control: public, max-age=3600, must-revalidate
+
+# Redirect /index.html to root with 301 permanent redirect
+/index.html / 301
+
+# SPA catch-all: serve index.html for all routes (React / Wouter)
+/* /index.html 200  Cache-Control: public, max-age=3600, must-revalidate

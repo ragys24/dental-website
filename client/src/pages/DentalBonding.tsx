@@ -6,17 +6,18 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PageSEO } from "@/components/PageSEO";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
-import { FAQSchema } from "@/components/StructuredData";
+import { FAQSchema, ServiceSchema } from "@/components/StructuredData";
 import { Link } from "wouter";
 import { Wand2, CheckCircle2, Phone, Calendar } from "lucide-react";
 import { PRACTICE, COLORS } from "@/lib/constants";
+import { trackSchedule } from "@/lib/tracking";
 
 export default function DentalBonding() {
   return (
     <>
       <PageSEO
-        title="Dental Bonding in Garden Grove, CA | Tooth Bonding | Uplift Dental"
-        description={`Fix chips, cracks, and gaps with dental bonding at Uplift Dental in Garden Grove, CA. Affordable cosmetic dentistry completed in one visit. Call ${PRACTICE.phone.display}.`}
+        title="Dental Bonding | Uplift Dental Garden Grove"
+        description="Affordable dental bonding in Garden Grove, CA. Repair chips, gaps, and discoloration in one visit. Free consultation at Uplift Dental."
         canonical="https://upliftdental.com/dental-bonding"
       />
       <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
@@ -25,6 +26,12 @@ export default function DentalBonding() {
           { name: "Services", url: "https://upliftdental.com/services" },
           { name: "Dental Bonding", url: "https://upliftdental.com/dental-bonding" },
         ]} />
+      <ServiceSchema
+        name="Dental Bonding"
+        description="Cosmetic dental bonding to repair chipped, cracked, or discolored teeth in Garden Grove, CA. Same-day results with composite resin bonding."
+        url="https://upliftdental.com/dental-bonding"
+        serviceType="Dental Bonding"
+      />
         <Navbar />
 
         {/* Hero */}
@@ -40,10 +47,10 @@ export default function DentalBonding() {
               Dental bonding is one of the most affordable and versatile cosmetic treatments available — fixing chips, cracks, gaps, and discoloration in a single appointment with no anesthesia required.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={PRACTICE.phone.tel} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg shadow-xl hover:bg-white/90 transition-all" style={{ color: COLORS.tealDark }}>
+              <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg shadow-xl hover:bg-white/90 transition-all" style={{ color: COLORS.tealDark }}>
                 <Phone className="w-5 h-5" /> Call {PRACTICE.phone.display}
               </a>
-              <Link href="/contact" className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
+              <Link href="/contact" onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
                 <Calendar className="w-5 h-5" /> Book Free Consult
               </Link>
             </div>
@@ -138,6 +145,41 @@ export default function DentalBonding() {
           </div>
         </section>
 
+        {/* Before & After Gallery */}
+        <section className="py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="font-display text-4xl text-center mb-4" style={{ color: COLORS.tealDark }}>Real Results from Our Patients</h2>
+            <p className="font-body text-gray-600 text-center mb-12 max-w-2xl mx-auto">See how dental bonding transformed chipped and damaged teeth into beautiful, natural-looking smiles — all in a single appointment.</p>
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                {
+                  title: "Chipped Front Teeth",
+                  before: "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/DSC02892_61e99dc8.webp",
+                  after: "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/DSC02895_1682c8dd.webp",
+                  desc: "Severely chipped upper front teeth restored with composite resin bonding in one visit."
+                },
+              ].map((item) => (
+                <div key={item.title} className="bg-[oklch(0.97_0.008_192)] rounded-2xl overflow-hidden">
+                  <div className="grid grid-cols-2 gap-4 p-4">
+                    <div>
+                      <p className="text-xs font-body font-semibold text-gray-500 mb-2 uppercase tracking-wide">Before</p>
+                      <img src={item.before} alt="Before bonding" className="w-full h-48 object-cover rounded-lg" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-body font-semibold mb-2 uppercase tracking-wide" style={{ color: COLORS.teal }}>After</p>
+                      <img src={item.after} alt="After bonding" className="w-full h-48 object-cover rounded-lg" />
+                    </div>
+                  </div>
+                  <div className="px-4 pb-4">
+                    <h3 className="font-body font-semibold text-gray-800 mb-1">{item.title}</h3>
+                    <p className="font-body text-gray-600 text-sm">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="py-20 bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -164,10 +206,10 @@ export default function DentalBonding() {
             <h2 className="font-display text-4xl text-white mb-4">Fix Your Smile in One Visit</h2>
             <p className="font-body text-white/75 text-lg mb-8">Dental bonding is the quickest, most affordable way to fix minor cosmetic issues — chipped teeth, small gaps, and discoloration. Completed in one visit with no prep or anesthesia needed, bonding is perfect for patients who want instant results without the cost of veneers. Schedule your free consultation today and see your new smile.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={PRACTICE.phone.tel} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg" style={{ color: COLORS.tealDark }}>
+              <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg" style={{ color: COLORS.tealDark }}>
                 <Phone className="w-5 h-5" /> Call {PRACTICE.phone.display}
               </a>
-              <Link href="/contact" className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
+              <Link href="/contact" onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
                 Book Online
               </Link>
             </div>

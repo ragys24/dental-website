@@ -6,17 +6,18 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PageSEO } from "@/components/PageSEO";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
-import { FAQSchema } from "@/components/StructuredData";
+import { FAQSchema, ServiceSchema } from "@/components/StructuredData";
 import { Link } from "wouter";
 import { CheckCircle2, Phone, Calendar, Stethoscope } from "lucide-react";
 import { PRACTICE, COLORS } from "@/lib/constants";
+import { trackSchedule } from "@/lib/tracking";
 
 export default function DentalFillings() {
   return (
     <>
       <PageSEO
-        title="Tooth-Colored Fillings in Garden Grove, CA | Composite Fillings | Uplift Dental"
-        description={`Get natural-looking tooth-colored composite fillings at Uplift Dental in Garden Grove, CA. Replace old silver amalgam fillings or treat new cavities. Call ${PRACTICE.phone.display}.`}
+        title="Tooth-Colored Fillings | Uplift Dental"
+        description="Mercury-free composite fillings in Garden Grove, CA. Natural-looking cavity repair for the whole family at Uplift Dental."
         canonical="https://upliftdental.com/dental-fillings"
       />
       <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
@@ -25,6 +26,12 @@ export default function DentalFillings() {
           { name: "Services", url: "https://upliftdental.com/services" },
           { name: "Dental Fillings", url: "https://upliftdental.com/dental-fillings" },
         ]} />
+      <ServiceSchema
+        name="Dental Fillings"
+        description="Tooth-colored composite dental fillings in Garden Grove, CA. Mercury-free fillings that match your natural tooth color."
+        url="https://upliftdental.com/dental-fillings"
+        serviceType="Dental Fillings"
+      />
         <Navbar />
 
         {/* Hero */}
@@ -40,10 +47,10 @@ export default function DentalFillings() {
               At Uplift Dental, we use tooth-colored composite resin fillings that blend seamlessly with your natural teeth — no more dark metal spots when you smile.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={PRACTICE.phone.tel} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg shadow-xl hover:bg-white/90 transition-all" style={{ color: COLORS.tealDark }}>
+              <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg shadow-xl hover:bg-white/90 transition-all" style={{ color: COLORS.tealDark }}>
                 <Phone className="w-5 h-5" /> Call {PRACTICE.phone.display}
               </a>
-              <Link href="/contact" className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
+              <Link href="/contact" onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
                 <Calendar className="w-5 h-5" /> Book Appointment
               </Link>
             </div>
@@ -79,7 +86,7 @@ export default function DentalFillings() {
               </div>
               <div className="bg-gray-50 rounded-3xl p-8 border border-gray-200">
                 <h3 className="font-display text-2xl mb-2 text-gray-600">Amalgam (Silver/Metal)</h3>
-                <p className="font-body text-sm text-gray-400 mb-6">Traditional option we no longer use</p>
+                <p className="font-body text-sm text-gray-500 mb-6">Traditional option we no longer use</p>
                 <ul className="space-y-3">
                   {[
                     "Dark silver color — visible when you smile",
@@ -158,7 +165,7 @@ export default function DentalFillings() {
             <p className="font-body text-gray-600 text-lg leading-relaxed mb-8">
               If you have old amalgam (silver) fillings that are cracked, leaking, or simply bothering you aesthetically, we can safely remove them and replace them with natural-looking composite fillings. Many patients are surprised by how much better their smile looks after replacing just a few old metal fillings.
             </p>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-body font-bold text-lg text-white hover:opacity-90 transition-all" style={{ backgroundColor: COLORS.teal }}>
+            <Link href="/contact" onClick={trackSchedule} className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-body font-bold text-lg text-white hover:opacity-90 transition-all" style={{ backgroundColor: COLORS.teal }}>
               <Calendar className="w-5 h-5" /> Schedule a Filling Replacement
             </Link>
           </div>
@@ -170,10 +177,10 @@ export default function DentalFillings() {
             <h2 className="font-display text-4xl text-white mb-4">Treat Cavities Before They Get Worse</h2>
             <p className="font-body text-white/75 text-lg mb-8">Cavities don't heal on their own — they grow deeper and more expensive to treat. Our tooth-colored composite fillings blend with your natural teeth and are completed in a single visit. We remove old silver amalgam fillings too, replacing them with modern, natural-looking restorations. Don't wait — call to schedule your filling today.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={PRACTICE.phone.tel} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg" style={{ color: COLORS.tealDark }}>
+              <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg" style={{ color: COLORS.tealDark }}>
                 <Phone className="w-5 h-5" /> Call {PRACTICE.phone.display}
               </a>
-              <Link href="/contact" className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
+              <Link href="/contact" onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
                 Book Online
               </Link>
             </div>

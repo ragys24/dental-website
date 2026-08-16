@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils";
 import { AlertTriangle, RotateCcw } from "lucide-react";
-import { Component, ReactNode } from "react";
+import { Component, ErrorInfo, ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 interface Props {
   children: ReactNode;
@@ -21,6 +21,12 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // Keep diagnostic detail available to maintainers without exposing stack
+    // traces or component internals to patients on the public site.
+    console.error("Uplift Dental application error", error, errorInfo.componentStack);
+  }
+
   render() {
     if (this.state.hasError) {
       return (
@@ -33,11 +39,9 @@ class ErrorBoundary extends Component<Props, State> {
 
             <h2 className="text-xl mb-4">An unexpected error occurred.</h2>
 
-            <div className="p-4 w-full rounded bg-muted overflow-auto mb-6">
-              <pre className="text-sm text-muted-foreground whitespace-break-spaces">
-                {this.state.error?.stack}
-              </pre>
-            </div>
+            <p className="max-w-md text-center text-muted-foreground mb-6">
+              Please reload the page. If the issue continues, call our office and our team will be glad to help.
+            </p>
 
             <button
               onClick={() => window.location.reload()}

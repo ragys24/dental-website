@@ -15,9 +15,9 @@ export default function TermsOfService() {
   return (
     <>
       <PageSEO
-        title="Terms of Service | Uplift Dental & Orthodontics Garden Grove CA"
-        description="Read the Terms of Service for Uplift Dental & Orthodontics. Understand the conditions governing use of our website and digital communications."
-        canonical="/terms-of-service"
+        title="Terms of Service | Uplift Dental"
+        description="Terms of service for Uplift Dental & Orthodontics website. Usage policies, disclaimers, and legal information."
+        canonical="https://upliftdental.com/terms-of-service"
       />
 
       <main className="min-h-screen bg-white pt-32 pb-24">

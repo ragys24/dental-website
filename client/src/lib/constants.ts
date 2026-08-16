@@ -37,6 +37,12 @@ export const PRACTICE = {
     count: 124,
     rating: 5.0,
   },
+  financing: {
+    monthlyLow: "$99",
+    qualifier: "for those who qualify",
+    options: ["CareCredit", "Cherry", "In-House Financing"],
+    headline: "Braces & Invisalign as Low as $99/mo*",
+  },
 } as const;
 
 // ─── Design Tokens ────────────────────────────────────────────────────────────
@@ -52,37 +58,38 @@ export const COLORS = {
   gold: "oklch(0.78 0.12 85)",
 } as const;
 
-// ─── Local Image Assets ──────────────────────────────────────────────────────
+// ─── CDN Image Assets ─────────────────────────────────────────────────────────
 
-const CDN = "/assets/uplift";
+const CDN = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN";
 
 /** Doctor headshots */
 export const DOCTOR_IMAGES = {
-  stefan: `${CDN}/dr-stefan-clean_5bc74027.webp`,
-  schneekluth: `${CDN}/dr-schneekluth-labcoat-clean_5cfb4098.webp`,
-  schneekluthClean: `${CDN}/dr-schneekluth-clean_de46bddf.webp`,
-  youssef: `${CDN}/dr-youssef-clean_da346e41.webp`,
-  saad: `${CDN}/dr-saad-periodontist_45f9c7c5.webp`,
-  ghobrial: `${CDN}/dr-ghobrial-hq_89525d81.webp`,
+  stefan: `${CDN}/dr-stefan-clean_5bc74027.png`,
+  schneekluth: `${CDN}/dr-schneekluth-labcoat-clean_5cfb4098.png`,
+  schneekluthClean: `${CDN}/dr-schneekluth-clean_de46bddf.png`,
+  youssef: `${CDN}/dr-youssef-clean_da346e41.png`,
+  saad: `${CDN}/dr-saad-periodontist_45f9c7c5.jpg`,
+  ghobrial: `${CDN}/dr-ghobrial-hq_89525d81.jpeg`,
+  sidky: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663519418507/XbJMTPsZSXVcOpYR.jpeg",
 } as const;
 
 /** Staff headshots */
 export const STAFF_IMAGES = {
-  angeliki: `${CDN}/angeliki_blanco_91783479.webp`,
-  sinath: `${CDN}/sinath_oum_f502fa41.webp`,
-  geneyah: `${CDN}/geneyah_warren_faf8fe8e.webp`,
+  angeliki: `${CDN}/angeliki_blanco_91783479.jpg`,
+  sinath: `${CDN}/sinath_oum_f502fa41.jpg`,
+  geneyah: `${CDN}/geneyah_warren_faf8fe8e.jpg`,
 } as const;
 
 /** Site-wide images */
 export const SITE_IMAGES = {
-  hero: `${CDN}/hero-smile_47b15f85.webp`,
-  logoPrimary: `${CDN}/Logo-01_0c8b669d.webp`,
-  logoLight: `${CDN}/Logo-10_73bf64d6.webp`,
-  team: `${CDN}/uplift-team-real_7d2676d0.webp`,
-  teamAlt: `${CDN}/uplift-team-real_80532d53.webp`,
-  about: `${CDN}/uplift-about-real_a6815637.webp`,
-  patternDark: `${CDN}/PATTERN-02_5ffa36bf.webp`,
-  patternDarkAlt: `${CDN}/uplift-pattern-dark_02e4726d.webp`,
+  hero: `${CDN}/hero-smile-optimized_eaf37ef9.jpg`,
+  logoPrimary: "/manus-storage/uplift-logo-primary-112_c4a29daf.webp",
+  logoLight: "/manus-storage/uplift-logo-light-112_30c322a0.webp",
+  team: `${CDN}/uplift-team-real_7d2676d0.jpg`,
+  teamAlt: `${CDN}/uplift-team-real_80532d53.jpg`,
+  about: `${CDN}/uplift-about-real_a6815637.jpg`,
+  patternDark: `${CDN}/pattern-02-optimized_1e03ef22.jpg`,
+  patternDarkAlt: `${CDN}/pattern-dark-optimized_09879858.jpg`,
 } as const;
 
 // ─── Doctor / Staff Data Types ────────────────────────────────────────────────

@@ -6,17 +6,18 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PageSEO } from "@/components/PageSEO";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
-import { FAQSchema } from "@/components/StructuredData";
+import { FAQSchema, ServiceSchema } from "@/components/StructuredData";
 import { Link } from "wouter";
 import { CheckCircle2, Phone, Calendar, Heart } from "lucide-react";
 import { PRACTICE, COLORS } from "@/lib/constants";
+import { trackSchedule } from "@/lib/tracking";
 
 export default function TeethCleaning() {
   return (
     <>
       <PageSEO
-        title="Teeth Cleaning in Garden Grove, CA | Dental Cleanings | Uplift Dental"
-        description={`Professional teeth cleanings and dental exams at Uplift Dental in Garden Grove, CA. New patient special: $99 Adult Exam & X-rays. Denti-Cal accepted. Call ${PRACTICE.phone.display}.`}
+        title="Teeth Cleaning | Uplift Dental Garden Grove"
+        description="Professional teeth cleaning in Garden Grove, CA. Preventive exams, deep cleaning, and periodontal maintenance at Uplift Dental."
         canonical="https://upliftdental.com/teeth-cleaning"
       />
       <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
@@ -25,6 +26,12 @@ export default function TeethCleaning() {
           { name: "Services", url: "https://upliftdental.com/services" },
           { name: "Teeth Cleaning", url: "https://upliftdental.com/teeth-cleaning" },
         ]} />
+      <ServiceSchema
+        name="Professional Teeth Cleaning"
+        description="Professional dental cleaning and preventive care in Garden Grove, CA. Routine cleanings, deep cleanings, and periodontal maintenance."
+        url="https://upliftdental.com/teeth-cleaning"
+        serviceType="Dental Cleaning"
+      />
         <Navbar />
 
         {/* Hero */}
@@ -44,10 +51,10 @@ export default function TeethCleaning() {
               <p className="font-body text-white/70 text-sm">No insurance required · Denti-Cal accepted</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={PRACTICE.phone.tel} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg shadow-xl hover:bg-white/90 transition-all" style={{ color: COLORS.tealDark }}>
+              <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg shadow-xl hover:bg-white/90 transition-all" style={{ color: COLORS.tealDark }}>
                 <Phone className="w-5 h-5" /> Call {PRACTICE.phone.display}
               </a>
-              <Link href="/contact" className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
+              <Link href="/contact" onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
                 <Calendar className="w-5 h-5" /> Book Appointment
               </Link>
             </div>
@@ -138,7 +145,7 @@ export default function TeethCleaning() {
               {[
                 { title: "Denti-Cal Accepted", desc: "We proudly serve Medi-Cal patients. Bring your Denti-Cal card and we'll handle the rest." },
                 { title: "Most PPO Plans", desc: "We work with most major dental insurance providers. Call us to verify your coverage." },
-                { title: "No Insurance? No Problem", desc: "New patient special: $99 adult exam + X-rays. Cherry 0% financing available." },
+                { title: "No Insurance? No Problem", desc: "New patient special: $99 adult exam + X-rays. CareCredit, Cherry & in-house financing available." },
               ].map((item) => (
                 <div key={item.title} className="bg-[oklch(0.97_0.008_192)] rounded-2xl p-6 border border-gray-100">
                   <h3 className="font-body font-semibold text-gray-800 mb-2">{item.title}</h3>
@@ -155,10 +162,10 @@ export default function TeethCleaning() {
             <h2 className="font-display text-4xl text-white mb-4">Schedule Your Cleaning Today</h2>
             <p className="font-body text-white/75 text-lg mb-8">Professional cleanings remove tartar buildup that brushing can't reach — protecting your teeth and gums from decay and disease. Combined with a thorough exam and X-rays, your cleaning appointment is your best defense against cavities and gum disease. Schedule your cleaning today and keep your smile healthy for life.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={PRACTICE.phone.tel} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg" style={{ color: COLORS.tealDark }}>
+              <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg" style={{ color: COLORS.tealDark }}>
                 <Phone className="w-5 h-5" /> Call {PRACTICE.phone.display}
               </a>
-              <Link href="/contact" className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
+              <Link href="/contact" onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
                 Book Online
               </Link>
             </div>

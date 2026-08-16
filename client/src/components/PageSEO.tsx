@@ -1,72 +1,103 @@
 /**
- * PageSEO — injects per-page canonical, meta description, OG title, OG description,
- * and OG image into the <head> using vanilla DOM manipulation (no react-helmet needed).
+ * PageSEO — Injects per-page SEO metadata into document head
+ * 
+ * Handles:
+ * - Document title
+ * - Meta description
+ * - Canonical URL
+ * - Open Graph (OG) tags for social sharing
+ * - Twitter Card tags
+ * 
+ * Uses vanilla DOM manipulation for better performance than react-helmet.
  * Call this at the top of each page's return statement.
+ * 
+ * @example
+ * export function MyPage() {
+ *   return (
+ *     <>
+ *       <PageSEO
+ *         title={`My Page | Uplift Dental`}
+ *         description={`Page description for search engines`}
+ *         canonical={`https://upliftdental.com/my-page`}
+ *         ogImage={`https://cdn.example.com/image.jpg`}
+ *       />
+ *     </>
+ *   );
+ * }
  */
 import { useEffect } from "react";
 import { PRACTICE } from "@/lib/constants";
 
+/**
+ * Props for PageSEO component
+ * @interface PageSEOProps
+ * @property {string} title - Page title (appears in browser tab and search results)
+ * @property {string} description - Meta description (appears in search results)
+ * @property {string} canonical - Canonical URL (prevents duplicate content issues)
+ * @property {string} [ogImage] - Open Graph image URL for social sharing
+ * @property {boolean} [noindex] - If true, adds noindex,nofollow meta robots tag
+ */
 interface PageSEOProps {
   title: string;
   description: string;
   canonical: string;
   ogImage?: string;
+  noindex?: boolean;
 }
 
-const SITE_ORIGIN = "https://upliftdental.com";
-const DEFAULT_OG_IMAGE = `${SITE_ORIGIN}/assets/uplift/hero-smile_47b15f85.webp`;
+const DEFAULT_OG_IMAGE =
+  "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/hero-smile-optimized_eaf37ef9.jpg";
 
-function absoluteUrl(url: string) {
-  return url.startsWith("/") ? `${SITE_ORIGIN}${url}` : url;
+const INDEXABLE_ROBOTS = "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1";
+
+function upsertMeta(attribute: "name" | "property", key: string, content: string) {
+  const selector = `meta[${attribute}="${key}"]`;
+  let element = document.head.querySelector<HTMLMetaElement>(selector);
+  if (!element) {
+    element = document.createElement("meta");
+    element.setAttribute(attribute, key);
+    document.head.appendChild(element);
+  }
+  element.content = content;
 }
 
-export function PageSEO({ title, description, canonical, ogImage }: PageSEOProps) {
+function upsertLink(rel: string, href: string) {
+  let element = document.head.querySelector<HTMLLinkElement>(`link[rel="${rel}"]`);
+  if (!element) {
+    element = document.createElement("link");
+    element.rel = rel;
+    document.head.appendChild(element);
+  }
+  element.href = href;
+}
+
+/**
+ * PageSEO component — manages page-level SEO metadata
+ * @param {PageSEOProps} props - SEO configuration
+ * @returns {null} - This component doesn't render anything
+ */
+export function PageSEO({ title, description, canonical, ogImage, noindex }: PageSEOProps) {
   useEffect(() => {
-    // Title
     document.title = title;
+    const image = ogImage || DEFAULT_OG_IMAGE;
 
-    // Helper to upsert a <meta> tag
-    const setMeta = (selector: string, attr: string, value: string) => {
-      let el = document.querySelector(selector) as HTMLMetaElement | null;
-      if (!el) {
-        el = document.createElement("meta");
-        const [attrName, attrVal] = selector.replace("[", "").replace("]", "").split("=");
-        el.setAttribute(attrName, attrVal.replace(/"/g, ""));
-        document.head.appendChild(el);
-      }
-      el.setAttribute(attr, value);
-    };
+    upsertMeta("name", "description", description);
+    upsertMeta("name", "robots", noindex ? "noindex, nofollow" : INDEXABLE_ROBOTS);
+    upsertLink("canonical", canonical);
 
-    // Helper to upsert a <link> tag
-    const setLink = (rel: string, href: string) => {
-      let el = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement | null;
-      if (!el) {
-        el = document.createElement("link");
-        el.rel = rel;
-        document.head.appendChild(el);
-      }
-      el.href = href;
-    };
+    upsertMeta("property", "og:type", "website");
+    upsertMeta("property", "og:site_name", PRACTICE.name);
+    upsertMeta("property", "og:title", title);
+    upsertMeta("property", "og:description", description);
+    upsertMeta("property", "og:url", canonical);
+    upsertMeta("property", "og:image", image);
+    upsertMeta("property", "og:image:alt", `${PRACTICE.name} in ${PRACTICE.address.city}, ${PRACTICE.address.state}`);
 
-    setMeta('meta[name="description"]', "content", description);
-    setLink("canonical", canonical);
-
-    setMeta('meta[property="og:title"]', "content", title);
-    setMeta('meta[property="og:description"]', "content", description);
-    setMeta('meta[property="og:url"]', "content", canonical);
-    const socialImage = absoluteUrl(ogImage || DEFAULT_OG_IMAGE);
-    setMeta('meta[property="og:image"]', "content", socialImage);
-
-    setMeta('meta[name="twitter:title"]', "content", title);
-    setMeta('meta[name="twitter:description"]', "content", description);
-    setMeta('meta[name="twitter:image"]', "content", socialImage);
-
-    return () => {
-      // Restore homepage defaults on unmount
-      document.title =
-        `Uplift Dental & Orthodontics | Top-Rated Dentist in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}`;
-    };
-  }, [title, description, canonical, ogImage]);
+    upsertMeta("name", "twitter:card", "summary_large_image");
+    upsertMeta("name", "twitter:title", title);
+    upsertMeta("name", "twitter:description", description);
+    upsertMeta("name", "twitter:image", image);
+  }, [title, description, canonical, ogImage, noindex]);
 
   return null;
 }

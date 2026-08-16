@@ -11,6 +11,7 @@ import { Link } from "wouter";
 import { ChevronRight, ChevronLeft, CheckCircle, Phone, MessageSquare, Star } from "lucide-react";
 import { PRACTICE, COLORS } from "@/lib/constants";
 import { SMS } from "@/lib/sms";
+import { trackSchedule } from "@/lib/tracking";
 
 const TEAL_BG = "oklch(0.97 0.01 192)";
 
@@ -193,7 +194,7 @@ function ProgressBar({ current, total }: { current: number; total: number }) {
         <span className="font-body text-xs font-semibold uppercase tracking-widest" style={{ color: COLORS.teal }}>
           Question {current} of {total}
         </span>
-        <span className="font-body text-xs text-gray-400">{pct}% complete</span>
+        <span className="font-body text-xs text-gray-500">{pct}% complete</span>
       </div>
       <div className="h-1.5 rounded-full bg-gray-100 overflow-hidden">
         <div
@@ -252,8 +253,8 @@ export default function SmileAssessment() {
   return (
     <>
       <PageSEO
-        title="Free Smile Assessment Quiz | Uplift Dental Garden Grove"
-        description="Take our free 5-question smile assessment to find out which dental treatment is right for you — Invisalign, implants, whitening, or more. Personalized results in 2 minutes."
+        title="Free Smile Assessment | Uplift Dental"
+        description="Take our free smile assessment to discover your ideal treatment. Personalized recommendations from Uplift Dental specialists."
         canonical="https://upliftdental.com/smile-assessment"
       />
 
@@ -313,7 +314,7 @@ export default function SmileAssessment() {
               >
                 Start My Assessment <ChevronRight className="w-5 h-5" />
               </button>
-              <p className="font-body text-xs text-gray-400 mt-4">No email or personal info required</p>
+              <p className="font-body text-xs text-gray-500 mt-4">No email or personal info required</p>
             </div>
           )}
 
@@ -420,7 +421,7 @@ export default function SmileAssessment() {
                       </Link>
                     )}
                     <a
-                      href={SMS.general}
+                      href={SMS.general} onClick={trackSchedule}
                       className="flex items-center justify-center gap-2 px-8 py-4 rounded-full border-2 font-body font-semibold text-base hover:opacity-80 transition-all"
                       style={{ borderColor: COLORS.teal, color: COLORS.teal }}
                     >

@@ -11,13 +11,15 @@
 import Navbar from "@/components/Navbar";
 import { PageSEO } from "@/components/PageSEO";
 import Footer from "@/components/Footer";
+import RelatedServices from "@/components/RelatedServices";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
-import { FAQSchema, MedicalPageSchema } from "@/components/StructuredData";
+import { FAQSchema, MedicalPageSchema, ServiceSchema } from "@/components/StructuredData";
 import { Link } from "wouter";
-import { CheckCircle2, Phone, ChevronRight, Star, Clock, Shield, Award, Users, Smile } from "lucide-react";
+import { CheckCircle2, Phone, ChevronRight, Star, Clock, Shield, Award, Users, Smile, DollarSign } from "lucide-react";
 import { PRACTICE, COLORS } from "@/lib/constants";
+import { trackSchedule } from "@/lib/tracking";
 
-const ORTHO_IMG = "/assets/uplift/orthodontics-braces-U3K8rtBtyKN8vNF3Qv3diF.webp";
+const ORTHO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-schneekluth-labcoat-clean_5cfb4098.png";
 
 const BRACE_TYPES = [
   {
@@ -64,7 +66,7 @@ const FAQS = [
   { question: "How long does orthodontic treatment with braces take?", answer: "Most comprehensive braces treatment takes 18–24 months, though this varies widely based on the complexity of the case, patient age, and compliance. Mild cases may finish in 12 months; complex bite corrections can take 30 months or more. We provide a personalized timeline estimate at your free consultation." },
   { question: "Do braces hurt?", answer: "Braces themselves don't hurt, but you'll experience soreness for 3–5 days after each adjustment appointment as your teeth begin to move. This is normal and manageable with over-the-counter pain relievers like ibuprofen. Most patients adapt quickly and find the discomfort minimal after the first few weeks." },
   { question: "What's the difference between braces and Invisalign?", answer: "Braces use fixed metal or ceramic brackets bonded to your teeth, connected by archwires that are periodically tightened. Invisalign uses a series of removable clear plastic aligners changed every 1–2 weeks. Braces are generally more effective for complex bite corrections and don't require the discipline of wearing aligners 22 hours per day. Invisalign offers more flexibility and is nearly invisible. We offer both — your orthodontist will recommend the best option for your specific case at a free consultation." },
-  { question: "How much do braces cost in Garden Grove, CA?", answer: "Traditional metal braces at Uplift Dental typically range from $3,500 to $6,000 depending on case complexity and treatment length. Ceramic braces are slightly higher. We accept most PPO insurance plans, Denti-Cal for qualifying patients, and offer flexible financing through Cherry Finance with low monthly payment options. We'll provide an exact quote after your free consultation." },
+  { question: "How much do braces cost in Garden Grove, CA?", answer: "Traditional metal braces at Uplift Dental typically range from $3,500 to $6,000 depending on case complexity and treatment length. Ceramic braces are slightly higher. We accept most PPO insurance plans, Denti-Cal for qualifying patients, and offer flexible financing through CareCredit, Cherry, and in-house payment plans — with payments as low as $99/month for those who qualify. We'll provide an exact quote after your free consultation." },
   { question: "Do I need to wear a retainer after braces?", answer: "Yes — retainers are essential after braces. Without retention, teeth naturally shift back toward their original positions (relapse). We provide custom retainers at the end of treatment and recommend wearing them nightly long-term. Retainer compliance is the single most important factor in maintaining your results for life." },
 ];
 
@@ -72,15 +74,15 @@ export default function Orthodontics() {
   return (
     <>
       <PageSEO
-        title="Braces in Garden Grove, CA | Orthodontist | Uplift Dental & Orthodontics"
-        description={`Traditional metal braces, ceramic braces, and Phase I/II orthodontics at Uplift Dental in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. Platinum Invisalign Provider. Free orthodontic consultations. Denti-Cal accepted. Call ${PRACTICE.phone.display}.`}
+        title="Braces in Garden Grove, CA | Orthodontist for All Ages"
+        description="Explore metal braces, clear braces, and early orthodontic care in Garden Grove with Dr. Schneekluth. Free orthodontic consultation; Invisalign has a dedicated page."
         canonical="https://upliftdental.com/orthodontics"
       />
       <FAQSchema faqs={FAQS} id="ld-faq-orthodontics" />
       <MedicalPageSchema
         name="Braces & Orthodontics in Garden Grove, CA"
         url="https://upliftdental.com/orthodontics"
-        description={`Traditional metal braces, ceramic braces, Phase I and Phase II orthodontics at Uplift Dental & Orthodontics in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. Platinum Invisalign Provider. Free consultations.`}
+        description={`Traditional metal braces, ceramic braces, Phase I and Phase II orthodontics at Uplift Dental & Orthodontics in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. Free orthodontic consultations.`}
         medicalSpecialty="Orthodontics"
         keywords="braces garden grove, orthodontist garden grove ca, metal braces near me, ceramic braces garden grove, orthodontics 92845, braces for kids garden grove"
       />
@@ -89,6 +91,12 @@ export default function Orthodontics() {
         { name: "Services", url: "https://upliftdental.com/services" },
         { name: "Orthodontics & Braces", url: "https://upliftdental.com/orthodontics" },
       ]} />
+      <ServiceSchema
+        name="Orthodontics"
+        description="Braces and clear aligners in Garden Grove, CA. Metal braces, ceramic braces, and Invisalign for children, teens, and adults."
+        url="https://upliftdental.com/orthodontics"
+        serviceType="Orthodontics"
+      />
       <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
         <Navbar />
 
@@ -103,29 +111,33 @@ export default function Orthodontics() {
                 <h1 className="font-display text-5xl md:text-6xl text-white mb-6 leading-tight">
                   Braces That Fit<br />Your Life & Budget
                 </h1>
+                <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full mb-6" style={{ backgroundColor: "oklch(0.78 0.12 85)", color: COLORS.tealDeep }}>
+                  <DollarSign className="w-5 h-5" />
+                  <span className="font-body font-extrabold text-base">As Low as $99/mo*</span>
+                </div>
                 <p className="font-body text-white/80 text-lg leading-relaxed mb-8">
-                  At Uplift Dental & Orthodontics, we offer traditional metal braces, ceramic braces, and comprehensive Phase I/II orthodontic programs for children, teens, and adults. Platinum Invisalign Provider. Free consultations.
+                  At Uplift Dental & Orthodontics, we offer traditional metal braces, ceramic braces, and comprehensive Phase I/II orthodontic programs for children, teens, and adults. Platinum Invisalign Provider. Payments as low as $99/month for those who qualify.
                 </p>
                 <div className="flex flex-wrap gap-3 mb-8">
-                  {["Denti-Cal Accepted", "Free Consultation", "Cherry Financing", "Platinum Invisalign Provider"].map((badge) => (
+                  {["Denti-Cal Accepted", "Free Consultation", "CareCredit · Cherry · In-House Financing", "Platinum Invisalign Provider"].map((badge) => (
                     <span key={badge} className="px-3 py-1.5 rounded-full text-xs font-body font-semibold bg-white/15 text-white border border-white/25">
                       {badge}
                     </span>
                   ))}
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/contact" className="flex items-center justify-center gap-2 px-7 py-3.5 bg-white rounded-full font-body font-bold text-sm" style={{ color: COLORS.tealDark }}>
+                  <Link href="/contact" onClick={trackSchedule} className="flex items-center justify-center gap-2 px-7 py-3.5 bg-white rounded-full font-body font-bold text-sm" style={{ color: COLORS.tealDark }}>
                     <ChevronRight className="w-4 h-4" /> Free Orthodontic Consultation
                   </Link>
-                  <a href={PRACTICE.phone.tel} className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border-2 border-white/40 text-white font-body font-semibold text-sm hover:bg-white/10 transition-all">
+                  <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border-2 border-white/40 text-white font-body font-semibold text-sm hover:bg-white/10 transition-all">
                     <Phone className="w-4 h-4" /> {PRACTICE.phone.display}
                   </a>
                 </div>
               </div>
               <img
                 src={ORTHO_IMG}
-                alt="Orthodontic braces treatment at Uplift Dental & Orthodontics, Garden Grove CA"
-                className="w-full rounded-3xl object-cover shadow-2xl"
+                alt="Dr. Clark Schneekluth, orthodontist at Uplift Dental & Orthodontics in Garden Grove, California"
+                className="w-full rounded-3xl object-cover object-center shadow-2xl"
                 style={{ maxHeight: "500px" }}
                 loading="lazy"
                width="1200" height="600"/>
@@ -163,6 +175,27 @@ export default function Orthodontics() {
                 Also a <strong>Platinum Invisalign® Provider</strong> — the highest tier awarded to practices with the most Invisalign experience.{" "}
                 <Link href="/invisalign" className="font-semibold underline" style={{ color: COLORS.teal }}>Learn about Invisalign →</Link>
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Braces vs. Invisalign: keeps related treatment intent distinct and links to the dedicated aligner consultation page. */}
+        <section className="bg-white pb-20">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-7 rounded-3xl border border-[oklch(0.90_0.015_185)] bg-[oklch(0.97_0.008_192)] p-7 sm:p-9 md:grid-cols-[1.25fr_0.75fr] md:items-center">
+              <div>
+                <p className="font-body text-xs font-bold uppercase tracking-widest" style={{ color: COLORS.teal }}>Choosing an orthodontic path</p>
+                <h2 className="mt-3 font-display text-3xl" style={{ color: COLORS.tealDark }}>Braces or Invisalign? Start with the treatment that fits your needs.</h2>
+                <p className="mt-4 font-body text-sm leading-relaxed text-gray-500">Metal and ceramic braces are fixed options that can address a wide range of bite and alignment concerns. Clear aligners are removable and may be appropriate for some orthodontic needs. Your consultation is the right place to compare the options with the orthodontic team.</p>
+              </div>
+              <div className="flex flex-col gap-3">
+                <Link href="/invisalign" className="flex items-center justify-center gap-2 rounded-full px-6 py-3.5 font-body text-sm font-bold text-white" style={{ backgroundColor: COLORS.teal }}>
+                  Explore Invisalign <ChevronRight className="w-4 h-4" />
+                </Link>
+                <Link href="/contact" onClick={trackSchedule} className="flex items-center justify-center gap-2 rounded-full border px-6 py-3.5 font-body text-sm font-bold" style={{ color: COLORS.tealDark, borderColor: "oklch(0.72 0.07 185)" }}>
+                  Book a Braces Consultation <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -223,8 +256,8 @@ export default function Orthodontics() {
                     { icon: <Users className="w-5 h-5" />, text: "Orthodontics for all ages: children, teens, and adults" },
                     { icon: <Shield className="w-5 h-5" />, text: "All specialists under one roof — orthodontist, periodontist, oral surgeon, and endodontist" },
                     { icon: <Clock className="w-5 h-5" />, text: "Convenient Garden Grove location — serving Seal Beach, Los Alamitos, Cypress, Westminster, and Anaheim" },
-                    { icon: <CheckCircle2 className="w-5 h-5" />, text: "Denti-Cal accepted, most PPO insurance plans, and Cherry Financing" },
-                    { icon: <Star className="w-5 h-5" />, text: "4.9-star rating across 500+ Google reviews" },
+                    { icon: <DollarSign className="w-5 h-5" />, text: "Braces & Invisalign as low as $99/mo — CareCredit, Cherry, and in-house financing for those who qualify" },
+                    { icon: <Star className="w-5 h-5" />, text: "Digital orthodontic records with Trios 6 and iTero scanning technology" },
                   ].map((item) => (
                     <div key={item.text} className="flex items-start gap-3">
                       <div className="w-8 h-8 rounded-lg bg-white/15 flex items-center justify-center flex-shrink-0 text-white mt-0.5">
@@ -241,14 +274,44 @@ export default function Orthodontics() {
                   Straight teeth aren't just cosmetic — they improve your bite, reduce wear, and make cleaning easier. Dr. Clark Schneekluth, our Platinum Invisalign® Provider, has been creating beautiful smiles for over 40 years. Whether you choose braces or Invisalign, we customize your treatment to your lifestyle and goals.
                 </p>
                 <div className="space-y-3">
-                  <Link href="/contact" className="flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-white rounded-full font-body font-bold text-sm" style={{ color: COLORS.tealDark }}>
+                  <Link href="/contact" onClick={trackSchedule} className="flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-white rounded-full font-body font-bold text-sm" style={{ color: COLORS.tealDark }}>
                     Book Free Consultation <ChevronRight className="w-4 h-4" />
                   </Link>
-                  <a href={PRACTICE.phone.tel} className="flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-full border-2 border-white/40 text-white font-body font-semibold text-sm hover:bg-white/10 transition-all">
+                  <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-full border-2 border-white/40 text-white font-body font-semibold text-sm hover:bg-white/10 transition-all">
                     <Phone className="w-4 h-4" /> Call {PRACTICE.phone.display}
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Affordable Financing */}
+        <section className="py-20" style={{ backgroundColor: "oklch(0.97 0.008 85)" }}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-14">
+              <h2 className="font-display text-4xl mb-4" style={{ color: COLORS.tealDark }}>Affordable Orthodontic Care That Fits Your Budget</h2>
+              <p className="font-body text-gray-500 max-w-2xl mx-auto">Finances should never stand between you and the smile you deserve. We offer multiple payment options to make orthodontic treatment accessible for every family.</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                { title: "As Low as $99/mo*", desc: "Low monthly payments starting at just $99 per month for braces or Invisalign — for those who qualify. No high upfront costs.", highlight: true },
+                { title: "CareCredit & Cherry", desc: "Apply for CareCredit or Cherry financing with flexible terms, low interest, and easy monthly payments. Most patients are approved in minutes." },
+                { title: "In-House Financing", desc: "We offer our own flexible payment plans with no third-party credit checks. Talk to our team about a plan that works for your budget." },
+              ].map((item) => (
+                <div key={item.title} className={`rounded-2xl p-7 border ${'highlight' in item && item.highlight ? 'border-2' : 'border-gray-100 bg-white'}`} style={'highlight' in item && item.highlight ? { borderColor: COLORS.teal, backgroundColor: "oklch(0.95 0.02 192)" } : undefined}>
+                  {'highlight' in item && item.highlight && (
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-body font-bold text-white mb-4" style={{ backgroundColor: COLORS.teal }}>
+                      <DollarSign className="w-3.5 h-3.5" /> Most Popular
+                    </div>
+                  )}
+                  <h3 className="font-display text-xl mb-2" style={{ color: COLORS.tealDark }}>{item.title}</h3>
+                  <p className="font-body text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 text-center">
+              <p className="font-body text-gray-500 text-xs">*$99/month payment available for qualifying patients. Actual monthly payment depends on treatment plan, duration, and credit approval. Insurance benefits may further reduce your cost. <Link href="/insurance" className="underline" style={{ color: COLORS.teal }}>View all financing options →</Link></p>
             </div>
           </div>
         </section>
@@ -268,7 +331,8 @@ export default function Orthodontics() {
           </div>
         </section>
 
-        <Footer />
+        <RelatedServices exclude={["/orthodontics"]} limit={4} />
+      <Footer />
       </div>
     </>
   );

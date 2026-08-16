@@ -1,0 +1,11 @@
+HTTP/2 200 
+date: Fri, 14 Aug 2026 17:29:06 GMT
+content-type: text/html; charset=utf-8
+cache-control: no-cache, no-store, must-revalidate
+expires: 0
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+pragma: no-cache
+x-content-type-options: nosniff
+server: cloudflare
+cf-ray: a2b1ae064839076f-SOF
+

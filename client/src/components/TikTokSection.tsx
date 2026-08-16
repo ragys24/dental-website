@@ -4,7 +4,7 @@
    with a "Watch More on TikTok" link to the profile.
    Design: Clean white section with teal accents
    ============================================================ */
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ExternalLink } from "lucide-react";
 
 const videos = [
@@ -27,9 +27,30 @@ const videos = [
 
 export default function TikTokSection() {
   const [loaded, setLoaded] = useState<Record<string, boolean>>({});
+  const [embedsEnabled, setEmbedsEnabled] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section || !("IntersectionObserver" in window)) {
+      setEmbedsEnabled(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setEmbedsEnabled(true);
+        observer.disconnect();
+      },
+      { rootMargin: "500px 0px" },
+    );
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section className="py-20 bg-white">
+    <section ref={sectionRef} className="py-20 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -56,7 +77,7 @@ export default function TikTokSection() {
             >
               {/* TikTok Embed */}
               <div className="relative w-full" style={{ paddingBottom: "177.78%" }}>
-                {!loaded[v.id] && (
+                {(!embedsEnabled || !loaded[v.id]) && (
                   <div
                     className="absolute inset-0 flex items-center justify-center"
                     style={{ backgroundColor: "oklch(0.97 0.008 185)" }}
@@ -67,15 +88,17 @@ export default function TikTokSection() {
                     />
                   </div>
                 )}
-                <iframe
-                  src={`https://www.tiktok.com/embed/v2/${v.id}`}
-                  className="absolute inset-0 w-full h-full border-0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  loading="lazy"
-                  title={v.caption}
-                  onLoad={() => setLoaded((prev) => ({ ...prev, [v.id]: true }))}
-                />
+                {embedsEnabled && (
+                  <iframe
+                    src={`https://www.tiktok.com/embed/v2/${v.id}`}
+                    className="absolute inset-0 w-full h-full border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                    title={v.caption}
+                    onLoad={() => setLoaded((prev) => ({ ...prev, [v.id]: true }))}
+                  />
+                )}
               </div>
 
               {/* Caption */}

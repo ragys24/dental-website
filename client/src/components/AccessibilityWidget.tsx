@@ -62,7 +62,7 @@ export default function AccessibilityWidget() {
         onClick={() => setOpen((o) => !o)}
         aria-label="Open accessibility options"
         aria-expanded={open}
-        className="fixed bottom-6 left-4 z-50 flex items-center gap-2 rounded-full shadow-lg px-4 py-3 text-white text-sm font-body font-semibold transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
+        className="fixed bottom-20 left-4 z-50 flex items-center gap-2 rounded-full shadow-lg px-4 py-3 text-white text-sm font-body font-semibold transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
         style={{ backgroundColor: "oklch(0.52 0.09 185)", focusRingColor: "oklch(0.52 0.09 185)" } as React.CSSProperties}
       >
         <Accessibility className="w-5 h-5" />
@@ -74,7 +74,7 @@ export default function AccessibilityWidget() {
         <div
           role="dialog"
           aria-label="Accessibility options"
-          className="fixed bottom-20 left-4 z-50 w-64 rounded-2xl shadow-2xl border bg-white overflow-hidden"
+          className="fixed bottom-32 left-4 z-50 w-64 rounded-2xl shadow-2xl border bg-white overflow-hidden"
           style={{ borderColor: "oklch(0.90 0.015 185)" }}
         >
           {/* Header */}
@@ -171,7 +171,7 @@ export default function AccessibilityWidget() {
             {/* Reset */}
             <button
               onClick={reset}
-              className="w-full flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-body text-gray-400 hover:text-gray-600 transition-colors"
+              className="w-full flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-body text-gray-500 hover:text-gray-600 transition-colors"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               Reset to Default

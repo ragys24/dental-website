@@ -9,17 +9,18 @@ import { PageSEO } from "@/components/PageSEO";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { PRACTICE, COLORS } from "@/lib/constants";
+import { trackSchedule } from "@/lib/tracking";
 
-const SMILE_IMG = "/assets/uplift/smile-transformation-Wf9zjaGJrezRhcJ4Rfspix.webp";
-const INVISALIGN_IMG = "/assets/uplift/invisalign-lifestyle-a4Ab7WZcR277XNEE76tgPU.webp";
-const FAMILY_IMG = "/assets/uplift/general-dentistry-clean-LezMDGWkmg46HMXLmdPsth.webp";
-const TECH_IMG = "/assets/uplift/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
-const WHITENING_IMG = "/assets/uplift/teeth-whitening-service-GFdaDu8hrcaxHAdkpU4VSE.webp";
-const ORTHO_IMG = "/assets/uplift/orthodontics-braces-U3K8rtBtyKN8vNF3Qv3diF.webp";
-const IMPLANTS_IMG = "/assets/uplift/dental-implants-xray-o29b5GJ6kDtFez7JQjzyLT.webp";
-const ORAL_SURGERY_IMG = "/assets/uplift/oral-surgery-consult-Vi4KLsbGvghRt73SdrUprh.webp";
-const PERIO_IMG = "/assets/uplift/periodontics-gums-8yxDptJ86QFDsaVgaCxvDM.webp";
-const ENDO_IMG = "/assets/uplift/endodontics-microscope-hx7iwZLLNyvbyySf2aHhfk.webp";
+const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation-Wf9zjaGJrezRhcJ4Rfspix.webp";
+const INVISALIGN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/invisalign-lifestyle-a4Ab7WZcR277XNEE76tgPU.webp";
+const FAMILY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/general-dentistry-clean-LezMDGWkmg46HMXLmdPsth.webp";
+const TECH_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-tech-clean-TzX7DySrWpcEhPpd2VXxTG.webp";
+const WHITENING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/teeth-whitening-service-GFdaDu8hrcaxHAdkpU4VSE.webp";
+const ORTHO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/orthodontics-braces-U3K8rtBtyKN8vNF3Qv3diF.webp";
+const IMPLANTS_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dental-implants-xray-o29b5GJ6kDtFez7JQjzyLT.webp";
+const ORAL_SURGERY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/oral-surgery-consult-Vi4KLsbGvghRt73SdrUprh.webp";
+const PERIO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/periodontics-gums-8yxDptJ86QFDsaVgaCxvDM.webp";
+const ENDO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/endodontics-microscope-hx7iwZLLNyvbyySf2aHhfk.webp";
 
 const serviceCategories = [
   {
@@ -175,8 +176,8 @@ export default function Services() {
   return (
     <>
           <PageSEO
-        title="Dental Services in Garden Grove, CA | Uplift Dental & Orthodontics"
-        description={`Comprehensive dental services in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip} — general dentistry, Invisalign, dental implants, orthodontics, oral surgery, periodontics, cosmetic dentistry & emergency care. Denti-Cal accepted. Call ${PRACTICE.phone.display}.`}
+        title="Dental Services | Uplift Dental Garden Grove"
+        description="Full-service dentistry in Garden Grove, CA. General, cosmetic, orthodontics, implants, periodontics, and emergency dental care."
         canonical="https://upliftdental.com/services"
       />
       <div className="min-h-screen flex flex-col bg-white">
@@ -188,7 +189,7 @@ export default function Services() {
 
       {/* Hero */}
       <section className="py-20 relative overflow-hidden" style={{ backgroundColor: COLORS.tealDark }}>
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url(/assets/uplift/PATTERN-02_5ffa36bf.webp)`, backgroundSize: "500px auto" }} />
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url(https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/pattern-02-optimized_1e03ef22.jpg)`, backgroundSize: "500px auto" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="font-body text-sm font-semibold uppercase tracking-widest mb-3" style={{ color: "oklch(0.73 0.07 200)" }}>Garden Grove, CA</p>
           <h1 className="font-display text-5xl md:text-6xl font-bold text-white mb-5">Our Dental Services</h1>
@@ -196,7 +197,7 @@ export default function Services() {
             Multi-specialty dental care under one roof — from preventive cleanings to full-mouth rehabilitation. Accepting Denti-Cal, PPO, and military insurance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href="/contact" onClick={trackSchedule}>
               <button className="flex items-center gap-2 px-7 py-3.5 rounded-full font-body font-bold text-white border-2 border-white hover:bg-white transition-all"
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = COLORS.tealDark; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = "white"; }}
@@ -205,7 +206,7 @@ export default function Services() {
                 Book Free Consultation
               </button>
             </Link>
-            <a href={PRACTICE.phone.tel}>
+            <a href={PRACTICE.phone.tel} onClick={trackSchedule}>
               <button className="flex items-center gap-2 px-7 py-3.5 rounded-full font-body font-semibold text-white/80 hover:text-white transition-colors">
                 <Phone className="w-5 h-5" />
                 {PRACTICE.phone.display}
@@ -255,7 +256,7 @@ export default function Services() {
                     </div>
                   ))}
                 </div>
-                <Link href="/contact">
+                <Link href="/contact" onClick={trackSchedule}>
                   <button className="flex items-center gap-2 px-7 py-3.5 rounded-full font-body font-semibold text-white transition-all hover:shadow-lg" style={{ backgroundColor: COLORS.teal }}>
                     Book {cat.category} Appointment <ArrowRight className="w-4 h-4" />
                   </button>
@@ -278,13 +279,13 @@ export default function Services() {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
           <p className="font-body text-white/80 text-lg mb-8">Free consultations for new patients. Denti-Cal, PPO, and military insurance accepted.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href="/contact" onClick={trackSchedule}>
               <button className="flex items-center gap-2 px-8 py-4 rounded-full font-body font-bold bg-white transition-all hover:shadow-lg" style={{ color: COLORS.tealDark }}>
                 <Calendar className="w-5 h-5" />
                 Book Free Consultation
               </button>
             </Link>
-            <a href={PRACTICE.phone.tel}>
+            <a href={PRACTICE.phone.tel} onClick={trackSchedule}>
               <button className="flex items-center gap-2 px-8 py-4 rounded-full font-body font-bold border-2 border-white text-white hover:bg-white/10 transition-all">
                 <Phone className="w-5 h-5" />
                 {PRACTICE.phone.display}

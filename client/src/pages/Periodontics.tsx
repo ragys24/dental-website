@@ -24,16 +24,18 @@ import {
 import Navbar from "@/components/Navbar";
 import { PageSEO } from "@/components/PageSEO";
 import Footer from "@/components/Footer";
+import RelatedServices from "@/components/RelatedServices";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
-import { FAQSchema } from "@/components/StructuredData";
+import { FAQSchema, ServiceSchema } from "@/components/StructuredData";
 import { useState } from "react";
 import { PRACTICE, COLORS } from "@/lib/constants";
 import { SMS } from "@/lib/sms";
+import { trackSchedule } from "@/lib/tracking";
 
 const FOREST = "oklch(0.32 0.08 155)";
-const PATTERN_DARK = "/assets/uplift/PATTERN-02_5ffa36bf.webp";
-const DR_SAAD = "/assets/uplift/dr-saad-periodontist_45f9c7c5.webp";
-const SMILE_IMG = "/assets/uplift/smile-transformation_82cc164e.webp";
+const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/pattern-02-optimized_1e03ef22.jpg";
+const DR_SAAD = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/dr-saad-periodontist_45f9c7c5.jpg";
+const SMILE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/smile-transformation_82cc164e.jpg";
 
 const TREATMENTS = [
   {
@@ -181,7 +183,7 @@ export default function Periodontics() {
       "url": "https://upliftdental.com/periodontics",
       "name": "Periodontist in Garden Grove, CA | Gum Disease Treatment | Uplift Dental",
       "description":
-        `Board-eligible periodontist Dr. Erene Saad, DMD MS offers gum disease treatment, LANAP laser therapy, gum grafts, crown lengthening, and dental implants in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}.`,
+        `Board-eligible periodontist Dr. Erene Saad, DMD MS offers gum disease treatment, LANAP laser therapy, gum grafts, crown lengthening, and dental implants in $${PRACTICE.address.city}, $${PRACTICE.address.state} $${PRACTICE.address.zip}.`,
       "about": {
         "@type": "MedicalCondition",
         "name": "Periodontal Disease",
@@ -207,15 +209,7 @@ export default function Periodontics() {
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
 
-    // Update page title and meta description
-    document.title = "Periodontist in Garden Grove, CA | Gum Disease Treatment | Uplift Dental";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        "content",
-        `Dr. Erene Saad, DMD MS — board-eligible periodontist at Uplift Dental & Orthodontics in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. Gum disease treatment, LANAP laser therapy, gum grafts, crown lengthening & dental implants. No referral needed.`
-      );
-    }
+    // PageSEO component handles document.title and meta description
 
     return () => {
       const el = document.getElementById(id);
@@ -226,8 +220,8 @@ export default function Periodontics() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <PageSEO
-        title="Periodontist in Garden Grove, CA | Gum Disease Treatment | Uplift Dental"
-        description={`Dr. Erene Saad, DMD MS — Board-trained Periodontist at Uplift Dental in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}. Gum disease treatment, LANAP laser therapy, gum grafts, scaling & root planing. Free consultations. Call ${PRACTICE.phone.display}.`}
+        title="Periodontist | Uplift Dental Garden Grove"
+        description="Gum disease treatment by Dr. Saad in Garden Grove, CA. LANAP laser therapy, gum grafts, and scaling. Board-certified periodontist."
         canonical="https://upliftdental.com/periodontics"
       />
       <FAQSchema faqs={FAQS.map(f => ({ question: f.q, answer: f.a }))} id="ld-faq-periodontics" />
@@ -237,6 +231,12 @@ export default function Periodontics() {
           { name: "Services", url: "https://upliftdental.com/services" },
           { name: "Periodontics", url: "https://upliftdental.com/periodontics" },
         ]}
+      />
+      <ServiceSchema
+        name="Periodontal Treatment"
+        description="LANAP laser gum disease treatment in Garden Grove, CA. Scaling and root planing, gum grafting, and periodontal maintenance."
+        url="https://upliftdental.com/periodontics"
+        serviceType="Periodontics"
       />
       <Navbar />
 
@@ -270,7 +270,7 @@ export default function Periodontics() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="/contact"
+                  href="/contact" onClick={trackSchedule}
                   className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-body font-semibold text-base transition-all shadow-lg"
                   style={{ backgroundColor: "oklch(0.78 0.07 195)", color: COLORS.tealDark }}
                 >
@@ -278,11 +278,11 @@ export default function Periodontics() {
                   Book Perio Consultation
                 </Link>
                 <a
-                  href={PRACTICE.phone.tel}
+                  href={PRACTICE.phone.tel} onClick={trackSchedule}
                   className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border-2 border-white/60 text-white font-body font-semibold text-base hover:bg-white/10 transition-all"
                 >
                   <Phone className="w-5 h-5" />
-                  {PRACTICE.phone.display}
+                  ${PRACTICE.phone.display}
                 </a>
               </div>
             </div>
@@ -315,7 +315,7 @@ export default function Periodontics() {
               "Dental Implant Specialist",
               "No Referral Required",
               "Most Insurance Accepted",
-              `${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}`,
+              `$${PRACTICE.address.city}, $${PRACTICE.address.state} $${PRACTICE.address.zip}`,
             ].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4" style={{ color: COLORS.teal }} />
@@ -424,7 +424,7 @@ export default function Periodontics() {
               </p>
             </div>
             <Link
-              href="/contact"
+              href="/contact" onClick={trackSchedule}
               className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full font-body font-semibold text-white transition-all shadow-md"
               style={{ backgroundColor: COLORS.teal }}
             >
@@ -550,7 +550,7 @@ export default function Periodontics() {
                   ].map((stat) => (
                     <div key={stat.label}>
                       <div className="font-display text-3xl text-white">{stat.num}</div>
-                      <div className="font-body text-xs text-white/60 mt-1">{stat.label}</div>
+                      <div className="font-body text-xs text-white/80 mt-1">{stat.label}</div>
                     </div>
                   ))}
                 </div>
@@ -594,7 +594,7 @@ export default function Periodontics() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/contact" onClick={trackSchedule}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-body font-semibold text-base transition-all shadow-lg"
               style={{ backgroundColor: "oklch(0.78 0.07 195)", color: COLORS.tealDark }}
             >
@@ -602,19 +602,20 @@ export default function Periodontics() {
               Book Perio Consultation
             </Link>
             <a
-              href={SMS.general}
+              href={SMS.general} onClick={trackSchedule}
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border-2 border-white/60 text-white font-body font-semibold text-base hover:bg-white/10 transition-all"
             >
               <MessageSquare className="w-5 h-5" />
-              Text Us: {PRACTICE.sms.display}
+              Text Us: ${PRACTICE.sms.display}
             </a>
           </div>
-          <p className="font-body text-white/50 text-sm mt-6">
-            {PRACTICE.address.full} · {PRACTICE.phone.display}
+          <p className="font-body text-white/75 text-sm mt-6">
+            ${PRACTICE.address.full} · ${PRACTICE.phone.display}
           </p>
         </div>
       </section>
 
+      <RelatedServices exclude={["/periodontics"]} limit={4} />
       <Footer />
     </div>
   );

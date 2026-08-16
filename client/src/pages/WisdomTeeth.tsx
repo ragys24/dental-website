@@ -6,17 +6,18 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PageSEO } from "@/components/PageSEO";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
-import { FAQSchema } from "@/components/StructuredData";
+import { FAQSchema, ServiceSchema } from "@/components/StructuredData";
 import { Link } from "wouter";
 import { Scissors, CheckCircle2, Phone, Calendar, Clock } from "lucide-react";
 import { PRACTICE, COLORS } from "@/lib/constants";
+import { trackSchedule } from "@/lib/tracking";
 
 export default function WisdomTeeth() {
   return (
     <>
       <PageSEO
-        title="Wisdom Teeth Removal in Garden Grove, CA | Uplift Dental"
-        description={`Expert wisdom teeth extraction in Garden Grove, CA by Dr. Joseph Youssef, Oral Surgeon. Same-day consultations available. Gentle care, fast recovery. Call ${PRACTICE.phone.display}.`}
+        title="Wisdom Teeth Removal | Uplift Dental"
+        description="Safe wisdom teeth extraction by Dr. Youssef in Garden Grove, CA. Oral surgery specialist with sedation options at Uplift Dental."
         canonical="https://upliftdental.com/wisdom-teeth-removal"
       />
       <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
@@ -25,6 +26,12 @@ export default function WisdomTeeth() {
           { name: "Services", url: "https://upliftdental.com/services" },
           { name: "Wisdom Teeth Removal", url: "https://upliftdental.com/wisdom-teeth-removal" },
         ]} />
+      <ServiceSchema
+        name="Wisdom Teeth Removal"
+        description="Safe and comfortable wisdom teeth extraction in Garden Grove, CA. Oral surgery with sedation options for impacted wisdom teeth."
+        url="https://upliftdental.com/wisdom-teeth-removal"
+        serviceType="Oral Surgery"
+      />
         <Navbar />
 
         {/* Hero */}
@@ -40,10 +47,10 @@ export default function WisdomTeeth() {
               Expert wisdom tooth extraction by Dr. Joseph Youssef, Oral Surgeon — right here in Garden Grove. No referrals needed. Gentle care, fast recovery.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={PRACTICE.phone.tel} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg shadow-xl hover:bg-white/90 transition-all" style={{ color: COLORS.tealDark }}>
+              <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg shadow-xl hover:bg-white/90 transition-all" style={{ color: COLORS.tealDark }}>
                 <Phone className="w-5 h-5" /> Call {PRACTICE.phone.display}
               </a>
-              <Link href="/contact" className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
+              <Link href="/contact" onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
                 <Calendar className="w-5 h-5" /> Book Consultation
               </Link>
             </div>
@@ -133,7 +140,7 @@ export default function WisdomTeeth() {
                 { q: "Do all wisdom teeth need to be removed?", a: "No. If your wisdom teeth are fully erupted, properly aligned, and easy to clean, they may not need removal. Dr. Youssef will evaluate your specific situation." },
                 { q: "What is dry socket?", a: "Dry socket occurs when the blood clot at the extraction site dislodges before healing. It causes significant pain and requires treatment. Following aftercare instructions (no straws, no smoking) greatly reduces this risk." },
                 { q: "How long does recovery take?", a: "Most patients feel back to normal within 3–5 days. Complete healing of the gum tissue takes 3–4 weeks, and bone healing takes several months — but this doesn't affect daily life." },
-                { q: "Does insurance cover wisdom tooth removal?", a: "Most dental insurance plans cover wisdom tooth extraction, especially when medically necessary. We'll verify your benefits and offer Cherry financing for any out-of-pocket costs." },
+                { q: "Does insurance cover wisdom tooth removal?", a: "Most dental insurance plans cover wisdom tooth extraction, especially when medically necessary. We'll verify your benefits and offer CareCredit, Cherry, and in-house financing for any out-of-pocket costs." },
               ].map((faq) => (
                 <div key={faq.q} className="border-b border-gray-100 pb-6">
                   <h3 className="font-body font-semibold text-gray-800 mb-2">{faq.q}</h3>
@@ -150,10 +157,10 @@ export default function WisdomTeeth() {
             <h2 className="font-display text-4xl text-white mb-4">Wisdom Tooth Pain? We Can Help Today.</h2>
             <p className="font-body text-white/75 text-lg mb-8">Wisdom teeth extraction is one of the most common oral surgeries. Dr. Joseph Youssef, our board-certified oral surgeon, removes wisdom teeth with minimal discomfort and fast recovery. Whether your wisdom teeth are impacted, crowding your bite, or causing pain, we offer same-day consultations and can often schedule extraction within days. Call now to book your appointment.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={PRACTICE.phone.tel} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg" style={{ color: COLORS.tealDark }}>
+              <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg" style={{ color: COLORS.tealDark }}>
                 <Phone className="w-5 h-5" /> Call {PRACTICE.phone.display}
               </a>
-              <Link href="/contact" className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
+              <Link href="/contact" onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
                 Book Online
               </Link>
             </div>

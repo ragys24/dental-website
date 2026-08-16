@@ -1,18 +1,21 @@
 import Navbar from "@/components/Navbar";
 import { PageSEO } from "@/components/PageSEO";
 import Footer from "@/components/Footer";
+import RelatedServices from "@/components/RelatedServices";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { Link } from "wouter";
-import { Phone, Zap, CheckCircle2, Clock, ChevronRight, MessageSquare } from "lucide-react";
+import { Phone, Zap, Clock, MessageSquare } from "lucide-react";
 import { PRACTICE } from "@/lib/constants";
 import { SMS } from "@/lib/sms";
+import { trackSchedule } from "@/lib/tracking";
+import { ServiceSchema } from "@/components/StructuredData";
 
 export default function EmergencyDentist() {
   return (
     <>
       <PageSEO
-        title="Emergency Dentist in Garden Grove, CA | Same-Day Care | Uplift Dental"
-        description={`Need an emergency dentist in Garden Grove, CA? Uplift Dental offers same-day emergency appointments for toothaches, broken teeth, lost crowns, and more. Call ${PRACTICE.phone.display} now.`}
+        title="Emergency Dentist | Uplift Dental Garden Grove"
+        description="Emergency dentist in Garden Grove & West Garden Grove. Same-day appointments for toothaches, broken teeth, knocked-out teeth. Denti-Cal accepted. Call (714) 898-3308 now."
         canonical="https://upliftdental.com/emergency-dentist"
       />
       <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
@@ -21,6 +24,12 @@ export default function EmergencyDentist() {
         { name: "Services", url: "https://upliftdental.com/services" },
         { name: "Emergency Dentist", url: "https://upliftdental.com/emergency-dentist" },
       ]} />
+      <ServiceSchema
+        name="Emergency Dental Care"
+        description="Same-day emergency dental appointments in Garden Grove, CA. Toothache relief, broken tooth repair, and dental trauma treatment."
+        url="https://upliftdental.com/emergency-dentist"
+        serviceType="Emergency Dental Care"
+      />
       <Navbar />
 
       {/* Hero */}
@@ -30,22 +39,22 @@ export default function EmergencyDentist() {
             <Zap className="w-8 h-8 text-white" />
           </div>
           <h1 className="font-display text-5xl md:text-6xl text-white mb-6">
-            Emergency Dentist<br />in Garden Grove, CA
+            Emergency Dentist<br />in Garden Grove &amp; West Garden Grove
           </h1>
           <p className="font-body text-white/85 text-xl leading-relaxed mb-10">
-            Dental emergencies don't wait. Neither do we. Call Uplift Dental for same-day emergency dental appointments in Garden Grove, CA.
+            Dental emergencies don't wait. Neither do we. Call Uplift Dental for same-day emergency dental appointments serving Garden Grove, West Garden Grove, Westminster, and all of Orange County.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={PRACTICE.phone.tel} className="flex items-center justify-center gap-2 px-8 py-4 bg-white text-[oklch(0.65_0.18_35)] rounded-full font-body font-bold text-lg shadow-xl hover:bg-white/90 transition-all">
+            <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white text-[oklch(0.65_0.18_35)] rounded-full font-body font-bold text-lg shadow-xl hover:bg-white/90 transition-all">
               <Phone className="w-5 h-5" />
               Call Now: {PRACTICE.phone.display}
             </a>
-            <a href={SMS.general} className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
+            <a href={SMS.general} onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
               <MessageSquare className="w-5 h-5" />
               Text Us Now
             </a>
           </div>
-          <p className="font-body text-white/60 text-sm mt-6">
+          <p className="font-body text-white/80 text-sm mt-6">
             <Clock className="w-4 h-4 inline mr-1" />
             Mon–Fri: 9am–5pm · 3rd Saturday: 9am–2pm
           </p>
@@ -109,14 +118,15 @@ export default function EmergencyDentist() {
       <section className="py-16 text-center" style={{ backgroundColor: "oklch(0.65 0.18 35)" }}>
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="font-display text-4xl text-white mb-4">Don't Wait — Call Now</h2>
-          <p className="font-body text-white/80 mb-8">Same-day emergency appointments available. Serving Garden Grove, Anaheim, Westminster, Seal Beach, Los Alamitos, Huntington Beach, and all of Orange County.</p>
-          <a href={PRACTICE.phone.tel} className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[oklch(0.65_0.18_35)] rounded-full font-body font-bold text-lg shadow-xl hover:bg-white/90 transition-all">
+          <p className="font-body text-white/80 mb-8">Same-day emergency appointments available. Serving Garden Grove, West Garden Grove, Anaheim, Westminster, Seal Beach, Los Alamitos, Huntington Beach, Stanton, and all of Orange County.</p>
+          <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[oklch(0.65_0.18_35)] rounded-full font-body font-bold text-lg shadow-xl hover:bg-white/90 transition-all">
             <Phone className="w-5 h-5" />
             Call {PRACTICE.phone.display}
           </a>
         </div>
       </section>
 
+      <RelatedServices exclude={["/emergency-dentist"]} limit={4} />
       <Footer />
     </div>
     </>

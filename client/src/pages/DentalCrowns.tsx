@@ -6,17 +6,18 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PageSEO } from "@/components/PageSEO";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
-import { FAQSchema } from "@/components/StructuredData";
+import { FAQSchema, ServiceSchema } from "@/components/StructuredData";
 import { Link } from "wouter";
 import { Shield, CheckCircle2, Phone, Calendar } from "lucide-react";
 import { PRACTICE, COLORS } from "@/lib/constants";
+import { trackSchedule } from "@/lib/tracking";
 
 export default function DentalCrowns() {
   return (
     <>
       <PageSEO
-        title="Dental Crowns in Garden Grove, CA | Same-Day Crowns | Uplift Dental"
-        description={`Restore damaged or weakened teeth with dental crowns at Uplift Dental in Garden Grove, CA. Porcelain, zirconia, and same-day crown options available. Call ${PRACTICE.phone.display}.`}
+        title="Dental Crowns | Uplift Dental Garden Grove"
+        description="Same-day dental crowns in Garden Grove, CA. Porcelain, zirconia, and CEREC crowns. Restore damaged teeth at Uplift Dental."
         canonical="https://upliftdental.com/dental-crowns"
       />
       <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
@@ -25,6 +26,12 @@ export default function DentalCrowns() {
           { name: "Services", url: "https://upliftdental.com/services" },
           { name: "Dental Crowns", url: "https://upliftdental.com/dental-crowns" },
         ]} />
+      <ServiceSchema
+        name="Dental Crowns & Bridges"
+        description="Custom dental crowns and bridges in Garden Grove, CA. Restore damaged teeth with same-day CEREC crowns and porcelain bridges."
+        url="https://upliftdental.com/dental-crowns"
+        serviceType="Dental Crowns"
+      />
         <Navbar />
 
         {/* Hero */}
@@ -40,10 +47,10 @@ export default function DentalCrowns() {
               A dental crown restores a damaged, cracked, or weakened tooth to its full strength and natural appearance. At Uplift Dental, we offer porcelain, zirconia, and same-day crown options.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={PRACTICE.phone.tel} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg shadow-xl hover:bg-white/90 transition-all" style={{ color: COLORS.tealDark }}>
+              <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg shadow-xl hover:bg-white/90 transition-all" style={{ color: COLORS.tealDark }}>
                 <Phone className="w-5 h-5" /> Call {PRACTICE.phone.display}
               </a>
-              <Link href="/contact" className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
+              <Link href="/contact" onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
                 <Calendar className="w-5 h-5" /> Book Appointment
               </Link>
             </div>
@@ -131,7 +138,7 @@ export default function DentalCrowns() {
                 { q: "How long do dental crowns last?", a: "With proper care, porcelain and zirconia crowns typically last 10–15 years or longer. Good oral hygiene, regular cleanings, and avoiding hard foods extend crown lifespan." },
                 { q: "Does getting a crown hurt?", a: "The procedure is done under local anesthesia, so you won't feel pain during the appointment. Some sensitivity and soreness for a few days afterward is normal." },
                 { q: "Can a crown fall off?", a: "It's rare, but crowns can loosen over time. If your crown comes off, keep it safe and call us right away — we can usually re-cement it quickly." },
-                { q: "Does insurance cover dental crowns?", a: "Most dental insurance plans cover a portion of crown costs when the crown is medically necessary. We'll help you maximize your benefits and offer Cherry financing for remaining balances." },
+                { q: "Does insurance cover dental crowns?", a: "Most dental insurance plans cover a portion of crown costs when the crown is medically necessary. We'll help you maximize your benefits and offer CareCredit, Cherry, and in-house financing for remaining balances." },
               ].map((faq) => (
                 <div key={faq.q} className="border-b border-gray-100 pb-6">
                   <h3 className="font-body font-semibold text-gray-800 mb-2">{faq.q}</h3>
@@ -148,10 +155,10 @@ export default function DentalCrowns() {
             <h2 className="font-display text-4xl text-white mb-4">Restore Your Tooth Today</h2>
             <p className="font-body text-white/75 text-lg mb-8">A crown restores a damaged tooth to full strength and appearance — protecting it from further damage while blending seamlessly with your natural smile. We offer same-day crowns using advanced CAD/CAM technology, so you can leave with a permanent restoration in one appointment. Schedule your crown consultation today.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={PRACTICE.phone.tel} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg" style={{ color: COLORS.tealDark }}>
+              <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg" style={{ color: COLORS.tealDark }}>
                 <Phone className="w-5 h-5" /> Call {PRACTICE.phone.display}
               </a>
-              <Link href="/contact" className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
+              <Link href="/contact" onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
                 Book Online
               </Link>
             </div>

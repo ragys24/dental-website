@@ -4,19 +4,21 @@
    ============================================================= */
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import RelatedServices from "@/components/RelatedServices";
 import { PageSEO } from "@/components/PageSEO";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
-import { FAQSchema } from "@/components/StructuredData";
+import { FAQSchema, ServiceSchema } from "@/components/StructuredData";
 import { Link } from "wouter";
-import { Smile, CheckCircle2, Phone, Calendar, Star } from "lucide-react";
+import { Smile, CheckCircle2, Phone, Calendar } from "lucide-react";
 import { PRACTICE, COLORS } from "@/lib/constants";
+import { trackSchedule } from "@/lib/tracking";
 
 export default function TeethWhitening() {
   return (
     <>
       <PageSEO
-        title="Teeth Whitening in Garden Grove, CA | Professional Whitening | Uplift Dental"
-        description={`Get a brighter smile with professional teeth whitening at Uplift Dental in Garden Grove, CA. In-office and take-home whitening options. Results in as little as one visit. Call ${PRACTICE.phone.display}.`}
+        title="Teeth Whitening | Uplift Dental Garden Grove"
+        description="Professional teeth whitening in Garden Grove, CA. In-office and take-home options for a brighter smile at Uplift Dental."
         canonical="https://upliftdental.com/teeth-whitening"
       />
       <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
@@ -25,6 +27,12 @@ export default function TeethWhitening() {
           { name: "Services", url: "https://upliftdental.com/services" },
           { name: "Teeth Whitening", url: "https://upliftdental.com/teeth-whitening" },
         ]} />
+      <ServiceSchema
+        name="Professional Teeth Whitening"
+        description="In-office and take-home teeth whitening treatments in Garden Grove, CA. Brighten your smile up to 8 shades whiter."
+        url="https://upliftdental.com/teeth-whitening"
+        serviceType="Teeth Whitening"
+      />
         <Navbar />
 
         {/* Hero */}
@@ -40,11 +48,11 @@ export default function TeethWhitening() {
               Brighten your smile by up to 8 shades with professional teeth whitening at Uplift Dental. Faster, safer, and longer-lasting than any store-bought kit.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={PRACTICE.phone.tel} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg shadow-xl hover:bg-white/90 transition-all" style={{ color: COLORS.tealDark }}>
+              <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg shadow-xl hover:bg-white/90 transition-all" style={{ color: COLORS.tealDark }}>
                 <Phone className="w-5 h-5" />
                 Call {PRACTICE.phone.display}
               </a>
-              <Link href="/contact" className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
+              <Link href="/contact" onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
                 <Calendar className="w-5 h-5" />
                 Book Free Consult
               </Link>
@@ -148,7 +156,7 @@ export default function TeethWhitening() {
                 { q: "Will whitening work on crowns, veneers, or fillings?", a: "Whitening only works on natural tooth enamel. Existing restorations won't change color. If you have visible restorations, we'll discuss options to ensure a uniform result." },
                 { q: "How long do results last?", a: "With proper care — limiting staining foods and beverages, brushing twice daily — results typically last 1–3 years. Touch-up treatments with your take-home kit can extend results indefinitely." },
                 { q: "Will my teeth be sensitive after whitening?", a: "Some patients experience temporary sensitivity for 24–48 hours after whitening. We use desensitizing agents to minimize discomfort and can recommend the best approach for sensitive teeth." },
-                { q: "How much does teeth whitening cost?", a: "Pricing varies by treatment type. We offer competitive rates and financing through Cherry. Call us or book a free consultation to get an exact quote." },
+                { q: "How much does teeth whitening cost?", a: "Pricing varies by treatment type. We offer competitive rates and financing through CareCredit, Cherry, and in-house plans. Call us or book a free consultation to get an exact quote." },
               ].map((faq) => (
                 <div key={faq.q} className="border-b border-gray-100 pb-6">
                   <h3 className="font-body font-semibold text-gray-800 mb-2">{faq.q}</h3>
@@ -165,17 +173,18 @@ export default function TeethWhitening() {
             <h2 className="font-display text-4xl text-white mb-4">Ready for a Brighter Smile?</h2>
             <p className="font-body text-white/75 text-lg mb-8">A brighter smile boosts confidence. Our professional whitening treatments are 6–8 times more effective than over-the-counter products — delivering visible results in a single visit. Choose in-office whitening for dramatic results, or take-home trays for gradual whitening on your schedule.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={PRACTICE.phone.tel} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg" style={{ color: COLORS.tealDark }}>
+              <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white rounded-full font-body font-bold text-lg" style={{ color: COLORS.tealDark }}>
                 <Phone className="w-5 h-5" /> Call {PRACTICE.phone.display}
               </a>
-              <Link href="/contact" className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
+              <Link href="/contact" onClick={trackSchedule} className="flex items-center justify-center gap-2 px-8 py-4 bg-white/20 border-2 border-white/50 text-white rounded-full font-body font-bold text-lg hover:bg-white/30 transition-all">
                 Book Online
               </Link>
             </div>
           </div>
         </section>
 
-        <Footer />
+        <RelatedServices exclude={["/teeth-whitening"]} limit={4} />
+      <Footer />
       </div>
     </>
   );

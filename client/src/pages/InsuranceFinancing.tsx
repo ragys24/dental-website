@@ -5,14 +5,16 @@
    ============================================================= */
 import { CheckCircle, Phone, MessageSquare, CreditCard, Shield, HelpCircle, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { PageSEO } from "@/components/PageSEO";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { PRACTICE, COLORS } from "@/lib/constants";
 import { SMS } from "@/lib/sms";
+import { trackSchedule } from "@/lib/tracking";
 
-const PATTERN_DARK = "/assets/uplift/PATTERN-02_5ffa36bf.webp";
+const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/pattern-02-optimized_1e03ef22.jpg";
 
 // ── All accepted insurance plans ─────────────────────────────────────────────
 const insurancePlans = [
@@ -41,14 +43,6 @@ const insurancePlans = [
       { name: "Most PPO Plans", note: "Call to verify your specific plan" },
     ],
   },
-  {
-    category: "HMO / Managed Care",
-    plans: [
-      { name: "DeltaCare USA (HMO)", note: "" },
-      { name: "Cigna DHMO", note: "" },
-      { name: "MetLife PDP Plus", note: "" },
-    ],
-  },
 ];
 
 // ── Financing options ─────────────────────────────────────────────────────────
@@ -56,13 +50,11 @@ const financingOptions = [
   {
     name: "Cherry Financing",
     logo: null,
-    tagline: "Get the care you need today — pay over time.",
+    tagline: "Explore payment options with the Cherry program.",
     features: [
-      "0% APR promotional financing available",
-      "Approvals in as little as 30 seconds",
-      "No hard credit pull to check your rate",
-      "Flexible payment plans from 3–24 months",
-      "Available for treatments of any size",
+      "Application and eligibility details are provided by Cherry",
+      "Payment-plan options may be available",
+      "Review current terms directly with Cherry before applying",
     ],
     cta: "Apply for Cherry",
     ctaUrl: "https://withcherry.com",
@@ -73,13 +65,11 @@ const financingOptions = [
   {
     name: "CareCredit",
     logo: null,
-    tagline: "Healthcare financing that works for your budget.",
+    tagline: "Healthcare financing options through CareCredit.",
     features: [
-      "Deferred interest financing options",
-      "Accepted at 260,000+ healthcare providers",
-      "Use for multiple family members",
-      "Revolving credit — reuse as needed",
-      "Covers treatments not covered by insurance",
+      "Review current terms directly with CareCredit before applying",
+      "May be used for eligible dental expenses",
+      "Ask the Uplift team how financing can fit your treatment discussion",
     ],
     cta: "Apply for CareCredit",
     ctaUrl: "https://www.carecredit.com",
@@ -87,13 +77,28 @@ const financingOptions = [
     borderColor: "oklch(0.80 0.06 240)",
     accentColor: "oklch(0.45 0.18 240)",
   },
+  {
+    name: "In-House Financing",
+    logo: null,
+    tagline: "Discuss payment options directly with the Uplift billing team.",
+    features: [
+      "Ask about available payment-plan options",
+      "Terms depend on the treatment plan and eligibility",
+      "Work directly with our billing team",
+    ],
+    cta: `Call ${PRACTICE.phone.display}`,
+    ctaUrl: PRACTICE.phone.tel,
+    color: "oklch(0.92 0.04 155)",
+    borderColor: "oklch(0.80 0.06 155)",
+    accentColor: "oklch(0.40 0.12 155)",
+  },
 ];
 
 // ── FAQ ───────────────────────────────────────────────────────────────────────
 const faqs = [
   {
     q: "How do I know if my insurance is accepted?",
-    a: `The easiest way is to call our office at ${PRACTICE.phone.display} or text us at ${PRACTICE.sms.display}. We'll verify your benefits in minutes. You can also provide your insurance card at your first visit and we'll handle the verification for you.`,
+    a: `Call our office at ${PRACTICE.phone.display} or text us at ${PRACTICE.sms.display}. You can also provide your insurance card before or at your first visit, and our team can help review the available benefits information.`,
   },
   {
     q: "Do you accept Denti-Cal for adults?",
@@ -109,7 +114,7 @@ const faqs = [
   },
   {
     q: "Do you offer in-house payment plans?",
-    a: "We work with Cherry and CareCredit to provide flexible financing. For specific payment arrangement questions, please call our office and we'll work with you to find a solution that fits your budget.",
+    a: `In addition to CareCredit and Cherry, ask the team whether an in-house payment arrangement may be available for your treatment plan. Call ${PRACTICE.phone.display} to discuss options and current terms.`,
   },
   {
     q: "Will you bill my insurance directly?",
@@ -148,8 +153,8 @@ export default function InsuranceFinancing() {
   return (
     <>
       <PageSEO
-        title="Insurance & Financing | Uplift Dental & Orthodontics Garden Grove CA"
-        description={`Uplift Dental accepts Denti-Cal, Delta Dental, MetLife, Cigna, Aetna, Anthem, Ameritas, TRICARE, and most PPO plans. Cherry and CareCredit financing available. ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}.`}
+        title="Insurance & Financing | Uplift Dental"
+        description="Denti-Cal, PPO, and military insurance guidance. Ask Uplift Dental in Garden Grove about CareCredit, Cherry, and available payment options."
         canonical="https://upliftdental.com/insurance-financing"
       />
       <BreadcrumbSchema items={[
@@ -170,12 +175,12 @@ export default function InsuranceFinancing() {
             <h1 className="font-display text-5xl md:text-6xl font-bold text-white mb-5">
               Insurance &amp; Financing
             </h1>
-            <p className="font-body text-white/75 text-xl max-w-2xl mx-auto">
+            <p className="font-body text-white/75 text-xl max-w-2xl mx-auto mb-4">
               We accept most major insurance plans — including Denti-Cal — and offer flexible financing so cost is never a barrier to a healthy smile.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <a
-                href={PRACTICE.phone.tel}
+                href={PRACTICE.phone.tel} onClick={trackSchedule}
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-body font-bold text-sm text-white transition-all hover:opacity-90 shadow-lg"
                 style={{ backgroundColor: COLORS.tealMid }}
               >
@@ -183,7 +188,7 @@ export default function InsuranceFinancing() {
                 Verify My Insurance — {PRACTICE.phone.display}
               </a>
               <a
-                href={SMS.general}
+                href={SMS.general} onClick={trackSchedule}
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-body font-bold text-sm border-2 border-white/40 text-white transition-all hover:border-white"
               >
                 <MessageSquare className="w-4 h-4" />
@@ -201,7 +206,7 @@ export default function InsuranceFinancing() {
                 "Denti-Cal Accepted",
                 "Military / TRICARE Welcome",
                 "Most PPO Plans In-Network",
-                "0% APR Financing Available",
+                "Financing Options Available",
                 "Free Consultations for New Patients",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2">
@@ -225,7 +230,7 @@ export default function InsuranceFinancing() {
                 We Work With Your Insurance
               </h2>
               <p className="font-body text-gray-500 text-lg max-w-2xl mx-auto">
-                We are in-network with most major PPO plans and accept Denti-Cal for adults and children. Not sure if we take yours? Call us — we'll verify in minutes.
+                We work with many PPO plans and accept Denti-Cal for adults and children. Not sure about your plan? Call us and the team can help review it.
               </p>
             </div>
 
@@ -258,10 +263,10 @@ export default function InsuranceFinancing() {
 
             <p className="text-center font-body text-sm text-gray-500 mt-8">
               Don't see your plan listed?{" "}
-              <a href={PRACTICE.phone.tel} className="font-semibold underline" style={{ color: COLORS.teal }}>
+              <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="font-semibold underline" style={{ color: COLORS.teal }}>
                 Call {PRACTICE.phone.display}
               </a>{" "}
-              — we likely accept it. Our list is always expanding.
+              — our team can review it with you.
             </p>
           </div>
         </section>
@@ -326,16 +331,23 @@ export default function InsuranceFinancing() {
               </div>
               <div className="flex-1 text-center sm:text-left">
                 <p className="font-body font-semibold text-gray-800">Not sure which financing option is right for you?</p>
-                <p className="font-body text-sm text-gray-500 mt-1">Our team can walk you through both options and help you choose the best fit for your treatment and budget.</p>
+                <p className="font-body text-sm text-gray-500 mt-1">Our team can walk you through all options — Cherry, CareCredit, or our in-house membership plans — and help you choose the best fit for your treatment and budget.</p>
               </div>
               <a
-                href={PRACTICE.phone.tel}
+                href={PRACTICE.phone.tel} onClick={trackSchedule}
                 className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full font-body font-bold text-sm text-white transition-all hover:opacity-90"
                 style={{ backgroundColor: COLORS.teal }}
               >
                 <Phone className="w-4 h-4" />
                 Call Us
               </a>
+            </div>
+
+            <div className="mt-8 max-w-4xl mx-auto text-center">
+              <p className="font-body text-gray-600 mb-4">Looking for a simpler, no-insurance solution?</p>
+              <Link href="/membership-plan" className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-body font-bold text-sm transition-all hover:opacity-90" style={{ backgroundColor: COLORS.teal, color: "white" }}>
+                View Our Membership Plans →
+              </Link>
             </div>
           </div>
         </section>
@@ -371,14 +383,14 @@ export default function InsuranceFinancing() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                href="/contact" onClick={trackSchedule}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-body font-bold text-sm text-white transition-all hover:opacity-90 shadow-lg"
                 style={{ backgroundColor: COLORS.tealMid }}
               >
                 Book Free Consultation
               </a>
               <a
-                href={PRACTICE.phone.tel}
+                href={PRACTICE.phone.tel} onClick={trackSchedule}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-body font-bold text-sm border-2 border-white/40 text-white transition-all hover:border-white"
               >
                 <Phone className="w-4 h-4" />

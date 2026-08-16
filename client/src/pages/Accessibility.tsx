@@ -2,14 +2,15 @@
 // Colors: COLORS.tealDark headers, body text gray-700, teal accent links
 import { PageSEO } from "@/components/PageSEO";
 import { PRACTICE, COLORS} from "@/lib/constants";
+import { trackSchedule } from "@/lib/tracking";
 
 export default function Accessibility() {
   return (
     <>
       <PageSEO
-        title="Accessibility Statement | Uplift Dental & Orthodontics Garden Grove CA"
-        description="Uplift Dental & Orthodontics is committed to ensuring digital accessibility for people with disabilities. Learn about our WCAG 2.1 AA compliance efforts."
-        canonical="/accessibility"
+        title="Accessibility | Uplift Dental Garden Grove"
+        description="Uplift Dental is committed to digital accessibility for all patients. Learn about our ADA compliance and accessibility features."
+        canonical="https://upliftdental.com/accessibility"
       />
 
       <main className="min-h-screen bg-white pt-32 pb-24">
@@ -172,7 +173,7 @@ export default function Accessibility() {
                 <p>
                   <span className="font-medium">Phone:</span>{" "}
                   <a
-                    href={PRACTICE.phone.tel}
+                    href={PRACTICE.phone.tel} onClick={trackSchedule}
                     className="underline"
                     style={{ color: COLORS.teal }}
                   >

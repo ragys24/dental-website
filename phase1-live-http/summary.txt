@@ -1,0 +1,24 @@
+--- /invisalign ---
+    <title>Uplift Dental | Dentist in Garden Grove, CA</title>
+    <link rel="canonical" href="https://upliftdental.com/" />
+        var canonical = document.querySelector('link[rel="canonical"]');
+    <meta property="og:title" content="Uplift Dental &amp; Orthodontics | Garden Grove, CA 92845 | Platinum Invisalign Provider" />
+          <h1 style="font-size:2em;color:#1a6b6b;margin:0 0 8px;">Uplift Dental &amp; Orthodontics — Garden Grove, CA 92845</h1>
+      <div class="hc-copy"><span class="hc-badge">Platinum Invisalign® Provider · Garden Grove, CA</span><h1>Your Trusted Dentist<br><em>&amp; Orthodontist</em><br>in Garden Grove, CA</h1><p>At Uplift Dental &amp; Orthodontics, we create confident smiles with expert general, restorative, and cosmetic dentistry for the whole family.</p><div class="hc-actions"><a class="hc-primary" href="/contact">Book Free Consultation</a><a class="hc-secondary" href="tel:+17148983308">Call (714) 898-3308</a></div><div class="hc-proof"><span>Free Consultations</span><span>Denti-Cal Accepted</span><span>Same-Day Emergency</span></div></div>
+
+--- /dentist-near-cypress ---
+    <title>Uplift Dental | Dentist in Garden Grove, CA</title>
+    <link rel="canonical" href="https://upliftdental.com/" />
+        var canonical = document.querySelector('link[rel="canonical"]');
+    <meta property="og:title" content="Uplift Dental &amp; Orthodontics | Garden Grove, CA 92845 | Platinum Invisalign Provider" />
+          <h1 style="font-size:2em;color:#1a6b6b;margin:0 0 8px;">Uplift Dental &amp; Orthodontics — Garden Grove, CA 92845</h1>
+      <div class="hc-copy"><span class="hc-badge">Platinum Invisalign® Provider · Garden Grove, CA</span><h1>Your Trusted Dentist<br><em>&amp; Orthodontist</em><br>in Garden Grove, CA</h1><p>At Uplift Dental &amp; Orthodontics, we create confident smiles with expert general, restorative, and cosmetic dentistry for the whole family.</p><div class="hc-actions"><a class="hc-primary" href="/contact">Book Free Consultation</a><a class="hc-secondary" href="tel:+17148983308">Call (714) 898-3308</a></div><div class="hc-proof"><span>Free Consultations</span><span>Denti-Cal Accepted</span><span>Same-Day Emergency</span></div></div>
+
+--- /invisalign-treatment-garden-grove-ca/ ---
+    <title>Uplift Dental | Dentist in Garden Grove, CA</title>
+    <link rel="canonical" href="https://upliftdental.com/" />
+        var canonical = document.querySelector('link[rel="canonical"]');
+    <meta property="og:title" content="Uplift Dental &amp; Orthodontics | Garden Grove, CA 92845 | Platinum Invisalign Provider" />
+          <h1 style="font-size:2em;color:#1a6b6b;margin:0 0 8px;">Uplift Dental &amp; Orthodontics — Garden Grove, CA 92845</h1>
+      <div class="hc-copy"><span class="hc-badge">Platinum Invisalign® Provider · Garden Grove, CA</span><h1>Your Trusted Dentist<br><em>&amp; Orthodontist</em><br>in Garden Grove, CA</h1><p>At Uplift Dental &amp; Orthodontics, we create confident smiles with expert general, restorative, and cosmetic dentistry for the whole family.</p><div class="hc-actions"><a class="hc-primary" href="/contact">Book Free Consultation</a><a class="hc-secondary" href="tel:+17148983308">Call (714) 898-3308</a></div><div class="hc-proof"><span>Free Consultations</span><span>Denti-Cal Accepted</span><span>Same-Day Emergency</span></div></div>
+

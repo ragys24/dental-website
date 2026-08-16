@@ -9,6 +9,7 @@ import { PageSEO } from "@/components/PageSEO";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { COLORS, PRACTICE, DOCTOR_IMAGES, STAFF_IMAGES, SITE_IMAGES, type Doctor, type StaffMember } from "@/lib/constants";
+import { trackSchedule } from "@/lib/tracking";
 
 const TEAL = COLORS.teal;
 const TEAL_DARK = COLORS.tealDark;
@@ -156,6 +157,23 @@ const doctors: Doctor[] = [
     ],
     quote: "Saving a natural tooth is always the best outcome. With precision and the right technology, we can make that possible for almost every patient.",
   },
+  {
+    img: DOCTOR_IMAGES.sidky,
+    name: "Dr. David Sidky, DMD",
+    slug: "dr-sidky",
+    role: "Associate Dentist",
+    education: [
+      "Bachelor of Science in Biological Sciences — University of Minnesota (2019)",
+      "Doctor of Dental Medicine (DMD) — Boston University Henry M. Goldman School of Dental Medicine (2023)",
+    ],
+    memberships: ["American Dental Association (ADA)"],
+    bio: [
+      "Dr. David Sidky is a third-generation dentist who brings a passion for personalized, patient-centered care to Uplift Dental & Orthodontics. He earned his Bachelor of Science in Biological Sciences from the University of Minnesota in 2019 before completing his Doctor of Dental Medicine degree at Boston University's Henry M. Goldman School of Dental Medicine in 2023, where he developed expertise in comprehensive and cosmetic dentistry.",
+      "Known for combining precision with artistry, Dr. Sidky specializes in cosmetic dentistry and takes pride in creating a welcoming environment where patients feel heard, informed, and comfortable. After beginning his career in Boston, he brought his commitment to modern, relationship-driven dentistry to Southern California.",
+    ],
+    specialties: ["General Dentistry", "Cosmetic Dentistry", "Preventive Care", "Restorative Dentistry"],
+    quote: "My goal is to combine advanced dentistry with genuine relationships — helping every patient feel confident, comfortable, and proud of their smile.",
+  },
 ];
 
 const values = [
@@ -181,8 +199,8 @@ export default function About() {
   return (
     <>
       <PageSEO
-        title="Meet Our Dental Team | Uplift Dental & Orthodontics Garden Grove, CA"
-        description="Meet Dr. Ragy Stefan, Dr. Clark Schneekluth, Dr. Joseph Youssef, and Dr. Erene Saad — four specialists serving Garden Grove, CA 92845 with general dentistry, orthodontics, oral surgery, and periodontics under one roof."
+        title="About Us | Uplift Dental Garden Grove, CA"
+        description="Meet our 6 specialists at Uplift Dental in Garden Grove, CA. Over 40 years combined experience in general, cosmetic, and specialty dentistry."
         canonical="https://upliftdental.com/about"
       />
       <div className="min-h-screen flex flex-col bg-white">
@@ -199,7 +217,7 @@ export default function About() {
           <p className="font-body text-sm font-semibold uppercase tracking-widest mb-3" style={{ color: "oklch(0.73 0.07 200)" }}>Our Story</p>
           <h1 className="font-display text-5xl md:text-6xl font-bold text-white mb-5">Meet the Uplift Dental Team</h1>
           <p className="font-body text-white/75 text-xl max-w-2xl mx-auto">
-            Four specialists united by one mission — exceptional dental care with compassion, honesty, and community at the heart of everything we do.
+            Six specialists united by one mission — exceptional dental care with compassion, honesty, and community at the heart of everything we do.
           </p>
         </div>
       </section>
@@ -382,18 +400,24 @@ export default function About() {
               We believe healthy smiles shouldn't be a privilege. That's why we actively work to make dental care accessible to everyone in our community.
             </p>
           </div>
-          <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
             {[
               { stat: "1,000+", label: "Children Screened", desc: "Free oral health screenings at local Garden Grove schools annually." },
               { stat: "100%", label: "Denti-Cal Accepted", desc: "We proudly accept Denti-Cal to serve patients who need it most." },
-              { stat: "3", label: "Professional Associations", desc: "OCDS, AADMD, and CMANA memberships ensuring the highest standards." },
             ].map((item) => (
               <div key={item.label} className="text-center p-6 rounded-2xl border" style={{ backgroundColor: "oklch(0.42 0.09 192 / 0.2)", borderColor: "oklch(0.42 0.09 192 / 0.4)" }}>
                 <div className="font-display text-4xl font-bold text-white mb-1">{item.stat}</div>
                 <div className="font-body font-semibold text-sm mb-2" style={{ color: "oklch(0.73 0.07 200)" }}>{item.label}</div>
-                <p className="font-body text-xs text-white/60">{item.desc}</p>
+                <p className="font-body text-xs text-white/80">{item.desc}</p>
               </div>
             ))}
+          </div>
+
+          <div className="rounded-3xl overflow-hidden shadow-2xl hover:shadow-2xl transition-all max-w-3xl mx-auto">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/IMG_3712_b2fcb1db.HEIC" alt="Uplift Dental team providing pediatric dental education and oral health guidance to children at community school outreach event" className="w-full h-96 object-cover" loading="lazy" />
+            <div className="p-6 bg-white/5">
+              <p className="font-body text-white text-lg">Our commitment to community health: Educating the next generation about preventive dental care and building healthier smiles in underserved communities.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -409,13 +433,13 @@ export default function About() {
           </h2>
           <p className="font-body text-gray-600 text-lg mb-8">Book a free consultation and experience the Uplift Dental difference.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href="/contact" onClick={trackSchedule}>
               <button className="flex items-center gap-2 px-8 py-4 rounded-full font-body font-bold text-white transition-all hover:shadow-lg" style={{ backgroundColor: TEAL }}>
                 <Calendar className="w-5 h-5" />
                 Book Free Consultation
               </button>
             </Link>
-            <a href={PRACTICE.phone.tel}>
+            <a href={PRACTICE.phone.tel} onClick={trackSchedule}>
               <button className="flex items-center gap-2 px-8 py-4 rounded-full font-body font-semibold border-2 transition-all" style={{ borderColor: TEAL, color: TEAL }}>
                 <Phone className="w-5 h-5" />
                 {PRACTICE.phone.display}

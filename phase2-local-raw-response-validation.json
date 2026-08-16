@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-08-14T18:38:35.834Z",
+  "baseUrl": "http://127.0.0.1:4175",
+  "passed": true,
+  "checks": [
+    {
+      "label": "Canonical homepage response",
+      "pass": true,
+      "detail": "expected 200, received 200"
+    },
+    {
+      "label": "Canonical route response",
+      "pass": true,
+      "detail": "expected 200, received 200"
+    },
+    {
+      "label": "Route-specific initial title",
+      "pass": true,
+      "detail": "missing Invisalign title in raw HTML"
+    },
+    {
+      "label": "Route-specific self-canonical",
+      "pass": true,
+      "detail": "missing Invisalign canonical in raw HTML"
+    },
+    {
+      "label": "Corrected geo coordinate metadata",
+      "pass": true,
+      "detail": "missing corrected geo.position"
+    },
+    {
+      "label": "Service document static schema present",
+      "pass": true,
+      "detail": "service document does not need root LocalBusiness geo schema"
+    },
+    {
+      "label": "Initial JSON-LD",
+      "pass": true,
+      "detail": "missing static route JSON-LD"
+    },
+    {
+      "label": "Corrected LocalBusiness coordinates",
+      "pass": true,
+      "detail": "missing corrected LocalBusiness GeoCoordinates in initial homepage HTML"
+    },
+    {
+      "label": "Legacy direct redirect",
+      "pass": true,
+      "detail": "expected one-hop 301 to /invisalign, received 301 https://upliftdental.com/invisalign"
+    },
+    {
+      "label": "Canonical slash normalization",
+      "pass": true,
+      "detail": "expected one-hop 301 to /invisalign, received 301 https://upliftdental.com/invisalign"
+    },
+    {
+      "label": "www host consolidation",
+      "pass": true,
+      "detail": "expected one-hop 301 to canonical host, received 301 https://upliftdental.com/invisalign"
+    },
+    {
+      "label": "Retired-topic 410",
+      "pass": true,
+      "detail": "expected 410 with noindex, received 410 noindex, follow"
+    },
+    {
+      "label": "Search-template artifact 410",
+      "pass": true,
+      "detail": "expected 410, received 410"
+    },
+    {
+      "label": "Unknown URL true 404",
+      "pass": true,
+      "detail": "expected 404 with noindex, received 404 noindex, follow"
+    }
+  ]
+}

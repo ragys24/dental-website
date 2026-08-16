@@ -1,0 +1,44 @@
+--- HTTP homepage ---
+HTTP/1.1 301 Moved Permanently
+Date: Fri, 14 Aug 2026 17:18:31 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Location: https://upliftdental.com/
+X-Content-Type-Options: nosniff
+Server: cloudflare
+CF-RAY: a2b19e887ca55b45-VIE
+
+--- HTTPS homepage ---
+HTTP/2 200 
+date: Fri, 14 Aug 2026 17:18:33 GMT
+content-type: text/html; charset=utf-8
+cache-control: no-cache, no-store, must-revalidate
+expires: 0
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+pragma: no-cache
+x-content-type-options: nosniff
+server: cloudflare
+cf-ray: a2b19e8eab20c2e1-VIE
+
+--- HTTP legacy Invisalign path ---
+HTTP/1.1 301 Moved Permanently
+Date: Fri, 14 Aug 2026 17:18:34 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Location: https://upliftdental.com/invisalign-treatment-garden-grove-ca/
+X-Content-Type-Options: nosniff
+Server: cloudflare
+CF-RAY: a2b19e973d2d5af4-VIE
+
+--- HTTPS legacy Invisalign path ---
+HTTP/2 200 
+date: Fri, 14 Aug 2026 17:18:36 GMT
+content-type: text/html; charset=utf-8
+cache-control: no-cache, no-store, must-revalidate
+expires: 0
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+pragma: no-cache
+x-content-type-options: nosniff
+server: cloudflare
+cf-ray: a2b19ea15d885aab-VIE
+

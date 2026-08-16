@@ -10,9 +10,9 @@ import Footer from "@/components/Footer";
 import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import { PRACTICE, COLORS } from "@/lib/constants";
 import { SMS } from "@/lib/sms";
-import { submitLead } from "@/lib/leads";
+import { trackSchedule, trackContact, trackVerifiedLead } from "@/lib/tracking";
 
-const PATTERN_DARK = "/assets/uplift/PATTERN-02_5ffa36bf.webp";
+const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/pattern-02-optimized_1e03ef22.jpg";
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", phone: "", service: "" });
@@ -20,19 +20,38 @@ export default function Contact() {
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
+  const didTrackVerifiedLead = useRef(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
     setError("");
     try {
-      await submitLead({
-        name: formData.name,
-        phone: formData.phone,
-        service: formData.service,
-        source: "contact-page",
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: "84b33306-8bd2-4e29-bbbc-0da57a4292dc",
+          subject: "New Appointment Request — Uplift Dental",
+          from_name: formData.name,
+          name: formData.name,
+          phone: formData.phone,
+          service: formData.service || "Not specified",
+          time: new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" }),
+        }),
       });
-      setSubmitted(true);
+      const data = await res.json();
+      if (data.success) {
+        trackContact();
+        trackSchedule();
+        if (!didTrackVerifiedLead.current) {
+          didTrackVerifiedLead.current = true;
+          trackVerifiedLead("contact_form");
+        }
+        setSubmitted(true);
+      } else {
+        throw new Error(data.message || "Submission failed");
+      }
     } catch (err) {
       setError(`Something went wrong. Please call us at ${PRACTICE.phone.display} or try again.`);
     } finally {
@@ -43,8 +62,8 @@ export default function Contact() {
   return (
     <>
       <PageSEO
-        title={`Contact Uplift Dental & Orthodontics | ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}`}
-        description={`Contact Uplift Dental & Orthodontics at ${PRACTICE.address.full}. Call ${PRACTICE.phone.display} or text ${PRACTICE.sms.display}. Book online 24/7. Same-day emergency appointments available.`}
+        title="Contact Us | Uplift Dental Garden Grove, CA"
+        description="Contact Uplift Dental at (714) 898-3308. Located at 5253 Lampson Ave, Garden Grove, CA 92845. Same-day emergency appointments available."
         canonical="https://upliftdental.com/contact"
       />
       <div className="min-h-screen flex flex-col bg-white">
@@ -70,7 +89,7 @@ export default function Contact() {
       <div className="py-4" style={{ backgroundColor: COLORS.teal }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
           <p className="font-body font-semibold text-white">Dental Emergency? Same-day appointments available.</p>
-          <a href={PRACTICE.phone.tel}>
+          <a href={PRACTICE.phone.tel} onClick={trackSchedule}>
             <button className="flex items-center gap-2 px-5 py-2 rounded-full font-body font-bold bg-white text-sm transition-all hover:shadow-md" style={{ color: COLORS.tealDark }}>
               <Phone className="w-4 h-4" />
               Call {PRACTICE.phone.display} Now
@@ -94,20 +113,23 @@ export default function Contact() {
                     </div>
                     <h3 className="font-display text-3xl font-bold mb-3" style={{ color: COLORS.tealDark }}>Thank You!</h3>
                     <p className="font-body text-gray-600 text-lg mb-2">Your appointment request has been received.</p>
-                    <p className="font-body text-gray-500">We'll contact you within 1 business day to confirm. For urgent needs, call <a href={PRACTICE.phone.tel} className="font-semibold" style={{ color: COLORS.teal }}>{PRACTICE.phone.display}</a>.</p>
+                    <p className="font-body text-gray-500">We'll contact you within 1 business day to confirm. For urgent needs, call <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="font-semibold" style={{ color: COLORS.teal }}>{PRACTICE.phone.display}</a>.</p>
                   </div>
                 ) : (
                   <>
                     <h2 className="font-display text-3xl font-bold mb-2" style={{ color: COLORS.tealDark }}>Request an Appointment</h2>
                     <p className="font-body text-gray-500 mb-6">Free consultations for new patients. We'll confirm within 1 business day.</p>
                     {error && (
-                      <div className="mb-4 p-3 rounded-lg bg-red-50 border border-red-200 text-red-700 font-body text-sm">{error}</div>
+                      <div role="alert" aria-live="assertive" className="mb-4 p-3 rounded-lg bg-red-50 border border-red-200 text-red-700 font-body text-sm">{error}</div>
                     )}
                     <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
                       <div>
-                        <label className="block font-body text-sm font-medium text-gray-700 mb-1.5">Your Name *</label>
+                        <label htmlFor="contact-appointment-name" className="block font-body text-sm font-medium text-gray-700 mb-1.5">Your Name *</label>
                         <input
+                          id="contact-appointment-name"
+                          name="name"
                           type="text"
+                          autoComplete="name"
                           required
                           value={formData.name}
                           onChange={e => setFormData({ ...formData, name: e.target.value })}
@@ -117,9 +139,12 @@ export default function Contact() {
                         />
                       </div>
                       <div>
-                        <label className="block font-body text-sm font-medium text-gray-700 mb-1.5">Phone Number *</label>
+                        <label htmlFor="contact-appointment-phone" className="block font-body text-sm font-medium text-gray-700 mb-1.5">Phone Number *</label>
                         <input
+                          id="contact-appointment-phone"
+                          name="tel"
                           type="tel"
+                          autoComplete="tel"
                           required
                           value={formData.phone}
                           onChange={e => setFormData({ ...formData, phone: e.target.value })}
@@ -137,10 +162,10 @@ export default function Contact() {
                         <Calendar className="w-5 h-5" />
                         {sending ? "Sending Request..." : "Request Appointment"}
                       </button>
-                      <p className="font-body text-xs text-center text-gray-400">
-                        We respond within 1 business day. For emergencies, call <a href={PRACTICE.phone.tel} className="font-semibold" style={{ color: COLORS.teal }}>{PRACTICE.phone.display}</a> directly.
+                      <p className="font-body text-xs text-center text-gray-500">
+                        We respond within 1 business day. For emergencies, call <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="font-semibold" style={{ color: COLORS.teal }}>{PRACTICE.phone.display}</a> directly.
                       </p>
-                      <p className="font-body text-xs text-center text-gray-400 leading-relaxed border-t border-gray-200 pt-3">
+                      <p className="font-body text-xs text-center text-gray-500 leading-relaxed border-t border-gray-200 pt-3">
                         <strong className="text-gray-600">Privacy Notice:</strong> Do not include sensitive health information (symptoms, diagnoses, or treatment details) in this form. This form is not encrypted for protected health information (PHI). For confidential matters, please call us directly at {PRACTICE.phone.display}.
                       </p>
                     </form>
@@ -148,13 +173,31 @@ export default function Contact() {
                 )}
               </div>
 
+              {/* Online Patient Portal */}
+              <div className="mt-6 p-4 rounded-2xl border border-dashed flex items-center justify-between gap-4" style={{ borderColor: "oklch(0.80 0.05 192)", backgroundColor: "oklch(0.97 0.005 192)" }}>
+                <div>
+                  <p className="font-body text-sm font-semibold text-gray-700">Prefer to book online?</p>
+                  <p className="font-body text-xs text-gray-500 mt-0.5">Use our patient portal to schedule directly.</p>
+                </div>
+                <a
+                  href="https://patientportal.carestack.com/?dn=uplift/#/online-appointments/select-reason"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="shrink-0 flex items-center gap-2 px-5 py-2.5 rounded-full font-body font-bold text-sm text-white transition-all hover:shadow-lg hover:opacity-90"
+                  style={{ backgroundColor: COLORS.teal }}
+                >
+                  <Calendar className="w-4 h-4" />
+                  Patient Portal
+                </a>
+              </div>
+
               {/* Quick Contact Buttons */}
-              <div className="mt-6 grid grid-cols-2 gap-4">
-                <a href={PRACTICE.phone.tel} className="flex items-center justify-center gap-2 py-4 rounded-2xl font-body font-bold text-white text-sm transition-all hover:opacity-90 shadow-md" style={{ backgroundColor: COLORS.teal }}>
+              <div className="mt-4 grid grid-cols-2 gap-4">
+                <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="flex items-center justify-center gap-2 py-4 rounded-2xl font-body font-bold text-white text-sm transition-all hover:opacity-90 shadow-md" style={{ backgroundColor: COLORS.teal }}>
                   <Phone className="w-4 h-4" />
                   Call {PRACTICE.phone.display}
                 </a>
-                <a href={SMS.general} className="flex items-center justify-center gap-2 py-4 rounded-2xl font-body font-bold text-sm border-2 transition-all hover:shadow-md" style={{ borderColor: COLORS.teal, color: COLORS.teal }}>
+                <a href={SMS.general} onClick={trackSchedule} className="flex items-center justify-center gap-2 py-4 rounded-2xl font-body font-bold text-sm border-2 transition-all hover:shadow-md" style={{ borderColor: COLORS.teal, color: COLORS.teal }}>
                   <MessageSquare className="w-4 h-4" />
                   Text {PRACTICE.sms.display}
                 </a>
@@ -170,12 +213,12 @@ export default function Contact() {
                     {
                       icon: Phone,
                       label: "Phone",
-                      content: <a href={PRACTICE.phone.tel} className="font-body font-semibold text-gray-800 hover:underline">{PRACTICE.phone.display}</a>,
+                      content: <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="font-body font-semibold text-gray-800 hover:underline">{PRACTICE.phone.display}</a>,
                     },
                     {
                       icon: MessageSquare,
                       label: "Text Us",
-                      content: <a href={SMS.general} className="font-body font-semibold text-gray-800 hover:underline">{PRACTICE.sms.display}</a>,
+                      content: <a href={SMS.general} onClick={trackSchedule} className="font-body font-semibold text-gray-800 hover:underline">{PRACTICE.sms.display}</a>,
                     },
                     {
                       icon: Mail,
@@ -212,7 +255,7 @@ export default function Contact() {
                         <Icon className="w-5 h-5" style={{ color: COLORS.teal }} />
                       </div>
                       <div>
-                        <p className="font-body text-xs text-gray-400 uppercase tracking-wide mb-1">{label}</p>
+                        <p className="font-body text-xs text-gray-500 uppercase tracking-wide mb-1">{label}</p>
                         {content}
                       </div>
                     </div>

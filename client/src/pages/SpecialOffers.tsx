@@ -1,20 +1,21 @@
 /* =============================================================
    UPLIFT DENTAL — Special Offers Page
-   Design: "Elevated Warmth" — Premium teal brand, DM Serif Display headlines
-   Pricing: $99 Adult Exam + X-rays, $79 Pediatric Exam + X-rays (no insurance)
+   Visual style: warm teal service guide. Display offers only when verified;
+   never fabricate patient ratings, reviews, quotations, or outcomes.
    ============================================================= */
 import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { PageSEO } from "@/components/PageSEO";
 import {
-  Phone, MessageSquare, CheckCircle2, Clock, Tag, Star,
+  Phone, MessageSquare, CheckCircle2, Clock, Tag,
   Baby, Smile, AlignCenter, Sparkles, Zap, Shield, Calendar
 } from "lucide-react";
 import { PRACTICE } from "@/lib/constants";
 import { SMS } from "@/lib/sms";
+import { trackSchedule } from "@/lib/tracking";
+import { PageSEO } from "@/components/PageSEO";
 
-const PATTERN_DARK = "/assets/uplift/uplift-pattern-dark_02e4726d.webp";
+const PATTERN_DARK = "https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/pattern-dark-optimized_09879858.jpg";
 
 const offers = [
   {
@@ -64,12 +65,12 @@ const offers = [
     price: "FREE",
     originalPrice: "$150",
     subtitle: "Platinum Invisalign® Provider",
-    description: "Find out if Invisalign is right for you with a no-obligation consultation. Includes a digital Trios 6 or iTero scan — no messy impressions.",
+    description: "Find out if Invisalign is right for you with a no-obligation consultation. Includes a digital Trios 6 or iTero scan — no messy impressions. Payments as low as $99/mo for those who qualify.",
     includes: [
       "Digital Trios 6 or iTero scan",
       "Smile simulation preview",
       "Custom treatment plan",
-      "Financing options review",
+      "As low as $99/mo financing*",
       "No obligation to proceed",
     ],
     cta: "Book Free Consult",
@@ -90,7 +91,7 @@ const offers = [
       "Digital smile design preview",
       "Veneer & whitening options",
       "Transparent pricing breakdown",
-      "Cherry financing available",
+      "CareCredit, Cherry & in-house financing",
     ],
     cta: "Book Smile Consult",
     color: "oklch(0.55 0.14 55)",
@@ -120,17 +121,17 @@ const offers = [
   {
     badge: "Financing",
     icon: <Shield className="w-8 h-8" />,
-    title: "Cherry Financing — 0% Interest",
-    price: "0%",
+    title: "Flexible Financing Options",
+    price: "$99",
     originalPrice: null,
-    subtitle: "Flexible payment plans available",
-    description: "Break your dental care into manageable monthly payments with Cherry financing. Apply in seconds with no hard credit pull required.",
+    subtitle: "Braces & Invisalign as low as $99/mo*",
+    description: "Choose from CareCredit, Cherry, or our in-house payment plans. Braces and Invisalign as low as $99/month for those who qualify. No high upfront costs.",
     includes: [
-      "Apply in under 60 seconds",
-      "No hard credit pull to apply",
-      "Flexible payment terms",
-      "Covers all dental services",
-      "Instant approval decision",
+      "CareCredit — 0% APR promotional periods",
+      "Cherry — apply in 60 seconds, no hard pull",
+      "In-house plans — no third-party credit check",
+      "Braces & Invisalign from $99/mo*",
+      "All dental treatments eligible",
     ],
     cta: "Learn About Financing",
     color: "oklch(0.42 0.09 185)",
@@ -217,13 +218,12 @@ function OfferCard({ offer }: { offer: typeof offers[0] }) {
 
 export default function SpecialOffers() {
   return (
-    <>
+    <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
       <PageSEO
-        title="Special Offers & New Patient Deals | Uplift Dental Garden Grove"
-        description="Explore new-patient dental specials at Uplift Dental & Orthodontics in Garden Grove, including adult and pediatric exams with X-rays and free Invisalign consultations."
+        title="Special Offers | Uplift Dental Garden Grove"
+        description="Current dental specials at Uplift Dental. Free consultations, new patient discounts, and seasonal promotions in Garden Grove, CA."
         canonical="https://upliftdental.com/special-offers"
       />
-      <div className="min-h-screen bg-[oklch(0.99_0.003_90)]">
       <Navbar />
 
       {/* ── HERO ── */}
@@ -243,12 +243,12 @@ export default function SpecialOffers() {
             Quality dental care should be accessible to everyone. These exclusive offers are designed to help you and your family get the care you deserve — at prices that make sense.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <a href={PRACTICE.phone.tel} className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white font-body font-bold text-sm transition-all hover:bg-white/90"
+            <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white font-body font-bold text-sm transition-all hover:bg-white/90"
               style={{ color: "oklch(0.18 0.04 185)" }}>
               <Phone className="w-4 h-4" />
               {PRACTICE.phone.display}
             </a>
-            <a href={SMS.general} className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-body font-bold text-sm transition-all border-2 border-white/40 text-white hover:bg-white/10">
+            <a href={SMS.general} onClick={trackSchedule} className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-body font-bold text-sm transition-all border-2 border-white/40 text-white hover:bg-white/10">
               <MessageSquare className="w-4 h-4" />
               Text {PRACTICE.sms.display}
             </a>
@@ -301,59 +301,17 @@ export default function SpecialOffers() {
               ))}
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={PRACTICE.phone.tel} className="inline-flex items-center gap-2 px-7 py-3 rounded-full text-white font-body font-bold text-sm transition-all hover:opacity-90"
+              <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="inline-flex items-center gap-2 px-7 py-3 rounded-full text-white font-body font-bold text-sm transition-all hover:opacity-90"
                 style={{ backgroundColor: "oklch(0.42 0.09 185)" }}>
                 <Phone className="w-4 h-4" />
                 Verify My Insurance
               </a>
-              <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3 rounded-full font-body font-bold text-sm transition-all border-2"
+              <Link href="/contact" onClick={trackSchedule} className="inline-flex items-center gap-2 px-7 py-3 rounded-full font-body font-bold text-sm transition-all border-2"
                 style={{ borderColor: "oklch(0.42 0.09 185)", color: "oklch(0.42 0.09 185)" }}>
                 <Calendar className="w-4 h-4" />
                 Book Appointment
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── TESTIMONIAL STRIP ── */}
-      <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <div className="flex justify-center gap-1 mb-2">
-              {[1,2,3,4,5].map((s) => <Star key={s} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
-            </div>
-            <p className="font-body text-sm text-[oklch(0.52_0.04_185)]">5.0 out of 5 — 100+ Google Reviews</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                text: "I came in without insurance and the $99 new patient exam was a lifesaver. Dr. Stefan was thorough and explained everything clearly. No pressure at all.",
-                name: "Melissa T.",
-                service: "New Patient Exam"
-              },
-              {
-                text: "Got the free Invisalign consultation and they showed me a simulation of my smile on the same day. Decided to start treatment right away. Best decision ever!",
-                name: "Carlos R.",
-                service: "Invisalign Consultation"
-              },
-              {
-                text: "Brought my kids in for the pediatric special. The staff was so gentle and patient with them. My daughter actually wants to come back — that says it all!",
-                name: "Jennifer M.",
-                service: "Pediatric Exam"
-              },
-            ].map((t) => (
-              <div key={t.name} className="bg-[oklch(0.97_0.008_85)] rounded-2xl p-6 border border-[oklch(0.90_0.015_185)]">
-                <div className="flex gap-1 mb-3">
-                  {[1,2,3,4,5].map((s) => <Star key={s} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />)}
-                </div>
-                <p className="font-body text-sm text-[oklch(0.35_0.04_185)] leading-relaxed mb-4 italic">"{t.text}"</p>
-                <div>
-                  <div className="font-body font-bold text-sm text-[oklch(0.18_0.04_185)]">{t.name}</div>
-                  <div className="font-body text-xs text-[oklch(0.52_0.04_185)]">{t.service}</div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -370,21 +328,21 @@ export default function SpecialOffers() {
               Call, text, or book online. Our team is ready to help you get started with your new patient special today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={PRACTICE.phone.tel} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white font-body font-bold text-sm transition-all hover:bg-white/90"
+              <a href={PRACTICE.phone.tel} onClick={trackSchedule} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white font-body font-bold text-sm transition-all hover:bg-white/90"
                 style={{ color: "oklch(0.18 0.04 185)" }}>
                 <Phone className="w-4 h-4" />
                 Call {PRACTICE.phone.display}
               </a>
-              <a href={SMS.general} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-body font-bold text-sm transition-all border-2 border-white/40 text-white hover:bg-white/10">
+              <a href={SMS.general} onClick={trackSchedule} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-body font-bold text-sm transition-all border-2 border-white/40 text-white hover:bg-white/10">
                 <MessageSquare className="w-4 h-4" />
                 Text {PRACTICE.sms.display}
               </a>
-              <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-body font-bold text-sm transition-all border-2 border-white/40 text-white hover:bg-white/10">
+              <Link href="/contact" onClick={trackSchedule} className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-body font-bold text-sm transition-all border-2 border-white/40 text-white hover:bg-white/10">
                 <Calendar className="w-4 h-4" />
                 Book Online
               </Link>
             </div>
-            <p className="font-body text-xs text-white/50 mt-6">
+            <p className="font-body text-xs text-white/75 mt-6">
               *Offers for new patients without dental insurance. Cannot be combined. Subject to change without notice. If you have dental insurance, we will bill your insurance first — any remaining balance after insurance may be eligible for these special rates.
             </p>
           </div>
@@ -392,7 +350,6 @@ export default function SpecialOffers() {
       </section>
 
       <Footer />
-      </div>
-    </>
+    </div>
   );
 }

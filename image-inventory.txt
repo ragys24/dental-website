@@ -1,0 +1,50 @@
+client/src/components/BeforeAfterSlider.tsx:103:      <img
+client/src/components/BeforeAfterSlider.tsx:115:        <img
+client/src/components/Footer.tsx:47:            <img
+client/src/components/LiveChat.tsx:324:                <img src={LOGO} alt="Uplift Dental" className="h-8 w-auto object-contain brightness-0 invert" />
+client/src/components/ManusDialog.tsx:58:              <img src={logo} alt="Dialog graphic" className="w-10 h-10 rounded-md" />
+client/src/components/Navbar.tsx:159:                <img
+client/src/components/Navbar.tsx:356:            <img src={SITE_IMAGES.logoPrimary} alt={PRACTICE.nameShort} className="h-12 w-auto object-contain" />
+client/src/pages/About.tsx:262:              <img src={SITE_IMAGES.team} alt="Uplift Dental & Orthodontics team in Garden Grove, CA — Dr. Stefan, Dr. Schneekluth, Dr. Youssef, Dr. Saad" className="w-full h-full object-cover"  loading="lazy"/>
+client/src/pages/About.tsx:305:                    <img src={doc.img} alt={`${doc.name} — ${doc.role} at Uplift Dental & Orthodontics Garden Grove CA`} className="w-full h-full object-cover object-top"  loading="lazy" width="300" height="400"/>
+client/src/pages/About.tsx:370:                  <img
+client/src/pages/About.tsx:417:            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/IMG_3712_b2fcb1db.HEIC" alt="Uplift Dental team providing pediatric dental education and oral health guidance to children at community school outreach event" className="w-full h-96 object-cover" loading="lazy" />
+client/src/pages/Blog.tsx:339:                  <img src={featured.image} alt={featured.title} className="w-full h-full object-cover"  loading="lazy" width="800" height="450"/>
+client/src/pages/Blog.tsx:374:                    <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"  loading="lazy" width="400" height="300"/>
+client/src/pages/BlogPost.tsx:176:          <img
+client/src/pages/BlogPost.tsx:295:                          <img src={rp.image} alt={rp.title} className="w-14 h-14 object-cover rounded-lg flex-shrink-0" />
+client/src/pages/CommunityOutreach.tsx:98:            <img src={OUTREACH_IMAGES.img1} alt="Uplift Dental team providing pediatric dental education and oral health guidance to children at community school outreach event" className="rounded-2xl shadow-lg w-full h-96 object-cover" loading="lazy" />
+client/src/pages/CommunityOutreach.tsx:126:            <img src={OUTREACH_IMAGES.img2} alt="Dental professionals screening children's teeth and providing oral health education at community health fair to promote preventive dental care" className="rounded-2xl shadow-lg w-full h-96 object-cover" loading="lazy" />
+client/src/pages/CommunityOutreach.tsx:130:            <img src={OUTREACH_IMAGES.img3} alt="Uplift Dental dentists providing free dental screenings and oral health guidance to children at school outreach program" className="rounded-2xl shadow-lg w-full h-96 object-cover" loading="lazy" />
+client/src/pages/CommunityOutreach.tsx:156:            <img src={OUTREACH_IMAGES.img4} alt="Uplift Dental team engaging with children at pediatric dental education community event to promote oral health awareness" className="rounded-2xl shadow-lg w-full h-72 object-cover" loading="lazy" />
+client/src/pages/CommunityOutreach.tsx:157:            <img src={OUTREACH_IMAGES.img5} alt="Dental professionals providing free oral health screenings and preventive care guidance to children at community outreach event" className="rounded-2xl shadow-lg w-full h-72 object-cover" loading="lazy" />
+client/src/pages/DentalBonding.tsx:166:                      <img src={item.before} alt="Before bonding" className="w-full h-48 object-cover rounded-lg" />
+client/src/pages/DentalBonding.tsx:170:                      <img src={item.after} alt="After bonding" className="w-full h-48 object-cover rounded-lg" />
+client/src/pages/DentalImplants.tsx:75:            <img src={IMPLANTS_IMG} alt="Advanced dental implant technology at Uplift Dental & Orthodontics, Garden Grove CA" className="w-full rounded-3xl object-cover shadow-2xl" style={{ maxHeight: "480px" }} loading="lazy"/>
+client/src/pages/DentalImplants.tsx:107:            <img src={SMILE_IMG} alt="Patient with beautiful smile after dental implants at Uplift Dental Garden Grove CA" className="w-full rounded-3xl object-cover shadow-xl" style={{ maxHeight: "480px" }} loading="lazy"/>
+client/src/pages/DentalImplants.tsx:163:              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/3ddenture2_0802583c.webp" alt="3D-printed denture fabrication showing digital design and precision engineering for tooth replacement" className="w-full rounded-2xl object-cover shadow-lg h-48" loading="lazy" width="400" height="300"/>
+client/src/pages/DentalImplants.tsx:164:              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/Denture3d_b263eb16.webp" alt="Completed 3D-printed denture restoration showing natural tooth color and realistic gum appearance" className="w-full rounded-2xl object-cover shadow-lg h-48" loading="lazy" width="400" height="300"/>
+client/src/pages/Dentures.tsx:154:                  <img src={item.image} alt={item.title} className="w-full h-40 object-cover" />
+client/src/pages/Endodontics.tsx:315:              <img
+client/src/pages/Endodontics.tsx:360:            <img
+client/src/pages/Endodontics.tsx:575:            <img
+client/src/pages/Gallery.tsx:251:                        <img
+client/src/pages/Gallery.tsx:259:                        <img
+client/src/pages/Home.tsx:279:            <img
+client/src/pages/Home.tsx:490:              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/3ddenture2_0802583c.webp" alt="3D-printed denture fabrication process showing digital design stage at Uplift Dental Garden Grove" className="w-full h-80 object-cover" loading="lazy" width="600" height="400"/>
+client/src/pages/Home.tsx:493:              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/3ddenture4_fe4fe9c0.webp" alt="Completed 3D-printed denture with precision fit and natural tooth-colored restoration" className="w-full h-80 object-cover" loading="lazy" width="600" height="400"/>
+client/src/pages/Home.tsx:519:              <img src={FAMILY_IMG} alt={`Family receiving dental care at Uplift Dental & Orthodontics in ${PRACTICE.address.city}, ${PRACTICE.address.state} ${PRACTICE.address.zip}`} className="w-full rounded-3xl object-cover shadow-2xl" style={{ maxHeight: "500px" }} loading="lazy" width="1200" height="600"/>
+client/src/pages/Home.tsx:614:              <img src={INVISALIGN_IMG} alt="Platinum Invisalign clear aligners treatment at Uplift Dental & Orthodontics, Garden Grove CA" className="w-full rounded-3xl object-cover shadow-2xl" style={{ maxHeight: "500px" }} loading="lazy" width="1200" height="600"/>
+client/src/pages/Home.tsx:688:                    <img src={doc.img} alt={`${doc.name} — ${doc.title} at Uplift Dental & Orthodontics, Garden Grove CA`} className="w-full h-full object-cover object-top" loading="lazy" width="300" height="400"/>
+client/src/pages/Home.tsx:771:                      <img src={item.before} alt="Before" className="w-full h-40 object-cover rounded-lg" />
+client/src/pages/Home.tsx:775:                      <img src={item.after} alt="After" className="w-full h-40 object-cover rounded-lg" />
+client/src/pages/Home.tsx:940:              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/3ddenture3_f6f03e03.webp" alt="3D-printed denture showing internal structure and precision design for optimal fit and comfort" className="w-full rounded-2xl object-cover shadow-lg h-48" loading="lazy" width="400" height="300"/>
+client/src/pages/Home.tsx:941:              <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663519418507/8XjTa97CZebFmBgqStQiLN/Denture3d_b263eb16.webp" alt="Finished 3D-printed denture with natural tooth color and gum-colored base for realistic smile restoration" className="w-full rounded-2xl object-cover shadow-lg h-48" loading="lazy" width="400" height="300"/>
+client/src/pages/Invisalign.tsx:131:                <img src={INVISALIGN_IMG} alt="Patient holding clear Invisalign aligners at Uplift Dental & Orthodontics in Garden Grove" className="relative aspect-[5/4] w-full rounded-[1.75rem] object-cover shadow-2xl" width="1200" height="960" fetchPriority="high" />
+client/src/pages/LocalAreaPage.tsx:179:              <img
+client/src/pages/Orthodontics.tsx:137:              <img
+client/src/pages/Periodontics.tsx:291:                <img
+client/src/pages/Periodontics.tsx:366:              <img
+client/src/pages/Services.tsx:266:                <img src={cat.img} alt={`${cat.category} at Uplift Dental Garden Grove`} className="w-full h-full object-cover"  loading="lazy" width="400" height="300"/>
+client/src/pages/cities/LongBeach.tsx:149:                <img
+client/src/pages/OurSpecialists.tsx:205:                  <img

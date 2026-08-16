@@ -16,9 +16,9 @@ export default function PrivacyPolicy() {
   return (
     <>
       <PageSEO
-        title="Privacy Policy | Uplift Dental & Orthodontics Garden Grove CA"
-        description="Read the Privacy Policy for Uplift Dental & Orthodontics. Learn how we collect, use, and protect your personal information in compliance with CCPA and HIPAA."
-        canonical="/privacy-policy"
+        title="Privacy Policy | Uplift Dental"
+        description="Read the privacy policy for Uplift Dental & Orthodontics in Garden Grove, CA. How we collect, use, and protect your information."
+        canonical="https://upliftdental.com/privacy-policy"
       />
 
       <main className="min-h-screen bg-white pt-32 pb-24">
